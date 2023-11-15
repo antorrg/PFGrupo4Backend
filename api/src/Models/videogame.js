@@ -1,4 +1,4 @@
-const {DataTypes, Sequelize} = require('sequelize');
+const {DataTypes} = require('sequelize');
 
 module.exports = (sequelize) => {
 
@@ -20,7 +20,19 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        
-
-    })
+        released: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        price:{
+            type: DataTypes.DECIMAL(7,2),
+            allowNull: false,
+        },
+        enable:{
+            type: DataTypes.BOOLEAN,
+            defaultValue:true
+        }       
+    },
+    {timestamps: false}
+    );
 }
