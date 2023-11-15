@@ -22,10 +22,10 @@ module.exports = (sequelize) => {
                 },
             },
             status: {
-                type: DataTypes.INTEGER,
+                type: DataTypes.STRING,
                 allowNull: false
             }
         },
-        { timestamps: false }
+        { timestamps: true }
     );
 };
