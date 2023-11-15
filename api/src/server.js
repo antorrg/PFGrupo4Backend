@@ -1,7 +1,7 @@
 const express=require('express');
 const morgan=require('morgan');
 const cors=require('cors');
-//const mainRouter=require('./Routers/mainRouter');
+const mainRouter=require('./Routers/mainRouter');
 
 server = express();
 server.use(cors());
@@ -17,6 +17,6 @@ server.use((req, res, next) => {
 
 server.use(express.json());
 
-//server.use(mainRouter);
+server.use(mainRouter);
 
 module.exports = server;
