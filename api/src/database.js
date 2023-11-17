@@ -1,7 +1,7 @@
 const {Sequelize}=require ('sequelize');
-const CreateVideogame = require('./Models/vidogame');
-const CreateGenre = require('./Models/Genre');
-const CreatePlatform = require('./Models/Platform');
+const CreateVideogame = require('./Models/videogame');
+const CreateGenre = require('./Models/genre');
+const CreatePlatform = require('./Models/platform');
 require ('dotenv').config();
 const {DB_USER, DB_PASS, DB_HOST, DB_NAME}=process.env;
 
