@@ -1,10 +1,10 @@
 const {Router}=require('express');
-const gamesRouter=require('./gamesRouter');
+const getRouter=require('./getRouter');
 
 
 const mainRouter=Router();
 
-mainRouter.use('/', gamesRouter);
+mainRouter.use('/', getRouter);
 
 
 

@@ -8,7 +8,7 @@ const getAllGames = async ()=> {
     const gamesAPI = [];
     for(let page = 1; page<=2; page++){
     const url = `${URL}games?key=${API_KEY}&page=${page}`
-
+    //const url="https://www.freetogame.com/api/games"
     const infoApi = (await axios.get(url)).data;
     const gamesFiltered = infoCleaner(infoApi);
     gamesAPI.push(gamesFiltered)
