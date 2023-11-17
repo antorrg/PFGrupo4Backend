@@ -1,5 +1,7 @@
 const {  getAllGames, getGameById, genres} = require('../Controllers/gamesControllers');
 //const fillGenTable = require('./autoFillGen');
+const genresBulk= require('../Controllers/databaseControllers/genresBulk')
+
 
 const getGamesHandler= async (req,res)=>{
         try {
@@ -24,7 +26,7 @@ const getDetailHandler = async (req,res)=>{
 
 const getGenresHandler = async (req, res) => {
     try {
-        //await fillGenTable();
+        await genresBulk()
         const response = await genres();
         if (response.length === 0) {
             res.status(404).json({ error: "No genres found" });
