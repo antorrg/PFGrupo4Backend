@@ -1,0 +1,154 @@
+[
+    {
+      "id": 1,
+      "name": "Action"
+    },
+    {
+      "id": 2,
+      "name": "Indie"
+    },
+    {
+      "id": 3,
+      "name": "Adventure"
+    },
+    {
+      "id": 4,
+      "name": "RPG"
+    },
+    {
+      "id": 5,
+      "name": "Strategy"
+    },
+    {
+      "id": 6,
+      "name": "Shooter"
+    },
+    {
+      "id": 7,
+      "name": "Casual"
+    },
+    {
+      "id": 8,
+      "name": "Simulation"
+    },
+    {
+      "id": 9,
+      "name": "Puzzle"
+    },
+    {
+      "id": 10,
+      "name": "Arcade"
+    },
+    {
+      "id": 11,
+      "name": "Platformer"
+    },
+    {
+      "id": 12,
+      "name": "Massively Multiplayer"
+    },
+    {
+      "id": 13,
+      "name": "Racing"
+    },
+    {
+      "id": 14,
+      "name": "Sports"
+    },
+    {
+      "id": 15,
+      "name": "Fighting"
+    },
+    {
+      "id": 16,
+      "name": "Family"
+    },
+    {
+      "id": 17,
+      "name": "Board Games"
+    },
+    {
+      "id": 18,
+      "name": "Educational"
+    },
+    {
+      "id": 19,
+      "name": "Card"
+    },
+    {
+      "id": 20,
+      "name": "Action"
+    },
+    {
+      "id": 21,
+      "name": "Indie"
+    },
+    {
+      "id": 22,
+      "name": "Adventure"
+    },
+    {
+      "id": 23,
+      "name": "RPG"
+    },
+    {
+      "id": 24,
+      "name": "Strategy"
+    },
+    {
+      "id": 25,
+      "name": "Shooter"
+    },
+    {
+      "id": 26,
+      "name": "Casual"
+    },
+    {
+      "id": 27,
+      "name": "Simulation"
+    },
+    {
+      "id": 28,
+      "name": "Puzzle"
+    },
+    {
+      "id": 29,
+      "name": "Arcade"
+    },
+    {
+      "id": 30,
+      "name": "Platformer"
+    },
+    {
+      "id": 31,
+      "name": "Massively Multiplayer"
+    },
+    {
+      "id": 32,
+      "name": "Racing"
+    },
+    {
+      "id": 33,
+      "name": "Sports"
+    },
+    {
+      "id": 34,
+      "name": "Fighting"
+    },
+    {
+      "id": 35,
+      "name": "Family"
+    },
+    {
+      "id": 36,
+      "name": "Board Games"
+    },
+    {
+      "id": 37,
+      "name": "Educational"
+    },
+    {
+      "id": 38,
+      "name": "Card"
+    }
+  ]
