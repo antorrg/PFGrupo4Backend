@@ -1,7 +1,7 @@
 
 
 const infoCleaner = (data)=>{
-    const arr= data//.results;
+    const arr= data.results;
      array = arr.map(game=>{
         
     const platforms = game.parent_platforms.map((platObj) => platObj.platform.name);
@@ -9,7 +9,7 @@ const infoCleaner = (data)=>{
 
     return{
         id: game.id,
-        name: game.title,
+        name: game.name,
         description: game.description,
         platforms: platforms,
         image: game.background_image,
@@ -51,12 +51,10 @@ const infoClean2 = (data) => {
 
     return resultArray;
 };
-
 const cleanGenre = (data)=>{
     const arr = data.results;
     const array = arr.map((genreInfo) => ({ name: genreInfo.name }));
     return array;
-
 }
 
 module.exports = {
