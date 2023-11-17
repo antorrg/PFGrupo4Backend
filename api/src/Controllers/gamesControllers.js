@@ -1,5 +1,5 @@
 const axios= require('axios');
-const {Genre}=require('../database')
+const {Genre, Videogame}=require('../database')
 const {infoCleaner,infoClean2 } = require('./index');
 const URL = "https://api.rawg.io/api/";
 const API_KEY= "ac1f67878bb04531ba13710b8cf5de88";
@@ -18,6 +18,11 @@ const getAllGames = async ()=> {
     const gamesApiF = gamesAPI.flat(1);
 
   return gamesApiF;
+
+  
+    // const  gamesDb = await Videogame.findAll();
+    // return gamesDb;
+  
   
   } catch (error) {
     throw new Error({error:error.message})
@@ -50,6 +55,8 @@ const genres = async(req,res)=>{
   const  genresDb = await Genre.findAll();
   return genresDb;
 };
+
+
 
 
 
