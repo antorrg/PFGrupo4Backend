@@ -13,8 +13,6 @@ native:false}
 
 //todo const {nombre de tabla}= sequelize.models
 
-
-
 module.exports = {
     ...sequelize.models,
     sequelize
