@@ -1,33 +1,17 @@
 const axios= require('axios');
-const {Genre, Videogame}=require('../database')
-const {infoCleaner,infoClean2 } = require('./index');
+const {Genre, Platform, Videogame}=require('../database')
+const {infoClean2 } = require('./index');
 const URL = "https://api.rawg.io/api/";
 const API_KEY= "ac1f67878bb04531ba13710b8cf5de88";
+const includeModels = require('../utils/includeModels')
 
-const getAllGames = async ()=> {
+const getAllGames = async () => {
   try {
-    const gamesAPI = [];
-    for(let page = 1; page<=2; page++){
-    const url = `${URL}games?key=${API_KEY}&page=${page}`
-    //const url="https://www.freetogame.com/api/games"
-    const infoApi = (await axios.get(url)).data;
-    const gamesFiltered = infoCleaner(infoApi);
-    gamesAPI.push(gamesFiltered)
-    }
-    
-    const gamesApiF = gamesAPI.flat(1);
-
-  return gamesApiF;
-
-  
-    // const  gamesDb = await Videogame.findAll();
-    // return gamesDb;
-  
-  
+      const gamesCreated = await includeModels(Videogame, [{ model: Genre }, { model: Platform }]);
+      return gamesCreated;
   } catch (error) {
-    throw new Error({error:error.message})
+      throw new Error({ error: error.message });
   }
-   
 };
 
 const getGameById= async(id)=>{

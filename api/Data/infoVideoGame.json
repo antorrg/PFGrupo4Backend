@@ -1,0 +1,1097 @@
+[
+	
+	
+	{
+		
+		"name": "Grand Theft Auto V",
+		"image": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg",
+		"platforms": [
+			"PlayStation 5",
+			"Xbox Series S/X",
+			"PC",
+			"PlayStation 4",
+			"PlayStation 3",
+			"Xbox 360",
+			"Xbox One"
+		],
+		"released": "2013-09-17",
+		"price": 253.05,
+		"genres": [
+			"Action",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "The Witcher 3: Wild Hunt",
+		"image": "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg",
+		"platforms": [
+			"macOS",
+			"PlayStation 4",
+			"Nintendo Switch",
+			"PC",
+			"Xbox One"
+		],
+		"released": "2015-05-18",
+		"price": 180.10,
+		"genres": [
+			"Action",
+			"Adventure",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Portal 2",
+		"image": "https://media.rawg.io/media/games/2ba/2bac0e87cf45e5b508f227d281c9252a.jpg",
+		"platforms": [
+			"PlayStation 3",
+			"PC",
+			"Xbox 360",
+			"Linux",
+			"macOS",
+			"Xbox One"
+		],
+		"released": "2011-04-18",
+		"price": 184.61,
+		"genres": [
+			"Shooter",
+			"Puzzle"
+		]
+	},
+	{
+		
+		"name": "Counter-Strike: Global Offensive",
+		"image": "https://media.rawg.io/media/games/736/73619bd336c894d6941d926bfd563946.jpg",
+		"platforms": [
+			"PC",
+			"Xbox 360",
+			"PlayStation 3"
+		],
+		"released": "2012-08-21",
+		"price": 173.56,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Tomb Raider (2013)",
+		"image": "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"macOS",
+			"PC",
+			"Xbox One",
+			"Xbox 360",
+			"PlayStation 3"
+		],
+		"released": "2013-03-05",
+		"price": 204.05,
+		"genres": [
+			"Action",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "Portal",
+		"image": "https://media.rawg.io/media/games/7fa/7fa0b586293c5861ee32490e953a4996.jpg",
+		"platforms": [
+			"Android",
+			"PlayStation 3",
+			"Xbox 360",
+			"Linux",
+			"macOS",
+			"PC",
+			"Nintendo Switch"
+		],
+		"released": "2007-10-09",
+		"price": 184.51,
+		"genres": [
+			"Adventure",
+			"Puzzle"
+		]
+	},
+	{
+		
+		"name": "Left 4 Dead 2",
+		"image": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
+		"platforms": [
+			"macOS",
+			"Linux",
+			"PC",
+			"Xbox 360"
+		],
+		"released": "2009-11-17",
+		"price": 164.09,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "The Elder Scrolls V: Skyrim",
+		"image": "https://media.rawg.io/media/games/7cf/7cfc9220b401b7a300e409e539c9afd5.jpg",
+		"platforms": [
+			"PC",
+			"Nintendo Switch",
+			"Xbox 360",
+			"PlayStation 3"
+		],
+		"released": "2011-11-11",
+		"price": 185.42,
+		"genres": [
+			"Action",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Red Dead Redemption 2",
+		"image": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg",
+		"platforms": [
+			"PC",
+			"PlayStation 4",
+			"Xbox One"
+		],
+		"released": "2018-10-26",
+		"price": 184.59,
+		"genres": [
+			"Action",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "BioShock Infinite",
+		"image": "https://media.rawg.io/media/games/fc1/fc1307a2774506b5bd65d7e8424664a7.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"Xbox 360",
+			"Nintendo Switch",
+			"Linux",
+			"PC",
+			"PlayStation 3",
+			"Xbox One"
+		],
+		"released": "2013-03-26",
+		"price": 176.38,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Borderlands 2",
+		"image": "https://media.rawg.io/media/games/49c/49c3dfa4ce2f6f140cc4825868e858cb.jpg",
+		"platforms": [
+			"PlayStation 3",
+			"macOS",
+			"PC",
+			"Android",
+			"Linux",
+			"PS Vita",
+			"Xbox 360"
+		],
+		"released": "2012-09-18",
+		"price": 154.01,
+		"genres": [
+			"Action",
+			"Shooter",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Life is Strange",
+		"image": "https://media.rawg.io/media/games/562/562553814dd54e001a541e4ee83a591c.jpg",
+		"platforms": [
+			"PC",
+			"Linux",
+			"PlayStation 3",
+			"macOS",
+			"iOS",
+			"Xbox 360",
+			"Android",
+			"PlayStation 4",
+			"Xbox One"
+		],
+		"released": "2015-01-29",
+		"price": 134.11,
+		"genres": [
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "Half-Life 2",
+		"image": "https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg",
+		"platforms": [
+			"PC",
+			"macOS",
+			"Xbox 360",
+			"Linux",
+			"Xbox",
+			"Android"
+		],
+		"released": "2004-11-16",
+		"price": 185.49,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "BioShock",
+		"image": "https://media.rawg.io/media/games/bc0/bc06a29ceac58652b684deefe7d56099.jpg",
+		"platforms": [
+			"PlayStation 3",
+			"macOS",
+			"PC",
+			"Xbox 360"
+		],
+		"released": "2007-08-21",
+		"price": 212.36,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Destiny 2",
+		"image": "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg",
+		"platforms": [
+			"Xbox One",
+			"PC",
+			"PlayStation 4",
+			"Web",
+			"Xbox Series S/X",
+			"PlayStation 5"
+		],
+		"released": "2017-09-06",
+		"price": 133.54,
+		"genres": [
+			"Action",
+			"Shooter",
+			"Adventure",
+			"Massively Multiplayer"
+		]
+	},
+	{
+		
+		"name": "Limbo",
+		"image": "https://media.rawg.io/media/games/942/9424d6bb763dc38d9378b488603c87fa.jpg",
+		"platforms": [
+			"Linux",
+			"PS Vita",
+			"Android",
+			"Xbox One",
+			"Nintendo Switch",
+			"iOS",
+			"PC",
+			"macOS",
+			"Xbox 360",
+			"PlayStation 3",
+			"PlayStation 4"
+		],
+		"released": "2010-07-21",
+		"price": 144.15,
+		"genres": [
+			"Adventure",
+			"Indie",
+			"Puzzle",
+			"Platformer"
+		]
+	},
+	{
+		
+		"name": "God of War (2018)",
+		"image": "https://media.rawg.io/media/games/4be/4be6a6ad0364751a96229c56bf69be59.jpg",
+		"platforms": [
+			"PC",
+			"PlayStation 4"
+		],
+		"released": "2018-04-20",
+		"price": 165.57,
+		"genres": [
+			"Action",
+			"Adventure",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Fallout 4",
+		"image": "https://media.rawg.io/media/games/d82/d82990b9c67ba0d2d09d4e6fa88885a7.jpg",
+		"platforms": [
+			"Xbox One",
+			"PC",
+			"PlayStation 4"
+		],
+		"released": "2015-11-09",
+		"price":113.8,
+		"genres": [
+			"Action",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "DOOM (2016)",
+		"image": "https://media.rawg.io/media/games/c4b/c4b0cab189e73432de3a250d8cf1c84e.jpg",
+		"platforms": [
+			"Xbox One",
+			"PC",
+			"Nintendo Switch",
+			"PlayStation 4"
+		],
+		"released": "2016-05-13",
+		"price": 124.38,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "PAYDAY 2",
+		"image": "https://media.rawg.io/media/games/73e/73eecb8909e0c39fb246f457b5d6cbbe.jpg",
+		"platforms": [
+			"Linux",
+			"PC",
+			"Xbox One"
+		],
+		"released": "2013-08-13",
+		"price": 176.51,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Team Fortress 2",
+		"image": "https://media.rawg.io/media/games/46d/46d98e6910fbc0706e2948a7cc9b10c5.jpg",
+		"platforms": [
+			"PC",
+			"macOS",
+			"Linux"
+		],
+		"released": "2007-10-10",
+		"price":165.68,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Horizon Zero Dawn",
+		"image": "https://media.rawg.io/media/games/b7d/b7d3f1715fa8381a4e780173a197a615.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"PC"
+		],
+		"released": "2017-02-28",
+		"price": 154.29,
+		"genres": [
+			"Action",
+			"Adventure",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Cyberpunk 2077",
+		"image": "https://media.rawg.io/media/games/26d/26d4437715bee60138dab4a7c8c59c92.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"PC",
+			"Xbox Series S/X",
+			"PlayStation 5",
+			"Xbox One"
+		],
+		"released": "2020-12-10",
+		"price": 204.14,
+		"genres": [
+			"Action",
+			"Adventure",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Grand Theft Auto IV",
+		"image": "https://media.rawg.io/media/games/4a0/4a0a1316102366260e6f38fd2a9cfdce.jpg",
+		"platforms": [
+			"Xbox 360",
+			"PlayStation 3",
+			"Xbox One",
+			"PC"
+		],
+		"released": "2008-04-29",
+		"price": 294.26,
+		"genres": [
+			"Action",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "Terraria",
+		"image": "https://media.rawg.io/media/games/f46/f466571d536f2e3ea9e815ad17177501.jpg",
+		"platforms": [
+			"Xbox 360",
+			"Wii U",
+			"Nintendo 3DS",
+			"Xbox One",
+			"PlayStation 4",
+			"iOS",
+			"PC",
+			"macOS",
+			"Linux",
+			"Nintendo Switch",
+			"PlayStation 3",
+			"PS Vita",
+			"Android"
+		],
+		"released": "2011-05-16",
+		"price": 154.06,
+		"genres": [
+			"Action",
+			"Indie",
+			"Platformer"
+		]
+	},
+	{
+		
+		"name": "Rocket League",
+		"image": "https://media.rawg.io/media/games/8cc/8cce7c0e99dcc43d66c8efd42f9d03e3.jpg",
+		"platforms": [
+			"Nintendo Switch",
+			"Linux",
+			"macOS",
+			"Xbox One",
+			"PC",
+			"PlayStation 4"
+		],
+		"released": "2015-07-07",
+		"price": 133.94,
+		"genres": [
+			"Sports",
+			"Racing",
+			"Indie"
+		]
+	},
+	{
+		
+		"name": "Dota 2",
+		"image": "https://media.rawg.io/media/games/6fc/6fcf4cd3b17c288821388e6085bb0fc9.jpg",
+		"platforms": [
+			"Linux",
+			"macOS",
+			"PC"
+		],
+		"released": "2013-07-09",
+		"price": 123.07,
+		"genres": [
+			"Action",
+			"Massively Multiplayer"
+		]
+	},
+	{
+		
+		"name": "Warframe",
+		"image": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg",
+		"platforms": [
+			"Xbox Series S/X",
+			"PlayStation 5",
+			"PlayStation 4",
+			"Xbox One",
+			"Nintendo Switch",
+			"PC"
+		],
+		"released": "2013-03-25",
+		"price": 143.42,
+		"genres": [
+			"Action",
+			"Shooter",
+			"Massively Multiplayer"
+		]
+	},
+	{
+		
+		"name": "Metro 2033",
+		"image": "https://media.rawg.io/media/games/120/1201a40e4364557b124392ee50317b99.jpg",
+		"platforms": [
+			"Xbox 360",
+			"PC"
+		],
+		"released": "2010-03-16",
+		"price": 143.94,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Metal Gear Solid V: The Phantom Pain",
+		"image": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg",
+		"platforms": [
+			"Xbox One",
+			"PlayStation 3",
+			"PlayStation 4",
+			"Xbox 360",
+			"PC"
+		],
+		"released": "2015-09-01",
+		"price": 194.16,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Rise of the Tomb Raider",
+		"image": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg",
+		"platforms": [
+			"Xbox One",
+			"PC",
+			"macOS",
+			"PlayStation 4"
+		],
+		"released": "2015-11-10",
+		"price": 174.03,
+		"genres": [
+			"Action"
+		]
+	},
+	{
+		
+		"name": "Batman: Arkham Knight",
+		"image": "https://media.rawg.io/media/games/310/3106b0e012271c5ffb16497b070be739.jpg",
+		"platforms": [
+			"PC",
+			"Xbox One",
+			"PlayStation 4"
+		],
+		"released": "2015-06-23",
+		"price": 200.23,
+		"genres": [
+			"Action"
+		]
+	},
+	{
+		
+		"name": "The Witcher 2: Assassins of Kings Enhanced Edition",
+		"image": "https://media.rawg.io/media/games/6cd/6cd653e0aaef5ff8bbd295bf4bcb12eb.jpg",
+		"platforms": [
+			"macOS",
+			"PC",
+			"Xbox 360"
+		],
+		"released": "2012-04-16",
+		"price": 164.16,
+		"genres": [
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "The Walking Dead: Season 1",
+		"image": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg",
+		"platforms": [
+			"Android",
+			"PS Vita",
+			"macOS",
+			"PC",
+			"iOS",
+			"PlayStation 4",
+			"PlayStation 3",
+			"Xbox 360",
+			"Nintendo Switch",
+			"Xbox One"
+		],
+		"released": "2012-04-23",
+		"price": 164.35,
+		"genres": [
+			"Action",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "Half-Life 2: Lost Coast",
+		"image": "https://media.rawg.io/media/games/b7b/b7b8381707152afc7d91f5d95de70e39.jpg",
+		"platforms": [
+			"macOS",
+			"Linux",
+			"PC"
+		],
+		"released": "2005-10-27",
+		"price": 133.45,
+		"genres": [
+			"Action"
+		]
+	},
+	{
+		
+		"name": "Grand Theft Auto: San Andreas",
+		"image": "https://media.rawg.io/media/games/960/960b601d9541cec776c5fa42a00bf6c4.jpg",
+		"platforms": [
+			"Xbox One",
+			"Android",
+			"Xbox",
+			"iOS",
+			"PC",
+			"macOS",
+			"Xbox 360",
+			"PlayStation 2",
+			"PlayStation 3",
+			"PlayStation 4"
+		],
+		"released": "2004-10-26",
+		"price": 274.51,
+		"genres": [
+			"Action",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "Middle-earth: Shadow of Mordor",
+		"image": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg",
+		"platforms": [
+			"Linux",
+			"Xbox One",
+			"Xbox 360",
+			"PlayStation 3",
+			"PlayStation 4",
+			"macOS",
+			"PC"
+		],
+		"released": "2014-09-30",
+		"price": 143.89,
+		"genres": [
+			"Action",
+			"RPG"
+		]
+	},
+	{
+		"name": "The Witcher: Enhanced Edition Director's Cut",
+		"image": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg",
+		"platforms": [
+			"PC",
+			"macOS"
+		],
+		"released": "2008-09-16",
+		"price": 164.06,
+		"genres": [
+			"Action",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Apex Legends",
+		"image": "https://media.rawg.io/media/games/b72/b7233d5d5b1e75e86bb860ccc7aeca85.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"Nintendo Switch",
+			"macOS",
+			"PC",
+			"Xbox One"
+		],
+		"released": "2019-02-04",
+		"price": 133.65,
+		"genres": [
+			"Action",
+			"Shooter",
+			"Adventure",
+			"Massively Multiplayer"
+		]
+	},
+	{
+		
+		"name": "Half-Life 2: Episode One",
+		"image": "https://media.rawg.io/media/games/7a2/7a2500ee8b2c0e1ff268bb4479463dea.jpg",
+		"platforms": [
+			"Linux",
+			"PC",
+			"Xbox 360",
+			"Android",
+			"macOS"
+		],
+		"released": "2006-06-01",
+		"price": 174.38,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "BioShock 2",
+		"image": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"Xbox One",
+			"Nintendo Switch",
+			"PC",
+			"macOS",
+			"Xbox 360",
+			"PlayStation 3"
+		],
+		"released": "2010-02-09",
+		"price": 170.08,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Half-Life 2: Episode Two",
+		"image": "https://media.rawg.io/media/games/198/1988a337305e008b41d7f536ce9b73f6.jpg",
+		"platforms": [
+			"Android",
+			"Linux",
+			"macOS",
+			"PC",
+			"Xbox 360"
+		],
+		"released": "2007-10-10",
+		"price": 194.45,
+		"genres": [
+			"Action",
+			"Shooter",
+			"Puzzle"
+		]
+	},
+	{
+		
+		"name": "Hollow Knight",
+		"image": "https://media.rawg.io/media/games/4cf/4cfc6b7f1850590a4634b08bfab308ab.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"Linux",
+			"macOS",
+			"PC",
+			"Nintendo Switch",
+			"Xbox One"
+		],
+		"released": "2017-02-23",
+		"price": 170.41,
+		"genres": [
+			"Action",
+			"Indie",
+			"Platformer"
+		]
+	},
+	{
+		
+		"name": "Little Nightmares",
+		"image": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"PC",
+			"Xbox One",
+			"Nintendo Switch"
+		],
+		"released": "2017-04-27",
+		"price": 154.04,
+		"genres": [
+			"Action",
+			"Platformer"
+		]
+	},
+	{
+		
+		"name": "Hitman",
+		"image": "https://media.rawg.io/media/games/16b/16b1b7b36e2042d1128d5a3e852b3b2f.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"Linux",
+			"macOS",
+			"PC",
+			"Xbox One"
+		],
+		"released": "2016-03-11",
+		"price": 143.92,
+		"genres": [
+			"Action",
+			"Shooter",
+			"Simulation"
+		]
+	},
+    {
+		
+		"name": "Dark Souls III",
+		"image": "https://media.rawg.io/media/games/da1/da1b267764d77221f07a4386b6548e5a.jpg",
+		"platforms": [
+			"Xbox One",
+			"PlayStation 4",
+			"PC"
+		],
+		"released": "2016-04-11",
+		"price": 170.4,
+		"genres": [
+			"Action",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Mirror's Edge",
+		"image": "https://media.rawg.io/media/games/8e4/8e4de3f54ac659e08a7ba6a2b731682a.jpg",
+		"platforms": [
+			"Xbox 360",
+			"PlayStation 3",
+			"PC"
+		],
+		"released": "2008-11-11",
+		"price": 160.07,
+		"genres": [
+			"Action"
+		]
+	},
+	{
+		
+		"name": "Hotline Miami",
+		"image": "https://media.rawg.io/media/games/9fa/9fa63622543e5d4f6d99aa9d73b043de.jpg",
+		"platforms": [
+			"Linux",
+			"Nintendo Switch",
+			"Xbox One",
+			"PlayStation 4",
+			"PS Vita",
+			"PC"
+		],
+		"released": "2012-10-22",
+		"price": 180.38,
+		"genres": [
+			"Action",
+			"Shooter",
+			"Arcade",
+			"Indie"
+		]
+	},
+	{
+		
+		"name": "Outlast",
+		"image": "https://media.rawg.io/media/games/9dd/9ddabb34840ea9227556670606cf8ea3.jpg",
+		"platforms": [
+			"Xbox One",
+			"PlayStation 4",
+			"Nintendo Switch",
+			"macOS",
+			"PC",
+			"Linux"
+		],
+		"released": "2013-09-03",
+		"price": 175.73,
+		"genres": [
+			"Action",
+			"Adventure",
+			"Indie"
+		]
+	},
+	{
+		
+		"name": "Deus Ex: Mankind Divided",
+		"image": "https://media.rawg.io/media/games/c24/c24ec439abf4a2e92f3429dfa83f7f94.jpg",
+		"platforms": [
+			"Xbox One",
+			"Linux",
+			"macOS",
+			"PlayStation 4",
+			"PC"
+		],
+		"released": "2016-08-22",
+		"price": 153.97,
+		"genres": [
+			"Action",
+			"RPG"
+		]
+	},
+	{
+		
+		"name": "Far Cry 3",
+		"image": "https://media.rawg.io/media/games/15c/15c95a4915f88a3e89c821526afe05fc.jpg",
+		"platforms": [
+			"Xbox One",
+			"Xbox 360",
+			"PlayStation 3",
+			"PC",
+			"PlayStation 4"
+		],
+		"released": "2012-11-28",
+		"price": 204.24,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "BioShock Remastered",
+		"image": "https://media.rawg.io/media/games/be0/be01c3d7d8795a45615da139322ca080.jpg",
+		"platforms": [
+			"PlayStation 4",
+			"Nintendo Switch",
+			"macOS",
+			"PC",
+			"Xbox One"
+		],
+		"released": "2016-09-15",
+		"price": 214.24,
+		"genres": [
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Marvel's Spider-Man",
+		"image": "https://media.rawg.io/media/games/9aa/9aa42d16d425fa6f179fc9dc2f763647.jpg",
+		"platforms": [
+			"PC",
+			"PlayStation 5",
+			"PlayStation 4"
+		],
+		"released": "2018-09-07",
+		"price": 234.46,
+		"genres": [
+			"Action",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "Spec Ops: The Line",
+		"image": "https://media.rawg.io/media/games/b49/b4912b5dbfc7ed8927b65f05b8507f6c.jpg",
+		"platforms": [
+			"Xbox 360",
+			"PlayStation 3",
+			"Xbox One",
+			"PC"
+		],
+		"released": "2012-06-26",
+		"price": 184.09,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Half-Life 2: Deathmatch",
+		"image": "https://media.rawg.io/media/games/ec3/ec3a7db7b8ab5a71aad622fe7c62632f.jpg",
+		"platforms": [
+			"Linux",
+			"macOS",
+			"PC"
+		],
+		"released": "2004-11-01",
+		"price": 123.28,
+		"genres": [
+			"Action"
+		]
+	},
+	{
+		
+		"name": "Amnesia: The Dark Descent",
+		"image": "https://media.rawg.io/media/games/b54/b54598d1d5cc31899f4f0a7e3122a7b0.jpg",
+		"platforms": [
+			"Linux",
+			"macOS",
+			"PC"
+		],
+		"released": "2010-09-08",
+		"price": 140.64,
+		"genres": [
+			"Action",
+			"Adventure",
+			"Indie"
+		]
+	},
+	{
+		
+		"name": "Half-Life",
+		"image": "https://media.rawg.io/media/games/6c5/6c55e22185876626881b76c11922b073.jpg",
+		"platforms": [
+			"Dreamcast",
+			"Linux",
+			"macOS",
+			"PC",
+			"PlayStation 2"
+		],
+		"released": "1998-11-08",
+		"price": 180.39,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	},
+	{
+		
+		"name": "Alan Wake",
+		"image": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg",
+		"platforms": [
+			"Xbox 360",
+			"Xbox One",
+			"PC"
+		],
+		"released": "2010-05-14",
+		"price": 175.11,
+		"genres": [
+			"Action",
+			"Shooter",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "Saints Row: The Third",
+		"image": "https://media.rawg.io/media/games/d69/d69810315bd7e226ea2d21f9156af629.jpg",
+		"platforms": [
+			"Linux",
+			"PC",
+			"Xbox One",
+			"Xbox 360",
+			"PlayStation 3"
+		],
+		"released": "2011-11-15",
+		"price": 160.95,
+		"genres": [
+			"Action",
+			"Adventure"
+		]
+	},
+	{
+		
+		"name": "Wolfenstein: The New Order",
+		"image": "https://media.rawg.io/media/games/c80/c80bcf321da44d69b18a06c04d942662.jpg",
+		"platforms": [
+			"Xbox One",
+			"PC",
+			"Xbox 360",
+			"PlayStation 3",
+			"PlayStation 4"
+		],
+		"released": "2014-05-19",
+		"price": 170.18,
+		"genres": [
+			"Action",
+			"Shooter"
+		]
+	}
+]
+	
