@@ -21,7 +21,7 @@ module.exports = (sequelize) => {
             allowNull: false,
         },
         released: {
-            type: DataTypes.STRING,
+            type: DataTypes.DATEONLY,
             allowNull: false,
         },
         price:{
