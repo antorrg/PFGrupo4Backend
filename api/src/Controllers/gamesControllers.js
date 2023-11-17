@@ -1,4 +1,5 @@
 const axios= require('axios');
+const {Genre}=require('../database')
 const {infoCleaner,infoClean2 } = require('./index');
 const URL = "https://api.rawg.io/api/";
 const API_KEY= "ac1f67878bb04531ba13710b8cf5de88";
@@ -35,16 +36,23 @@ const getGameById= async(id)=>{
 };
 
 
-const genres = async(req,res)=>{
-    try {
-          const response = (await axios.get(`${URL}genres?key=${API_KEY}`)).data;
-          const genresData= response;
-          return genresData;
-      } catch (error) {
-       console.error({error: error.message});
+// const genres = async(req,res)=>{
+//     try {
+//           const response = (await axios.get(`${URL}genres?key=${API_KEY}`)).data;
+//           const genresData= response;
+//           return genresData;
+//       } catch (error) {
+//        console.error({error: error.message});
         
-       }
-  };
+//        }
+//   };
+const genres = async(req,res)=>{
+  const  genresDb = await Genre.findAll();
+  return genresDb;
+};
+
+
+
 
 
 

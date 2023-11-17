@@ -21,6 +21,6 @@ server.listen(PORT, async () => {
         await sequelize.sync({force:true}),
         console.log(`Server is running on port ${PORT} ✔️`);
     } catch (error) {
-        res.status(500).json({ error: error.message });
+       res.status(500).json({ error: error.message });
     }
 });
