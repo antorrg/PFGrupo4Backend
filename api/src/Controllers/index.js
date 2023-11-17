@@ -52,10 +52,16 @@ const infoClean2 = (data) => {
     return resultArray;
 };
 
+const cleanGenre = (data)=>{
+    const arr = data.results;
+    const array = arr.map((genreInfo) => ({ name: genreInfo.name }));
+    return array;
 
+}
 
 module.exports = {
     infoCleaner,
-    infoClean2 
+    infoClean2 ,
+    cleanGenre
 };
 
