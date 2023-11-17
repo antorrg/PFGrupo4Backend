@@ -1,5 +1,7 @@
 const {Sequelize}=require ('sequelize');
-//todo const XXXXX = require('./Models/xxxx'); aquí van declarados los modelos.
+const CreateVideogame = require('./Models/videogame');
+const CreateGenre = require('./Models/genre');
+const CreatePlatform = require('./Models/platform');
 require ('dotenv').config();
 const {DB_USER, DB_PASS, DB_HOST, DB_NAME}=process.env;
 
@@ -8,10 +10,17 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASS}@${DB_HOST}/${D
 native:false}
 );
 
-//todo XXXXX(sequelize)
-//todo xxXXXx(sequelize)
+CreateVideogame(sequelize);
+CreateGenre(sequelize);
+CreatePlatform(sequelize);
 
-//todo const {nombre de tabla}= sequelize.models
+const {Videogame, Genre, Platform}= sequelize.models
+
+Videogame.belongsToMany(Genre, {through: 'videogame_genre'})
+Genre.belongsToMany(Videogame, {through: 'videogame_genre'})
+
+Videogame.belongsToMany(Platform, {through: 'videogame_platform'})
+Platform.belongsToMany(Videogame, {through: 'videogame_platform'})
 
 module.exports = {
     ...sequelize.models,
