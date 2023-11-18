@@ -1,4 +1,4 @@
-const {  getAllGames, getGameById, genres} = require('../Controllers/gamesControllers');
+const {  getAllGames, getGameById, genres, platforms} = require('../Controllers/gamesControllers');
 
 
 const getGamesHandler= async (req,res)=>{
@@ -35,11 +35,24 @@ const getGenresHandler = async (req, res) => {
     }
 };
 
+const getPlatformHandler = async (req, res) => {
+    try {
+        const response = await platforms();
+        if (response.length === 0) {
+            res.status(404).json({ error: "No platforms found" });
+        } else {
+            res.status(200).json(response);
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
 
 
 
 module.exports = {
     getGamesHandler,
     getDetailHandler,
-    getGenresHandler 
+    getGenresHandler,
+    getPlatformHandler
 }
