@@ -11,15 +11,15 @@
 
 const server=require('./src/server');
 const {sequelize} = require('./src/database');
-const genresBulk = require('./src/Controllers/databaseControllers/genresBulk')
+const fillTables = require('./src/Controllers/databaseControllers/fillTables');
 require('dotenv').config();
 const {PORT}=process.env;
 
 
 server.listen(PORT, async () => {  
     try {
-        await sequelize.sync({force:false}),
-        await genresBulk ();
+        await sequelize.sync({force:false});
+        await fillTables();
         console.log(`Server is running on port ${PORT} ✔️`);
     } catch (error) {
        res.status(500).json({ error: error.message });
