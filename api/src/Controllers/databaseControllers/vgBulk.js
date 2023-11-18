@@ -7,12 +7,12 @@ for (let i = 0; i <infoVideoGame.length; i++) {
     const game = infoVideoGame[i];
 
     try {
-        // Llamar a tu función post aquí, usando los datos del juego
+        // Llamar al controlador post aquí, usando los datos del juego
         await gamesPostController(game.name, game.description, game.image, game.released, game.genres, game.platforms, game.price);
 
-        console.log(`Juego posteado exitosamente: ${game.name}`);
+        console.log(`Successfully: ${game.name}`);
     } catch (error) {
-        console.error(`Error al postear el juego ${game.name}: ${error.message}`);
+        console.error(`Error when posting the game ${game.name}: ${error.message}`);
     }
 }
 }

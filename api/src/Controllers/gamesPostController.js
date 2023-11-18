@@ -37,7 +37,7 @@ const createGameDB = async (name, description, image, released, genres, platform
       const result = { isCreate: create, game: newGame };
       return result;
   } catch (error) {
-     console.log('algo malo pasó');
+     console.log('algo malo pasó acá 🤔');
   }
 };
 
