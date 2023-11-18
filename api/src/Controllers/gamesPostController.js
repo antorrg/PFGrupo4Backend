@@ -1,59 +1,44 @@
-
 const { Videogame, Genre, Platform} = require("../database");
 
-const createGameDB = async (name,description,image,released, genres,platform,price,req,res) => {
-    console.log('este es el nombre '+ name)
+
+const createGameDB = async (name, description, image, released, genres, platforms, price, req, res) => {
   try {
-// if (!name || !description || !image || !released || !genres || !platform || price === undefined) {
-//   throw new Error("Missing or invalid input data")
-   
-//  }
-
-//   const videoGFound = Videogames.find((game) => game.name.toLowerCase() === name.toLowerCase()
-//   );
-//   if (videoGFound) {
-//     throw new Error("This game already exists")
-  
- // } else {
-  
-  //const genreArray = genres.split(',').map(genre => genre.trim());
-      
-        const [newGame, create] = await Videogame.findOrCreate({
-          where:{
-            name:name
+      const [newGame, create] = await Videogame.findOrCreate({
+          where: {
+              name: name
           },
-          defaults:{
-          description,
-          image,
-          released,
-          price,
+          defaults: {
+              description,
+              image,
+              released,
+              price,
           }
-        });
-        if(create){
-        // // Buscar los objetos de género correspondientes en la base de datos
-        // const dbGenres = await Genre.findAll({
-        //   where: { name: genres },
-        // });
-  
-        // // Asociar los géneros al nuevo juego
-        // await newGame.addGenres(dbGenres);
+      });
 
-        // // Buscar los objetos de platform correspondientes en la base de datos
-        // const dbPlat = await Platform.findAll({
-        //     where: { name: platforms },
+      if (create) {
+          // Buscar los objetos de género correspondientes en la base de datos
+        //   const dbGenres = await Genre.findAll({
+        //       where: { name: genres },
         //   });
-    
-        //   // Asociar las platform al nuevo juego
-        //   await newGame.addPlatform(dbPlat);
-        }
-        const result ={isCreate: create, game: newGame}
-        return result;
-  //}
-} 
-catch(error){
-  return res.status(500).json({ error: error.message });
-}
 
+          // Asociar los géneros al nuevo juego
+          await newGame.addGenres(genres);
+          //Buscar los objetos de plataforma correspondientes en la base de datos
+          //   const dbPlatforms = await Platform.findAll({
+              //       where: { name: platforms },
+              //   });
+              
+              // Asociar las plataformas al nuevo juego
+              
+            await newGame.addPlatforms(platforms);
+              
+       }
+
+      const result = { isCreate: create, game: newGame };
+      return result;
+  } catch (error) {
+     console.log('algo malo pasó');
+  }
 };
 
 module.exports = createGameDB;
