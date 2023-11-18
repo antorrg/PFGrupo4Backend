@@ -25,25 +25,30 @@ const getAllGames = async () => {
 //  };
 const getGameById = async (id) => {
   try {
-    // const infodb =(await Videogame.findByPk(id, {include: [{
-    //   model: Genre, attributes: ['name'], through: { attributes: []} }]},
-    //   {include: [{
-    //     model: Platform, attributes: ['name'], through: { attributes: []} }]}
-    //   ));
-    //   if(infodb.length === 0){
-    //     throw new Error("Videogame not found");
-    //}
-  //return infodb;
-      // const game = await Videogame.findByPk(id)
-      // const associations = [{ model: Genre }, { model: Platform }];
-      // const gameWithModels = await includeModels(game, associations);
+    const infodb = await Videogame.findByPk(id, {
+      include: [
+        {
+          model: Genre,
+          attributes: ['name'],
+          through: { attributes: [] }
+        },
+        {
+          model: Platform,
+          attributes: ['name'],
+          through: { attributes: [] }
+        }
+      ]
+    });
 
-      // return gameWithModels;
+    if (!infodb) {
+      throw new Error("Videogame not found");
+    }
+
+    return infodb;
   } catch (error) {
-      throw new Error({ error: error.message });
+    throw new Error({ error: error.message });
   }
 };
-
 
 
 const genres = async(req,res)=>{
@@ -55,10 +60,6 @@ const platforms = async(req,res)=>{
   const  platformsDb = await Platform.findAll();
   return platformsDb;
 };
-
-
-
-
 
 
 
