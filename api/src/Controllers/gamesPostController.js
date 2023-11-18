@@ -17,20 +17,21 @@ const createGameDB = async (name, description, image, released, genres, platform
 
       if (create) {
           // Buscar los objetos de género correspondientes en la base de datos
-          const dbGenres = await Genre.findAll({
-              where: { name: genres },
-          });
+        //   const dbGenres = await Genre.findAll({
+        //       where: { name: genres },
+        //   });
 
           // Asociar los géneros al nuevo juego
-          await newGame.addGenres(dbGenres);
-
+          await newGame.addGenres(genres);
           //Buscar los objetos de plataforma correspondientes en la base de datos
-          const dbPlatforms = await Platform.findAll({
-              where: { name: platform },
-          });
-
-          // Asociar las plataformas al nuevo juego
-          await newGame.addPlatforms(dbPlatforms);
+          //   const dbPlatforms = await Platform.findAll({
+              //       where: { name: platforms },
+              //   });
+              
+              // Asociar las plataformas al nuevo juego
+              
+            await newGame.addPlatforms(platforms);
+              
        }
 
       const result = { isCreate: create, game: newGame };
