@@ -3,7 +3,7 @@ const gamesPostController=require('../gamesPostController');
 
 
 const vgBulk = async()=>{
-for (let i = 0; i <10; i++) {
+for (let i = 0; i <infoVideoGame.length; i++) {
     const game = infoVideoGame[i];
 
     try {
