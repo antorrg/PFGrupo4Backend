@@ -28,6 +28,15 @@ module.exports = (sequelize) => {
             type: DataTypes.DECIMAL(7,2),
             allowNull: false,
         },
+        physicalGame:{
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        stock:{
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+
         enable:{
             type: DataTypes.BOOLEAN,
             defaultValue:true

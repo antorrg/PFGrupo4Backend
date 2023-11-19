@@ -1,28 +1,33 @@
-const axios= require('axios');
 const {Genre, Platform, Videogame}=require('../database')
-const {infoClean2 } = require('./index');
-const URL = "https://api.rawg.io/api/";
-const API_KEY= "ac1f67878bb04531ba13710b8cf5de88";
-const includeModels = require('../utils/includeModels')
+const datamaped = require('../utils/dataMaped')
+
 
 const getAllGames = async () => {
   try {
-      const gamesCreated = await includeModels(Videogame, [{ model: Genre }, { model: Platform }]);
-      return gamesCreated;
-  } catch (error) {
-      throw new Error({ error: error.message });
-  }
+    const allGames = await Videogame.findAll({
+      include: [
+        {
+          model: Genre,
+          attributes: ['name'],
+          through: { attributes: [] }
+        },
+        {
+          model: Platform,
+          attributes: ['name'],
+          through: { attributes: [] }
+        }
+      ]
+    });
+ // Transformar los datos antes de devolverlos
+ const transformedGames = allGames.map(game => datamaped(game));
+
+ return transformedGames;
+} catch (error) {
+ throw new Error({ error: error.message });
+}
 };
 
-// const getGameById= async(id)=>{
-//   try {
-//         const info=(await axios.get(`${URL}games/${id}?key=${API_KEY}`)).data;
-//         const infoWash = infoClean2(info);
-//         return infoWash;
-//   } catch (error) {
-//     throw new Error(error);
-//    } 
-//  };
+
 const getGameById = async (id) => {
   try {
     const infodb = await Videogame.findByPk(id, {
@@ -44,7 +49,10 @@ const getGameById = async (id) => {
       throw new Error("Videogame not found");
     }
 
-    return infodb;
+    
+    const infoWash = datamaped(infodb);
+    return infoWash;
+
   } catch (error) {
     throw new Error({ error: error.message });
   }
