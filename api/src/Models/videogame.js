@@ -28,6 +28,7 @@ module.exports = (sequelize) => {
             type: DataTypes.DECIMAL(7,2),
             allowNull: false,
         },
+
         enable:{
             type: DataTypes.BOOLEAN,
             defaultValue:true

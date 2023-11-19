@@ -12,6 +12,7 @@ const createGameDB = async (name, description, image, released, genres, platform
               image,
               released,
               price,
+          
           }
       });
 
