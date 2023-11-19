@@ -17,8 +17,6 @@ const fillTables =async (table, data)=>{
         } else {
           console.log(`¡¡Ehh paraaa!! ¡Videogame ya tiene juegos!🤣.`);//The Videogame table already contains data
         }
-   //await vgBulk();
-
 }
 module.exports= fillTables;
 
