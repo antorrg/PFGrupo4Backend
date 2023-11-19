@@ -7,8 +7,10 @@ const datamaped =(info)=> {
     image: info.image,
     released: info.released,
     price: info.price,
+    physicalGame: info.physicalGame,
+		stock: info.stock,
     enable: info.enable,
-    genres: info.Genres.map(genre => genre.name).join(', '), // Mapear a un arreglo de nombres y unir con comas y espacios.
+    genres: info.Genres.map(genre => genre.name).join(', '), 
     platforms: info.Platforms.map(platform => platform.name).join(', '), 
   }
    };

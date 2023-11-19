@@ -15,6 +15,8 @@
 		],
 		"released": "2013-09-17",
 		"price": 253.05,
+		"physicalGame": false,
+		"stock": 5,
 		"genres": [
 			3,
 			1
@@ -32,6 +34,8 @@
 		],
 		"released": "2015-05-18",
 		"price": 180.10,
+		"physicalGame":true,
+		"stock": 4,
 		"genres": [
 			1,
 			3,
@@ -51,6 +55,8 @@
 		],
 		"released": "2011-04-18",
 		"price": 184.61,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			13,9
 		]
@@ -67,6 +73,8 @@
 		],
 		"released": "2012-08-21",
 		"price": 173.56,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			1,13
 		]
@@ -85,6 +93,8 @@
 		],
 		"released": "2013-03-05",
 		"price": 204.05,
+		"physicalGame":true,
+		"stock": 2,
 		"genres": [
 			1,2
 		]
@@ -103,6 +113,8 @@
 		],
 		"released": "2007-10-09",
 		"price": 184.51,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			1,
 			9
@@ -121,6 +133,8 @@
 		],
 		"released": "2009-11-17",
 		"price": 164.09,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			1,
 			6
@@ -139,6 +153,8 @@
 		],
 		"released": "2011-11-11",
 		"price": 185.42,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			1,
 			4
@@ -156,6 +172,8 @@
 		],
 		"released": "2018-10-26",
 		"price": 184.59,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			1,
 			3
@@ -177,6 +195,8 @@
 		],
 		"released": "2013-03-26",
 		"price": 176.38,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			1,6
 		]
@@ -197,6 +217,8 @@
 		],
 		"released": "2012-09-18",
 		"price": 154.01,
+		"physicalGame":true,
+		"stock": 6,
 		"genres": [
 			1,
 			4,
@@ -221,6 +243,8 @@
 		],
 		"released": "2015-01-29",
 		"price": 134.11,
+		"physicalGame":true,
+		"stock": 6,
 		"genres": [
 			1
 		]
@@ -239,6 +263,8 @@
 		],
 		"released": "2004-11-16",
 		"price": 185.49,
+		"physicalGame":true,
+		"stock": 6,
 		"genres": [
 			1,
 			6
@@ -257,6 +283,8 @@
 		],
 		"released": "2007-08-21",
 		"price": 212.36,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			1,
 			6
@@ -276,6 +304,8 @@
 		],
 		"released": "2017-09-06",
 		"price": 133.54,
+		"physicalGame":true,
+		"stock": 9,
 		"genres": [
 			1,
 			6,
@@ -303,6 +333,8 @@
 		],
 		"released": "2010-07-21",
 		"price": 144.15,
+		"physicalGame":true,
+		"stock": 8,
 		"genres": [
 			3,
 			2,
@@ -321,6 +353,8 @@
 		],
 		"released": "2018-04-20",
 		"price": 165.57,
+		"physicalGame":true,
+		"stock": 7,
 		"genres": [
 			1,
 			3,
@@ -339,6 +373,8 @@
 		],
 		"released": "2015-11-09",
 		"price":113.8,
+		"physicalGame":true,
+		"stock": 3,
 		"genres": [
 			1,
 			4
@@ -357,6 +393,8 @@
 		],
 		"released": "2016-05-13",
 		"price": 124.38,
+		"physicalGame":true,
+		"stock": 12,
 		"genres": [
 			1,
 			6
@@ -374,6 +412,8 @@
 		],
 		"released": "2013-08-13",
 		"price": 176.51,
+		"physicalGame":true,
+		"stock": 15,
 		"genres": [
 			1,
 			6
@@ -391,6 +431,8 @@
 		],
 		"released": "2007-10-10",
 		"price":165.68,
+		"physicalGame":true,
+		"stock": 15,
 		"genres": [
 			1,
 			6
@@ -407,6 +449,8 @@
 		],
 		"released": "2017-02-28",
 		"price": 154.29,
+		"physicalGame":true,
+		"stock": 12,
 		"genres": [
 			1,
 			3,
@@ -427,6 +471,8 @@
 		],
 		"released": "2020-12-10",
 		"price": 204.14,
+		"physicalGame":true,
+		"stock": 12,
 		"genres": [
 			1,
 			3,
@@ -446,6 +492,8 @@
 		],
 		"released": "2008-04-29",
 		"price": 294.26,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			1,
 			3
@@ -473,6 +521,8 @@
 		],
 		"released": "2011-05-16",
 		"price": 154.06,
+		"physicalGame":true,
+		"stock": 6,
 		"genres": [
 			1,
 			2,
@@ -494,6 +544,8 @@
 		],
 		"released": "2015-07-07",
 		"price": 133.94,
+		"physicalGame":true,
+		"stock": 5,
 		"genres": [
 			13,
 			12,
@@ -512,6 +564,8 @@
 		],
 		"released": "2013-07-09",
 		"price": 123.07,
+		"physicalGame":true,
+		"stock": 4,
 		"genres": [
 			1,
 			11
