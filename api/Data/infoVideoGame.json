@@ -257,7 +257,7 @@
 		"platforms": [
 			1,
 			16,
-			53,
+			12,
 			14,
 			52
 		],
@@ -536,7 +536,6 @@
 		"image": "https://media.rawg.io/media/games/8cc/8cce7c0e99dcc43d66c8efd42f9d03e3.jpg",
 		"platforms": [
 			17,
-			53,
 			12,
 			14,
 			1,
@@ -547,7 +546,7 @@
 		"physicalGame":true,
 		"stock": 5,
 		"genres": [
-			13,
+			3,
 			12,
 			2
 		]
@@ -558,7 +557,7 @@
 		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
 		"image": "https://media.rawg.io/media/games/6fc/6fcf4cd3b17c288821388e6085bb0fc9.jpg",
 		"platforms": [
-			53,
+			3,
 			12,
 			1
 		],
@@ -569,6 +568,690 @@
 		"genres": [
 			1,
 			11
+		]
+	},
+	{
+		
+		"name": "Warframe",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/f87/f87457e8347484033cb34cde6101d08d.jpg",
+		"platforms": [
+			2,
+			3,
+			15,
+			11,
+			1
+		],
+		"released": "2013-03-25",
+		"price": 143.42,
+		"physicalGame":false,
+		"stock": 8,
+		"genres": [
+			1,
+			6,
+			11
+		]
+	},
+	{
+		
+		"name": "Metro 2033",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/120/1201a40e4364557b124392ee50317b99.jpg",
+		"platforms": [
+			16,
+			1
+		],
+		"released": "2010-03-16",
+		"price": 143.94,
+		"physicalGame":true,
+		"stock": 6,
+		"genres": [
+			1,
+			6
+		]
+	},
+	{
+		
+		"name": "Metal Gear Solid V: The Phantom Pain",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/490/49016e06ae2103881ff6373248843069.jpg",
+		"platforms": [
+			14,
+			4,
+			3,
+			16,
+			1
+		],
+		"released": "2015-09-01",
+		"price": 194.16,
+		"physicalGame":false,
+		"stock": 12,
+		"genres": [
+			1,
+			6
+		]
+	},
+	{
+		
+		"name": "Rise of the Tomb Raider",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/b45/b45575f34285f2c4479c9a5f719d972e.jpg",
+		"platforms": [
+			14,
+			1,
+			12,
+			3
+		],
+		"released": "2015-11-10",
+		"price": 174.03,
+		"physicalGame":true,
+		"stock": 9,
+		"genres": [
+			1
+		]
+	},
+	{
+		
+		"name": "Batman: Arkham Knight",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/310/3106b0e012271c5ffb16497b070be739.jpg",
+		"platforms": [
+			1,
+			14,
+			3
+		],
+		"released": "2015-06-23",
+		"price": 200.23,
+		"physicalGame":false,
+		"stock": 7,
+		"genres": [
+			1
+		]
+	},
+	{
+		
+		"name": "The Witcher 2: Assassins of Kings Enhanced Edition",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/6cd/6cd653e0aaef5ff8bbd295bf4bcb12eb.jpg",
+		"platforms": [
+			12,
+			1,
+			14
+		],
+		"released": "2012-04-16",
+		"price": 164.16,
+		"physicalGame":true,
+		"stock": 8,
+		"genres": [
+			4
+		]
+	},
+	{
+		
+		"name": "The Walking Dead: Season 1",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/8d6/8d69eb6c32ed6acfd75f82d532144993.jpg",
+		"platforms": [
+			52,
+			7,
+			12,
+			1,
+			13,
+			3,
+			4,
+			14,
+			17,
+			16
+		],
+		"released": "2012-04-23",
+		"price": 164.35,
+		"physicalGame":false,
+		"stock":10,
+		"genres": [
+			1,
+			3
+		]
+	},
+	{
+		
+		"name": "Half-Life 2: Lost Coast",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/b7b/b7b8381707152afc7d91f5d95de70e39.jpg",
+		"platforms": [
+			12,
+			3,
+			1
+		],
+		"released": "2005-10-27",
+		"price": 133.45,
+		"physicalGame":true,
+		"stock": 7,
+		"genres": [
+			1
+		]
+	},
+	{
+		
+		"name": "Grand Theft Auto: San Andreas",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/960/960b601d9541cec776c5fa42a00bf6c4.jpg",
+		"platforms": [
+			2,
+			1,
+			12,
+			5,
+			4,
+			3
+		],
+		"released": "2004-10-26",
+		"price": 274.51,
+		"physicalGame":false,
+		"stock": 12,
+		"genres": [
+			1,
+			3
+		]
+	},
+	{
+		
+		"name": "Middle-earth: Shadow of Mordor",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg",
+		"platforms": [
+			14,
+			16,
+			4,
+			3,
+			12,
+			1
+		],
+		"released": "2014-09-30",
+		"price": 143.89,
+		"physicalGame":true,
+		"stock": 7,
+		"genres": [
+			1,
+			4
+		]
+	},
+	{
+		"name": "The Witcher: Enhanced Edition Director's Cut",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/ee3/ee3e10193aafc3230ba1cae426967d10.jpg",
+		"platforms": [
+			1,
+			12
+		],
+		"released": "2008-09-16",
+		"price": 164.06,
+		"physicalGame":true,
+		"stock": 9,
+		"genres": [
+			1,
+			4
+		]
+	},
+	{
+		
+		"name": "Apex Legends",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/b72/b7233d5d5b1e75e86bb860ccc7aeca85.jpg",
+		"platforms": [
+			3,
+			17,
+			12,
+			1,
+			14
+		],
+		"released": "2019-02-04",
+		"price": 133.65,
+		"physicalGame":true,
+		"stock": 11,
+		"genres": [
+			1,
+			6,
+			3,
+			11
+		]
+	},
+	{
+		
+		"name": "Half-Life 2: Episode One",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/7a2/7a2500ee8b2c0e1ff268bb4479463dea.jpg",
+		"platforms": [
+			53,
+			1,
+			16,
+			52,
+			12
+		],
+		"released": "2006-06-01",
+		"price": 174.38,
+		"physicalGame":false,
+		"stock": 4,
+		"genres": [
+			1,
+			6
+		]
+	},
+	{
+		
+		"name": "BioShock 2",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/157/15742f2f67eacff546738e1ab5c19d20.jpg",
+		"platforms": [
+			3,
+			14,
+			17,
+			1,
+			12,
+			16,
+			4
+		],
+		"released": "2010-02-09",
+		"price": 170.08,
+		"physicalGame":true,
+		"stock": 9,
+		"genres": [
+			1,
+			6
+		]
+	},
+	{
+		
+		"name": "Half-Life 2: Episode Two",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/198/1988a337305e008b41d7f536ce9b73f6.jpg",
+		"platforms": [
+			52,
+			53,
+			12,
+			1,
+			16
+		],
+		"released": "2007-10-10",
+		"price": 194.45,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			6,
+			9
+		]
+	},
+	{
+		
+		"name": "Hollow Knight",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/4cf/4cfc6b7f1850590a4634b08bfab308ab.jpg",
+		"platforms": [
+			3,
+			53,
+			12,
+			1,
+			17,
+			14
+		],
+		"released": "2017-02-23",
+		"price": 170.41,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			2,
+			10
+		]
+	},
+	{
+		
+		"name": "Little Nightmares",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/8a0/8a02f84a5916ede2f923b88d5f8217ba.jpg",
+		"platforms": [
+			3,
+			1,
+			14,
+			36
+		],
+		"released": "2017-04-27",
+		"price": 154.04,
+		"physicalGame":false,
+		"stock": 10,
+		"genres": [
+			1,
+			10
+		]
+	},
+	{
+		
+		"name": "Hitman",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/16b/16b1b7b36e2042d1128d5a3e852b3b2f.jpg",
+		"platforms": [
+			3,
+			53,
+			12,
+			1,
+			14
+		],
+		"released": "2016-03-11",
+		"price": 143.92,
+		"physicalGame":false,
+		"stock": 4,
+		"genres": [
+			1,
+			6,
+			8
+		]
+	},
+    {
+		
+		"name": "Dark Souls III",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/da1/da1b267764d77221f07a4386b6548e5a.jpg",
+		"platforms": [
+			14,
+			3,
+			1
+		],
+		"released": "2016-04-11",
+		"price": 170.4,
+		"physicalGame":true,
+		"stock": 4,
+		"genres": [
+			1,
+			4
+		]
+	},
+	{
+		
+		"name": "Mirror's Edge",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/8e4/8e4de3f54ac659e08a7ba6a2b731682a.jpg",
+		"platforms": [
+			16,
+			4,
+			1
+		],
+		"released": "2008-11-11",
+		"price": 160.07,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1
+		]
+	},
+	{
+		
+		"name": "Hotline Miami",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/9fa/9fa63622543e5d4f6d99aa9d73b043de.jpg",
+		"platforms": [
+			53,
+			17,
+			14,
+			3,
+			7,
+			1
+		],
+		"released": "2012-10-22",
+		"price": 180.38,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			6,
+			15,
+			2
+		]
+	},
+	{
+		
+		"name": "Outlast",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/9dd/9ddabb34840ea9227556670606cf8ea3.jpg",
+		"platforms": [
+			14,
+			3,
+			17,
+			12,
+			1,
+			53
+		],
+		"released": "2013-09-03",
+		"price": 175.73,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			3,
+			2
+		]
+	},
+	{
+		
+		"name": "Deus Ex: Mankind Divided",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/c24/c24ec439abf4a2e92f3429dfa83f7f94.jpg",
+		"platforms": [
+			14,
+			53,
+			12,
+			3,
+			1,
+			28
+		],
+		"released": "2016-08-22",
+		"price": 153.97,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			4
+		]
+	},
+	{
+		
+		"name": "Far Cry 3",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/15c/15c95a4915f88a3e89c821526afe05fc.jpg",
+		"platforms": [
+			14,
+			16,
+			4,
+			1,
+			3
+		],
+		"released": "2012-11-28",
+		"price": 204.24,
+		"physicalGame":false,
+		"stock": 4,
+		"genres": [
+			1,
+			6
+		]
+	},
+	{
+		
+		"name": "BioShock Remastered",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/be0/be01c3d7d8795a45615da139322ca080.jpg",
+		"platforms": [
+			3,
+			17,
+			12,
+			1,
+			16
+		],
+		"released": "2016-09-15",
+		"price": 214.24,
+		"physicalGame":true,
+		"stock": 4,
+		"genres": [
+			6
+		]
+	},
+	{
+		
+		"name": "Marvel's Spider-Man",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/9aa/9aa42d16d425fa6f179fc9dc2f763647.jpg",
+		"platforms": [
+			1,
+			2,
+			3
+		],
+		"released": "2018-09-07",
+		"price": 234.46,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			3
+		]
+	},
+	{
+		
+		"name": "Spec Ops: The Line",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/b49/b4912b5dbfc7ed8927b65f05b8507f6c.jpg",
+		"platforms": [
+			16,
+			4,
+			14,
+			1
+		],
+		"released": "2012-06-26",
+		"price": 184.09,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			6
+		]
+	},
+	{
+		
+		"name": "Half-Life 2: Deathmatch",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/ec3/ec3a7db7b8ab5a71aad622fe7c62632f.jpg",
+		"platforms": [
+			53,
+			12,
+			1
+		],
+		"released": "2004-11-01",
+		"price": 123.28,
+		"physicalGame":false,
+		"stock": 4,
+		"genres": [
+			1
+		]
+	},
+	{
+		
+		"name": "Amnesia: The Dark Descent",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/b54/b54598d1d5cc31899f4f0a7e3122a7b0.jpg",
+		"platforms": [
+			53,
+			12,
+			1
+		],
+		"released": "2010-09-08",
+		"price": 140.64,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			3,
+			2
+		]
+	},
+	{
+		
+		"name": "Half-Life",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/6c5/6c55e22185876626881b76c11922b073.jpg",
+		"platforms": [
+			45,
+			53,
+			12,
+			1,
+			5
+		],
+		"released": "1998-11-08",
+		"price": 180.39,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			1,
+			14
+		]
+	},
+	{
+		
+		"name": "Alan Wake",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/5c0/5c0dd63002cb23f804aab327d40ef119.jpg",
+		"platforms": [
+			16,
+			14,
+			40
+		],
+		"released": "2010-05-14",
+		"price": 175.11,
+		"physicalGame":true,
+		"stock": 4,
+		"genres": [
+			1,
+			18,
+			16
+		]
+	},
+	{
+		
+		"name": "Saints Row: The Third",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/d69/d69810315bd7e226ea2d21f9156af629.jpg",
+		"platforms": [
+			53,
+			48,
+			46,
+			25,
+			4
+		],
+		"released": "2011-11-15",
+		"price": 160.95,
+		"physicalGame":true,
+		"stock": 4,
+		"genres": [
+			1,
+			14,
+			7
+		]
+	},
+	{
+		
+		"name": "Wolfenstein: The New Order",
+		"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Pretium viverra suspendisse potenti nullam ac tortor vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Vestibulum mattis ullamcorper velit sed ullamcorper. Massa eget egestas purus viverra accumsan in. Non arcu risus quis varius quam quisque. Aenean et tortor at risus. Consectetur lorem donec massa sapien faucibus et molestie. Tempor nec feugiat nisl pretium fusce.",
+		"image": "https://media.rawg.io/media/games/c80/c80bcf321da44d69b18a06c04d942662.jpg",
+		"platforms": [
+			22,
+			19,
+			48,
+			31,
+			26
+		],
+		"released": "2014-05-19",
+		"price": 170.18,
+		"physicalGame":true,
+		"stock": 10,
+		"genres": [
+			8,
+			12,
+			13
 		]
 	}
 ]

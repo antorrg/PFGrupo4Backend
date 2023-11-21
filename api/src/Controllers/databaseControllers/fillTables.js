@@ -10,12 +10,12 @@ const fillTables =async (table, data)=>{
     await dataBulk(Genre, genresData);
    await dataBulk(Platform, platformsData);
    const existdatas = await Videogame.findAll();
-      if (existdatas.length === 0) {
+      if (existdatas.length ===0 ) {
           // Hacer una lectura de la data.json para llenar la tabla
           await vgBulk();
           console.log(`Videogame table filled successfully`);
         } else {
-          console.log(`¡¡Ehh paraaa!! ¡Videogame ya tiene juegos!🤣.`);//The Videogame table already contains data
+          console.log(`The Videogame table already contains data`);//
         }
 }
 module.exports= fillTables;
