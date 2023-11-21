@@ -10,8 +10,8 @@ const datamaped =(info)=> {
     physicalGame: info.physicalGame,
 		stock: info.stock,
     enable: info.enable,
-    genres: info.Genres.map(genre => genre.name), 
-    platforms: info.Platforms.map(platform => platform.name), 
+    Genres: info.Genres.map(genre => genre.name), 
+    Platforms: info.Platforms.map(platform => platform.name), 
   }
    };
 
