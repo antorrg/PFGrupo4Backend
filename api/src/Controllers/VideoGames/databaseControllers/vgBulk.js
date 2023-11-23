@@ -1,4 +1,4 @@
-const {infoVideoGame}=require('../../../Data/indexData');
+const {infoVideoGame}=require('../../../../Data/indexData');
 const gamesPostController=require('../gamesPostController');
 
 

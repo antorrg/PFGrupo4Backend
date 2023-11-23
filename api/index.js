@@ -11,10 +11,9 @@
 
 const server=require('./src/server');
 const {sequelize} = require('./src/database');
-const fillTables = require('./src/Controllers/databaseControllers/fillTables');
+const fillTables = require('./src/Controllers/VideoGames/databaseControllers/fillTables');
 require('dotenv').config();
 const {PORT}=process.env;
-
 
 server.listen(PORT, async () => {  
     try {

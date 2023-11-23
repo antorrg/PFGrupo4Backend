@@ -1,8 +1,9 @@
-const {Router}=require('express');
-const createGameHandler = require('../Handlers/gamePostHandler')
+const { Router } = require("express");
+const postRouter = Router();
+//Importacion de funciones:
+const createGameHandler = require("../Handlers/VideoGames/gamePostHandler");
 
-const postRouter=Router(); 
-
-postRouter.post('/',(createGameHandler));
+//===============================================================================
+postRouter.post("/", createGameHandler); //Modulo game/videogame
 
 module.exports = postRouter;
