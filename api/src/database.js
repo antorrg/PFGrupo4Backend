@@ -5,10 +5,15 @@ const CreatePlatform = require('./Models/platform');
 require ('dotenv').config();
 const {DB_USER, DB_PASS, DB_HOST, DB_NAME}=process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`,
+const sequelize = new Sequelize("postgres:default:MRAIj5azfV4h@ep-frosty-forest-24432384.us-east-1.postgres.vercel-storage.com:5432/verceldb",
 {logging: false,
 native:false}
 );
+
+/*const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`,
+{logging: false,
+native:false}
+);*/
 
 CreateVideogame(sequelize);
 CreateGenre(sequelize);
