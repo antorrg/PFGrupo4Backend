@@ -1,4 +1,4 @@
-const gameUpdPrice = require("../../Controllers/VideoGames/gameUpdPrice");
+const gameUpdPrice = require("../../Controllers/VideoGames/AdminControllers/gameUpdPrice");
 
 const gameUpdaterHand = async (req, res) => {
   const { id } = req.params;
