@@ -3,17 +3,20 @@ const getRouter = Router();
 //Importacion de funciones.
 const {
   getGamesHandler,
-  getDetailHandler,
   getGenresHandler,
   getPlatformHandler,
-} = require("../Handlers/VideoGames/gameshandlers");
+} = require("../Handlers/Admin/gameshandlers");
+const getUserHandler= require('../Handlers/Users/getUserHandler')
 const getVideogamesHandler = require("../Handlers/VideoGames/getVideogamesHandler");
+const getDetailHandler= require('../Handlers/VideoGames/getDetailHandler')
+const verifyToken= require('../utils/verifyToken')
 //======================================================================================
-getRouter.get("/games", getGamesHandler);
 getRouter.get("/videogames", getVideogamesHandler);
 getRouter.get("/games/:id", getDetailHandler); //Modulos games/videogames
 getRouter.get("/genres", getGenresHandler);
 getRouter.get("/platforms", getPlatformHandler);
+getRouter.get("/games", getGamesHandler);
+getRouter.get("/user", verifyToken, getUserHandler)
 //===============================================================================================
 
 module.exports = getRouter;
