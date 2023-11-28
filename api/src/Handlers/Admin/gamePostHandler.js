@@ -1,4 +1,4 @@
-const createGameDB = require("../../Controllers/VideoGames/gamesPostController");
+const createGameDB = require("../../Controllers/VideoGames/AdminControllers/gamesPostController");
 
 const createGameHandler = async (req, res) => {
   const {
@@ -12,6 +12,7 @@ const createGameHandler = async (req, res) => {
     physicalGame,
     stock,
   } = req.body;
+  console.log(req.body)
   if (!name) {
     return res
       .status(404)
