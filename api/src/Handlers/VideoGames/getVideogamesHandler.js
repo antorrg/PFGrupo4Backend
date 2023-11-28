@@ -9,13 +9,31 @@ const getVideogamesHandler = async (req, res) => {
     genres,
     minPrice,
     maxPrice,
-    onlyPrice,
+    //onlyPrice,
+    order,
     name,
   } = req.query;
+
+  console.log("order: " + order);
 
   let filters = {};
   let platformsFilters = {};
   let genresFilters = {};
+  let orderFilter = [];
+
+  //Verificar si se solicita algun ordenamiento
+  if(order && order !== "none") {
+    const auxArray = order.split("_");
+    console.log("auxArray: " + auxArray)
+    switch(auxArray[1]){
+      case "N":
+        orderFilter.push(["name", auxArray[0]]); 
+        break;
+      case "P":
+        orderFilter.push(["price", auxArray[0]]);
+        break;
+    }
+  }
 
   // Verifica si se proporciona el parámetro de filtro 'platform'
   if (platforms) {
@@ -49,7 +67,8 @@ const getVideogamesHandler = async (req, res) => {
       size,
       filters,
       platformsFilters,
-      genresFilters
+      genresFilters,
+      orderFilter
     );
     res.status(201).json(videogamesData);
   } catch (error) {
