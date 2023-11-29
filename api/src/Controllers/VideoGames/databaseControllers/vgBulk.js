@@ -1,5 +1,5 @@
 const {infoVideoGame}=require('../../../../Data/indexData');
-const gamesPostController=require('../gamesPostController');
+const gamesPostController=require('../AdminControllers/gamesPostController');
 
 
 const vgBulk = async()=>{

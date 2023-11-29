@@ -5,13 +5,14 @@ const putRouter = require('./putRouter');
 const delRouter =require('./delRouter');
 
 
+
 const mainRouter=Router();
 
 mainRouter.use('/', getRouter);
 
 mainRouter.use('/post', postRouter);
 
-mainRouter.use('/put', putRouter);
+mainRouter.use('/put',  putRouter);
 
 mainRouter.use('/delete', delRouter);
 
