@@ -1,4 +1,4 @@
-const { Videogame } = require("../../database");
+const { Videogame } = require("../../../database");
 
 const createGameDB = async (
   name,
