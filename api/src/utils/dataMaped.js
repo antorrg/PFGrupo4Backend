@@ -15,4 +15,25 @@ const datamaped =(info)=> {
   }
    };
 
-  module.exports= datamaped;
+   const usermaped = (info)=>{
+    return {
+      id:info.id,
+      email:info.email,
+      password: info.password ?? null,
+      nickname:info.nickname,
+      given_name: info.given_name ?? null,
+      user_name:info.user_name ?? null,
+      picture: info.picture,
+      role: info.role,
+      country: info.country ?? null,
+      enable:info.enable,
+      createdAt: info.createdAt,
+      updatedAt:info.updatedAt ?? null,
+      
+    }
+   };
+  
+  module.exports= {
+    datamaped,
+    usermaped
+  };

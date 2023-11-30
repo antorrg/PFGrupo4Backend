@@ -20,7 +20,7 @@ const userLogin = async(email, nickname, given_name, picture, sub, req, res)=>{
     
              // Agrega el token al encabezado de la respuesta
             if (res && res.header) {
-              res.headers('authorization', `Bearer ${token}`);
+              res.header('authorization', `Bearer ${token}`);
               console.log('Encabezado Authorization establecido:', res.get('authorization'));
             }
            

@@ -10,6 +10,7 @@ const userUpdController = async (id, newData)=>{
     
         // Convertir campos a sus tipos respectivos antes de actualizar
         const parsedData = {
+          password:newData.password,
           given_name: newData.given_name,
           picture: newData.picture,
           role: parseFloat(newData.role), //convertir a numero
