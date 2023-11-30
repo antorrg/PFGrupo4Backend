@@ -44,6 +44,10 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        cart: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         enable: {
             type: DataTypes.BOOLEAN,
             allowNull: false

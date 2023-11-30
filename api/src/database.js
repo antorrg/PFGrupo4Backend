@@ -2,6 +2,8 @@ const {Sequelize}=require ('sequelize');
 const CreateVideogame = require('./Models/videogame');
 const CreateGenre = require('./Models/genre');
 const CreatePlatform = require('./Models/platform');
+const CreateUser = require('./Models/user');
+const CreatePurchaseOrder = require('./Models/purchaseOrder');
 require ('dotenv').config();
 const {DB_USER, DB_PASS, DB_HOST, DB_NAME}=process.env;
 
@@ -13,6 +15,8 @@ native:false}
 CreateVideogame(sequelize);
 CreateGenre(sequelize);
 CreatePlatform(sequelize);
+CreateUser(sequelize);
+CreatePurchaseOrder(sequelize);
 
 const {Videogame, Genre, Platform}= sequelize.models
 
