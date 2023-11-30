@@ -1,4 +1,4 @@
-const { Videogame } = require("../../../database");
+const { Videogame,Genre, Platform } = require("../../../database");
 
 const gameSetFalse = async (id) => {
   try {
@@ -20,4 +20,47 @@ const gameSetFalse = async (id) => {
   }
 };
 
-module.exports = gameSetFalse;
+const genreSetFalse = async (id) => {
+  try {
+    const genre = await Genre.findByPk(id);
+    if (genre && genre.enable) {
+      
+      await genre.update({ enable: false });
+      return { message: "Genero deshabilitado exitosamente." };
+    } else if (genre && !genre.enable) {
+      
+      return { message: "El genero ya está deshabilitado." };
+    } else {
+      
+      return { message: "Genero no encontrado." };
+    }
+  } catch (error) {
+    throw new Error("Error al deshabilitar el genero.");
+  }
+};
+
+const platformSetFalse = async (id) => {
+  try {
+    
+    const platform = await Platform.findByPk(id);
+    if (platform && platform.enable) {
+      
+      await platform.update({ enable: false });
+      return { message: "Plataforma deshabilitada exitosamente." };
+    } else if (platform && !platform.enable) {
+      
+      return { message: "La plataforma ya está deshabilitada." };
+    } else {
+      
+      return { message: "Plataforma no encontrada." };
+    }
+  } catch (error) {
+    throw new Error("Error al deshabilitar la plataforma.");
+  }
+};
+
+module.exports = { 
+  gameSetFalse,
+  genreSetFalse,
+  platformSetFalse
+};
