@@ -1,4 +1,7 @@
-const createGameDB = require("../../Controllers/VideoGames/AdminControllers/gamesPostController");
+const {
+  createGameDB,
+  createGenreDB,
+  createPlatformDB} = require("../../Controllers/VideoGames/AdminControllers/gamesPostController");
 
 const createGameHandler = async (req, res) => {
   const {
@@ -36,4 +39,41 @@ const createGameHandler = async (req, res) => {
   }
 };
 
-module.exports = createGameHandler;
+const createGenreHandler = async (req, res) => {
+  const { name } = req.body;
+  
+  if (!name) {
+    return res
+      .status(404)
+      .json({ error: "Un nombre es requerido para crear un genero" });
+  }
+  try {
+    const response = await createGenreDB(name);
+    res.status(201).json(response);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+const createPlatformHandler = async (req, res) => {
+  const { name } = req.body;
+  
+  if (!name) {
+    return res
+      .status(404)
+      .json({ error: "Un nombre es requerido para crear una plataforma" });
+  }
+  try {
+    const response = await createPlatformDB(name);
+    res.status(201).json(response);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+module.exports = {
+  createGameHandler,
+  createGenreHandler,
+  createPlatformHandler
+
+};

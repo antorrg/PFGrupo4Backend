@@ -82,8 +82,6 @@ const updatePLatform = async (id, name) => {
   }
 };
 
-
-
 module.exports = {
   updateVideogame,
   updateGenre,
