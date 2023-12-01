@@ -1,7 +1,7 @@
 const {User}= require('../../database')
 const generateToken = require('../../utils/generate');
 
-const userLogin = async(email,pasword, nickname, given_name, picture, sub,   req, res)=>{
+const userLogin = async(email,password, nickname, given_name, picture, sub,   req, res)=>{
     try {
         // Busca el usuario por el email
         const existingUser = await User.findOne({
