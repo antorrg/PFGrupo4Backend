@@ -1,4 +1,4 @@
-const { Videogame } = require("../../database");
+const { Videogame, Genre, Platform } = require("../../../database");
 
 const createGameDB = async (
   name,
@@ -41,4 +41,28 @@ const createGameDB = async (
   }
 };
 
-module.exports = createGameDB;
+const createGenreDB = async (name) => {
+    try {
+    const [newGenre, create] = await Genre.findOrCreate({ where: {name: name}});
+    const result = { isCreate: create, game: newGenre };
+    return result;
+  } catch (error) {
+    return {error: error.message};
+  }
+};
+
+const createPlatformDB = async (name) => {
+  try {
+  const [newPLatform, create] = await Platform.findOrCreate({ where: {name: name}});
+  const result = { isCreate: create, game: newPLatform };
+  return result;
+} catch (error) {
+  return {error: error.message};
+}
+};
+
+module.exports = {
+  createGameDB,
+  createGenreDB,
+  createPlatformDB
+};
