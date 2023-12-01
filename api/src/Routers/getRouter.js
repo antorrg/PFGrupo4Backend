@@ -8,6 +8,7 @@ const {
 } = require("../Handlers/Admin/gameshandlers");
 const getUserHandler= require('../Handlers/Users/getUserHandler')
 const getVideogamesHandler = require("../Handlers/VideoGames/getVideogamesHandler");
+const getParchuseOrderHandler = require("../Handlers/Payments/getParchuseOrderHandler");
 const getDetailHandler= require('../Handlers/VideoGames/getDetailHandler')
 //const verifyToken= require('../utils/verifyToken');
 const getUserDetailHand = require("../Handlers/Users/detailUserHandler");
@@ -19,6 +20,11 @@ getRouter.get("/platforms", getPlatformHandler); //Protegida
 getRouter.get("/games", getGamesHandler); //Libres
 getRouter.get("/user",  getUserHandler) //Protegida
 getRouter.get("/user/:id", getUserDetailHand) //Libre
-//===============================================================================================
+
+//Payments:
+getRouter.get("/getParchuseOrder", getParchuseOrderHandler);
+getRouter.get("/success", (req, res) => res.send("success"));
+getRouter.get("/failure", (req, res) => res.send("failure"));
+getRouter.get("/pending", (req, res) => res.send("pending"));
 
 module.exports = getRouter;
