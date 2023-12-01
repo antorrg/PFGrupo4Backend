@@ -10,6 +10,7 @@ module.exports = (sequelize) => {
             primaryKey: true
         },
         email: { type: DataTypes.STRING, allowNull: false, unique: true },
+        password: {type:DataTypes.STRING, allowNull: true},
         nickname:{type: DataTypes.STRING, allowNull: true},
         given_name: { type: DataTypes.STRING, allowNull: true },
         picture: { type: DataTypes.STRING, allowNull: true },
@@ -21,6 +22,10 @@ module.exports = (sequelize) => {
         created: { type: DataTypes.BOOLEAN, defaultValue: true },
       },
         country: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        cart: {
             type: DataTypes.STRING,
             allowNull: true
         },
