@@ -2,6 +2,7 @@ const {Sequelize}=require ('sequelize');
 const CreateVideogame = require('./Models/videogame');
 const CreateGenre = require('./Models/genre');
 const CreatePlatform = require('./Models/platform');
+const CreatePurchaseOrder = require('./Models/purchaseOrder');
 const CreateUser= require('./Models/user');
 const CreateRating=require('./Models/rating');
 const videogame = require('./Models/videogame');
@@ -27,6 +28,7 @@ CreateVideogame(sequelize);
 CreateGenre(sequelize);
 CreatePlatform(sequelize);
 CreateUser(sequelize);
+CreatePurchaseOrder(sequelize);
 CreateRating(sequelize);
 
 const {Videogame, Genre, Platform, User, Rating}= sequelize.models

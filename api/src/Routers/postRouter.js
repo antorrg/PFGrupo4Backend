@@ -1,11 +1,17 @@
 const { Router } = require("express");
 const postRouter = Router();
 //Importacion de funciones:
+postRouter.post("/", createGameHandler); //Modulo game/videogame
+postRouter.post("/createParchuseOrder", postCreateParchuseOrderHandler);
+//postRouter.post("/DBcreateParchuseOrder", createOrderInDBHandler);
 const {
     createGameHandler,
     createGenreHandler,
     createPlatformHandler} = require("../Handlers/Admin/gamePostHandler");
 const userLogHandler = require('../Handlers/Users/userLogHandler')
+const postCreateParchuseOrderHandler = require("../Handlers/Payments/postCreateParchuseOrderHandler");
+const postPaymentResultWebhookHandler = require("../Handlers/Payments/postPaymentResultWebhookHandler");
+//const createOrderInDBHandler = require("../Handlers/Payments/createOrderInDBHandler");
 //const verifyToken= require('../utils/verifyToken')
 
 //===============================================================================
@@ -13,6 +19,8 @@ postRouter.post("/",  createGameHandler); //Modulo game/videogame
 postRouter.post("/genre",  createGenreHandler);
 postRouter.post("/platform", createPlatformHandler);
 postRouter.post("/user", userLogHandler);
+//Payments:
+postRouter.post("/paymentResultwebhook", postPaymentResultWebhookHandler);
 
 
 module.exports = postRouter;
