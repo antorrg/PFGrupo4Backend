@@ -2,7 +2,7 @@ const { Router, request } = require("express");
 const getRouter = Router();
 //Importacion de funciones.
 const {
-  getGamesHandler,
+  getGamesAdminHandler,
   getGenresHandler,
   getPlatformHandler,
 } = require("../Handlers/Admin/gameshandlers");
@@ -17,7 +17,7 @@ getRouter.get("/videogames", getVideogamesHandler);//Modulos games/videogames (L
 getRouter.get("/games/:id", getDetailHandler); //Modulos games/videogames (Libres)
 getRouter.get("/genres", getGenresHandler); //Protegida
 getRouter.get("/platforms", getPlatformHandler); //Protegida
-getRouter.get("/games", getGamesHandler); //Libres
+getRouter.get("/games", getGamesAdminHandler); //Libres
 getRouter.get("/user",  getUserHandler) //Protegida
 getRouter.get("/user/:id", getUserDetailHand) //Libre
 

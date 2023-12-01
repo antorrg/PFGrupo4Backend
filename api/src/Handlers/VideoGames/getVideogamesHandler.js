@@ -16,7 +16,7 @@ const getVideogamesHandler = async (req, res) => {
 
   console.log("order: " + order);
 
-  let filters = {};
+  let filters = {enable: true};
   let platformsFilters = {};
   let genresFilters = {};
   let orderFilter = [];
