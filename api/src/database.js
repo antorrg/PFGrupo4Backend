@@ -3,7 +3,8 @@ const CreateVideogame = require('./Models/videogame');
 const CreateGenre = require('./Models/genre');
 const CreatePlatform = require('./Models/platform');
 const CreateUser= require('./Models/user');
-const CreateRating=require('./Models/rating')
+const CreateRating=require('./Models/rating');
+const videogame = require('./Models/videogame');
 require ('dotenv').config();
 const {DB_USER, DB_PASS, DB_HOST, DB_NAME, DB_DEPLOY}=process.env;
 
@@ -35,8 +36,12 @@ Genre.belongsToMany(Videogame, {through: 'videogame_genre'})
 
 Videogame.belongsToMany(Platform, {through: 'videogame_platform'})
 Platform.belongsToMany(Videogame, {through: 'videogame_platform'})
-User.hasOne(Rating);
+
+User.hasMany(Rating);
 Rating.belongsTo(User);
+
+Videogame.hasMany(Rating);
+Rating.belongsTo(Videogame);
 
 module.exports = {
     ...sequelize.models,

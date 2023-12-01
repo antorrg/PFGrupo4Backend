@@ -7,6 +7,7 @@ const getVideogames = async (
   filters,
   platformsFilters,
   genresFilters,
+  orderFilter,
   req,
   res
 ) => {
@@ -16,6 +17,7 @@ const getVideogames = async (
   try {
     const { count, rows } = await Videogame.findAndCountAll({
       where: filters,
+      order: orderFilter,
       include: [
         {
           model: Genre,
