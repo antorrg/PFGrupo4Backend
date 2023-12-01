@@ -1,4 +1,4 @@
-const { Videogame} = require("../../../database");
+const { Videogame, Genre, Platform} = require("../../../database");
 
 const updateVideogame = async (id, newData) => {
   try {
@@ -52,4 +52,38 @@ const updateVideogame = async (id, newData) => {
   }
 };
 
-module.exports = updateVideogame;
+const updateGenre = async (id, name) => {
+  try {
+    const genre = await Genre.findByPk(id);
+    if (genre) {
+      await genre.update({ name: name });
+      return { message: "Genero actualizado exitosamente." };
+    } 
+    else {
+      return { message: "Genero no encontrado." };
+    }
+  } catch (error) {
+    return {error: error.message}
+  }
+};
+
+const updatePLatform = async (id, name) => {
+  try {
+    const platform = await Platform.findByPk(id);
+    if (platform) {
+      await platform.update({ name: name });
+      return { message: "Plataforma actualizada exitosamente." };
+    } 
+    else {
+      return { message: "PLataforma no encontrada." };
+    }
+  } catch (error) {
+    return {error: error.message}
+  }
+};
+
+module.exports = {
+  updateVideogame,
+  updateGenre,
+  updatePLatform
+};
