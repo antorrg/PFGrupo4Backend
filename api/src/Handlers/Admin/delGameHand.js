@@ -1,12 +1,12 @@
 const {
-  gameSetFalse,
-  genreSetFalse,
-  platformSetFalse} = require("../../Controllers/VideoGames/AdminControllers/gameSetFalse");
+  gameDelete,
+  genreDelete,
+  platformDelete} = require("../../Controllers/VideoGames/AdminControllers/gameDelController");
 
 const delGameHand = async (req, res) => {
   const { id } = req.params;
   try {
-    const response = await gameSetFalse(id);
+    const response = await gameDelete(id);
     res.status(200).json(response);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -16,7 +16,7 @@ const delGameHand = async (req, res) => {
 const delGenreHand = async (req, res) => {
   const { id } = req.params;
   try {
-    const response = await genreSetFalse(id);
+    const response = await genreDelete(id);
     res.status(200).json(response);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -26,7 +26,7 @@ const delGenreHand = async (req, res) => {
 const delPlatformHand = async (req, res) => {
   const { id } = req.params;
   try {
-    const response = await platformSetFalse(id);
+    const response = await platformDelete(id);
     res.status(200).json(response);
   } catch (error) {
     res.status(500).json({ error: error.message });

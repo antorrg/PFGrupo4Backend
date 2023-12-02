@@ -1,3 +1,4 @@
+const { where } = require("sequelize");
 const { Genre, Platform, Videogame } = require("../../../database");
 const datamaped = require("../../../utils/dataMaped");
 
@@ -104,7 +105,7 @@ const getAllGamesAdminController = async (
                 };*/
       });
     }
-
+    
     const auxTotalPages = Math.ceil(count / size);
     const auxPrevPage = page - 1 >= 0 ? page - 1 : -1;
     const auxNextPage = page + 1 <= auxTotalPages ? page + 1 : -1;
@@ -130,12 +131,12 @@ const getAllGamesAdminController = async (
 }
 
 const genres = async (req, res) => {
-  const genresDb = await Genre.findAll();
+  const genresDb = await Genre.findAll({where: {deleteAt: false}});
   return genresDb;
 };
 
 const platforms = async (req, res) => {
-  const platformsDb = await Platform.findAll();
+  const platformsDb = await Platform.findAll({where: {deleteAt: false}});
   return platformsDb;
 };
 

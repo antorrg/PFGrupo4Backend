@@ -29,7 +29,7 @@ const getGamesAdminHandler = async (req, res) => {
 
   console.log("order: " + order);
 
-  let filters = {};
+  let filters = {deleteAt: false};
   let platformsFilters = {};
   let genresFilters = {};
   let orderFilter = [];
