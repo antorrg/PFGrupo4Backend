@@ -42,6 +42,10 @@ const getAllGamesAdminController = async (
   size = +size;
 
   try {
+    const videogames = await Videogame.findAll({attributes: ["name"], where: {deleteAt: false}});
+    const nombres = videogames?.map(videogame => videogame.get({ plain: true })).map(vg=>vg.name);
+    console.log(nombres);
+
     const { count, rows } = await Videogame.findAndCountAll({
       where: filters,
       order: orderFilter,
@@ -114,6 +118,7 @@ const getAllGamesAdminController = async (
 
     return {
       videogames: videogamesData,
+      nombres,
       PaginationData: {
         totalItems: count,
         limit: size,
