@@ -1,7 +1,7 @@
 const {User}= require('../../database')
 const generateToken = require('../../utils/generate');
 
-const userLogin = async(email,pasword, nickname, given_name, picture, sub,   req, res)=>{
+const userLogin = async(email,password, nickname, given_name, picture, sub,   req, res)=>{
     try {
         // Busca el usuario por el email
         const existingUser = await User.findOne({
@@ -12,19 +12,20 @@ const userLogin = async(email,pasword, nickname, given_name, picture, sub,   req
     
         if (existingUser) {
           // El usuario ya existe, envía un mensaje indicando que está autenticado
-          const result = { isCreate: false,  user: existingUser };
-          console.log(result+' usuario existente')
+          let result = { isCreate: false,  user: existingUser };
+          // console.log(result+' usuario existente')
             // Genera el token
             const token = generateToken(existingUser);
-            console.log(token)
+            // console.log("token generado: ", token)
     
              // Agrega el token al encabezado de la respuesta
-            if (res && res.header) {
-              res.header('authorization', `Bearer ${token}`);
-              console.log('Encabezado Authorization establecido:', res.get('authorization'));
+            if (res) {
+              return res.status(201).json({user:newUser, token})
+              // res.header('authorization', `Bearer ${token}`);
+              // console.log('Encabezado Authorization establecido:', res.get('authorization'));
             }
-           
-      
+           result= {...result,token}
+      console.log(result)
             return result;
         } else {
           // El usuario no existe, créalo
@@ -43,18 +44,20 @@ const userLogin = async(email,pasword, nickname, given_name, picture, sub,   req
           });
     
           const result = { isCreate: create, user: newUser };
-          console.log(result+' Usuario nuevo')
+          // console.log(result+' Usuario nuevo')
           // Genera el token
           const token = generateToken(newUser);
-          console.log(token)
+          // console.log(token)
     
           // Agrega el token al encabezado de la respuesta
-          if (res && res.header) {
-            res.header('authorization', `Bearer ${token}`);
-         }
+          if (res) {
+            return res.status(201).json({user:newUser, token})
+            // res.header('authorization', `Bearer ${token}`);
+            // console.log('Encabezado Authorization establecido:', res.get('authorization'));
+          }
          
-    
-          return result;
+          result= {...result,token}
+          console.log(result)
         }
       } catch (error) {
         console.error("¡Hubo un error!", error);
