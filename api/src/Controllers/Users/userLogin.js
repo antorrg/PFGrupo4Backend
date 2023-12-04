@@ -75,7 +75,9 @@ const userwithPass = async(email, password, nickname, given_name, picture, sub, 
         sub: "",
       });
       const token = generateToken(newUser);
-            return {user:newUser, token}
+
+            return {result:newUser, token}
+
         
   }
   else{
@@ -86,11 +88,13 @@ const userwithPass = async(email, password, nickname, given_name, picture, sub, 
         // Contraseña válida, puedes generar y enviar un token de sesión aquí si es necesario
         if (user) {
           // El usuario ya existe, envía un mensaje indicando que está autenticado
-          let userFind = { isCreate: false,  user: user };
+
+          let result = { isCreate: false,  user: user };
           // console.log(result+' usuario existente')
             // Genera el token
             const token = generateToken(user);
-            return {userFind, token}
+            return {result, token}
+
       
       } else {
         // Contraseña incorrecta
@@ -127,7 +131,9 @@ const userwithPass = async(email, password, nickname, given_name, picture, sub, 
       }
   
       const token = generateToken(user);
-      return { user: user, token };
+
+      return { result: user, token };
+
     } catch (error) {
       console.error("Error al colocar el password:", error);
       return { error: "Error interno del servidor" };
@@ -147,7 +153,8 @@ const userwithPass = async(email, password, nickname, given_name, picture, sub, 
           await user.update({ sub: sub });
         }
       const token = generateToken(user);
-      return { user: user, token };
+      return { result: user, token };
+
     } catch (error) {
       console.error("Error al colocar el sub:", error);
       return { error: "Error interno del servidor" };
