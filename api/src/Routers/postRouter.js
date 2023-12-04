@@ -1,6 +1,8 @@
 const { Router } = require("express");
 const postRouter = Router();
 //Importacion de funciones:
+//postRouter.post("/DBcreateParchuseOrder", createOrderInDBHandler);
+//a0aecb343e7a8564efadfe1f64da4f3bd04fe889
 const {
     createGameHandler,
     createGenreHandler,

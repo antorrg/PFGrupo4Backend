@@ -1,4 +1,4 @@
-const putUserShoppingCartController = require("../../Controllers/User/putUserShoppingCartController");
+const putUserShoppingCartController = require("../../Controllers/Users/putUserShoppingCartController");
 
 const putUserShoppingCartHandler = async (req, res) => {
   const  { userID }  = req.params;

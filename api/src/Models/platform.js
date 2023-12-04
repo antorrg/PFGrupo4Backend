@@ -11,9 +11,9 @@ module.exports = (sequelize) => {
           type: DataTypes.STRING,
           allowNull: false,
         },
-        enable:{
+        deleteAt:{
           type: DataTypes.BOOLEAN, 
-          defaultValue: true
+          defaultValue: false
       },
     },
       {timestamps:true}
