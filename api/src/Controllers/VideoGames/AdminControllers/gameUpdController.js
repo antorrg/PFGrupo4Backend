@@ -8,7 +8,7 @@ const updateVideogame = async (id, newData) => {
       return { error: "Videojuego no encontrado" };
     }
 
-    console.log("Nuevos datos (antes de la conversión):", newData);
+    //console.log("Nuevos datos (antes de la conversión):", newData);
 
     // Convertir campos a sus tipos respectivos antes de actualizar
     const parsedData = {
@@ -44,7 +44,7 @@ const updateVideogame = async (id, newData) => {
       await videogame.setGenres(newData.genres);
     }
 
-    console.log(videogame);
+    //console.log(videogame);
     return videogame;
   } catch (error) {
     console.error("Error al actualizar el videojuego:", error);
