@@ -1,4 +1,4 @@
-const userLogin = require('../../Controllers/Users/userLogin')
+const {userLogin} = require('../../Controllers/Users/userLogin')
 
 const userLogHandler = async(req,res)=>{
     //console.log(' apenitas llegue aquí el handler')
