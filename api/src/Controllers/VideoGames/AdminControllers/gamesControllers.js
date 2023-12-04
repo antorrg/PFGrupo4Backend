@@ -1,5 +1,5 @@
 const { Genre, Platform, Videogame } = require("../../../database");
-const datamaped = require("../../../utils/dataMaped");
+const {datamaped} = require("../../../utils/dataMaped");
 
 const getAllGames = async () => {
   try {
