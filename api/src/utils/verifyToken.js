@@ -4,7 +4,7 @@ const { SECRET_KEY } = process.env;
 
 const verifyToken = (req, res, next) => {
   // Obtén el token del encabezado de la solicitud
-  const token = req.headers['x-access-token'] || req.headers.authorization;
+  const token = req.headers['x-access-token'] || req.headers.Authorization;
 
   // Verifica si el token está presente
   if (!token) {

@@ -79,8 +79,10 @@ const userwithPass = async (email, password, nickname, given_name, picture, sub,
         sub: "",
       });
       const token = generateToken(newUser);
+
       return { result: newUser, token };
     } else {
+
       // Comparar la contraseña ingresada con la contraseña hasheada almacenada en la base de datos
       const passwordMatch = await bcrypt.compare(password, user.password);
 
@@ -126,6 +128,13 @@ const userUpdPass = async (email, password, nickname, given_name, picture, sub, 
         // Actualizar solo el campo de la contraseña
         await user.update({ password: password });
       }
+      const token = generateToken(user);
+
+      return { result: user, token };
+
+    } catch (error) {
+      console.error("Error al colocar el password:", error);
+      return { error: "Error interno del servidor" };
     }
 
     const token = generateToken(user);
@@ -143,6 +152,20 @@ const userUpdSub = async (email, password, nickname, given_name, picture, sub, r
         email: email,
       },
     });
+  
+      if (user && !user.sub) {
+          // Actualizar solo el campo del sub
+          await user.update({ sub: sub });
+        }
+      const token = generateToken(user);
+      return { result: user, token };
+
+    } catch (error) {
+      console.error("Error al colocar el sub:", error);
+      return { error: "Error interno del servidor" };
+    }
+  };
+  
 
     if (user && !user.sub) {
       // Actualizar solo el campo del sub

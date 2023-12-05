@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
         nickname:{type: DataTypes.STRING, allowNull: true},
         given_name: { type: DataTypes.STRING, allowNull: true },
         picture: { type: DataTypes.STRING, allowNull: true },
-        sub:{type: DataTypes.STRING, allowNull:false},
+        sub:{type: DataTypes.STRING, allowNull:true},
         role:{type: DataTypes.SMALLINT, allowNull: false,defaultValue: 1,
           validate: {
             isIn: [[0, 1, 2]], // Por ejemplo, 0: admin, 1: user, 2: moderator
