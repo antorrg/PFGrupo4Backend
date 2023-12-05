@@ -22,6 +22,8 @@ const userLogin = async(email,password, nickname, given_name, picture, sub, req,
             const token = generateToken(existingUser);
              // Agrega el token al body de la respuesta
               return {result, token}
+
+        
         } else {
           // El usuario no existe, créalo
           const [newUser, create] = await User.findOrCreate({

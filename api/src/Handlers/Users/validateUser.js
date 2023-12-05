@@ -5,7 +5,7 @@ const validateUser = async (req, res) => {
   const { email, password, nickname, given_name, picture, sub } = req.body;
   try {
     const userFound = await User.findOne({
-      attributes: ['sub', 'password'],
+      attributes: ['sub', 'password', 'deleteAt'],
       where: {
         email: email,
       },
@@ -17,13 +17,15 @@ const validateUser = async (req, res) => {
         return res.status(201).json(send);
 
       } else if (sub === null && password !== null) {
-        const send2 = await userwithPass(email, password, nickname, given_name, picture, sub);
-        return res.status(201).json(send2);
+        const send = await userwithPass(email, password, nickname, given_name, picture, sub);
+        return res.status(201).json(send);
 
       } else {
         return res.status(400).json({ error: 'Invalid request parameters create' });
       }
-    } if (userFound){
+    } if (userFound && userFound.deleteAt === true){
+      return res.status(401).json({ error: 'Este email no esta disponible' }); 
+    }if (userFound && userFound.deleteAt === false){
       if (sub !== null && password === null) {
         if (userFound.sub && !userFound.password) {
           const send1 = await userLogin(email, password, nickname, given_name, picture, sub);
@@ -48,12 +50,10 @@ const validateUser = async (req, res) => {
 
         } else if(!userFound.sub && userFound.password){
           const result = await userwithPass(email, password, nickname, given_name, picture, sub, req, res);
-          console.log('soy usuario solo con pass ' + result);
           return res.status(200).json(result);
 
         }else if (userFound.sub && userFound.password){
           const result = await userwithPass(email, password, nickname, given_name, picture, sub, req, res);
-          console.log('soy usuario solo con pass ' + result);
           return res.status(200).json(result);
         }
       } else {

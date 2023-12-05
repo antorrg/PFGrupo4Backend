@@ -9,6 +9,7 @@ const authenticateAndUpdate = async (email, password, sub, additionalFields) => 
             const existingUser = await User.findOne({
                 where: {
                     email: email,
+                    deleteAt:false,
                 },
             });
 
@@ -30,6 +31,7 @@ const authenticateAndUpdate = async (email, password, sub, additionalFields) => 
                 where: {
                     email: email,
                     sub: sub,
+                    deleteAt:false,
                 },
             });
             if (existingUser && existingUser.sub === sub) {
