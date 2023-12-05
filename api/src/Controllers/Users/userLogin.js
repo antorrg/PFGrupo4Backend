@@ -69,9 +69,9 @@ const userwithPass = async(email, password, nickname, given_name, picture, sub, 
       const newUser = await User.create({
         email: email,
         password: hashedPassword,
-        nickname: "",
-        given_name:"",
-        picture: "",
+        nickname: nickname,
+        given_name: given_name,
+        picture: picture,
         sub: "",
       });
       const token = generateToken(newUser);
