@@ -73,9 +73,9 @@ const userwithPass = async (email, password, nickname, given_name, picture, sub,
       const newUser = await User.create({
         email: email,
         password: hashedPassword,
-        nickname: "",
-        given_name: "",
-        picture: "",
+        nickname: nickname,
+        given_name: given_name,
+        picture: picture,
         sub: "",
       });
       const token = generateToken(newUser);
@@ -136,13 +136,6 @@ const userUpdPass = async (email, password, nickname, given_name, picture, sub, 
       console.error("Error al colocar el password:", error);
       return { error: "Error interno del servidor" };
     }
-
-    const token = generateToken(user);
-    return { result: user, token };
-  } catch (error) {
-    console.error("Error al colocar el password:", error);
-    return { error: "Error interno del servidor" };
-  }
 };
 //*=============================================================================================
 const userUpdSub = async (email, password, nickname, given_name, picture, sub, req, res) => {
@@ -166,18 +159,6 @@ const userUpdSub = async (email, password, nickname, given_name, picture, sub, r
     }
   };
   
-
-    if (user && !user.sub) {
-      // Actualizar solo el campo del sub
-      await user.update({ sub: sub });
-    }
-    const token = generateToken(user);
-    return { return: user, token };
-  } catch (error) {
-    console.error("Error al colocar el sub:", error);
-    return { error: "Error interno del servidor" };
-  }
-};
 
 module.exports = {
   userLogin,

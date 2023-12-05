@@ -13,7 +13,7 @@ module.exports = (sequelize) => {
         password: {type:DataTypes.STRING, allowNull: true},
         nickname:{type: DataTypes.STRING, allowNull: true},
         given_name: { type: DataTypes.STRING, allowNull: true },
-        picture: { type: DataTypes.STRING, allowNull: true },
+        picture: { type: DataTypes.STRING, allowNull: false, defaultValue:'https://res.cloudinary.com/dmhxl1rpc/image/upload/c_scale,w_250/v1701669223/gameworld/avatar_gamer.jpg' },
         sub:{type: DataTypes.STRING, allowNull:true},
         role:{type: DataTypes.SMALLINT, allowNull: false,defaultValue: 1,
           validate: {
@@ -32,6 +32,10 @@ module.exports = (sequelize) => {
         enable: {
             type: DataTypes.BOOLEAN,
             allowNull: true
-        }
+        },
+        deleteAt:{
+          type: DataTypes.BOOLEAN,
+          defaultValue:false
+      } 
     });
 };
