@@ -131,7 +131,7 @@ const userUpdPass = async (email, password, nickname, given_name, picture, sub, 
       const token = generateToken(user);
 
       return { result: user, token };
-
+    }
     } catch (error) {
       console.error("Error al colocar el password:", error);
       return { error: "Error interno del servidor" };
