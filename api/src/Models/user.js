@@ -25,10 +25,6 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: true
         },
-        cart: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
         enable: {
             type: DataTypes.BOOLEAN,
             allowNull: true

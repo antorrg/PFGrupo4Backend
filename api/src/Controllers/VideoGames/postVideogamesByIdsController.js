@@ -1,11 +1,11 @@
 const { Videogame, Genre, Platform } = require("../../database");
 
-const getVideogames = async (cartItems, req, res ) => {
-    console.log("cartItems 2: " + JSON.stringify(cartItems));
+const postVideogamesByIdsController = async (ids, req, res ) => {
+    console.log("ids : " + JSON.stringify(ids));
     try {
       const result = await Videogame.findAll({
         where: {
-            id: cartItems
+            id: ids
             //id: ["394469b7-e82d-4445-a993-501b96819343", "456353c3-4b50-4f05-9e1d-b997383df32b", "ede9e455-9c8d-4186-98fb-1858893395fd", "a412f0dd-900c-4feb-b9ac-a6b691ede8ad"]
         },
         include: [
@@ -54,4 +54,4 @@ const getVideogames = async (cartItems, req, res ) => {
     }
   };
   
-  module.exports = getVideogames;
+  module.exports = postVideogamesByIdsController;

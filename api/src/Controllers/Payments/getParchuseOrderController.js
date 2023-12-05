@@ -1,4 +1,5 @@
-const { PurchaseOrder } = require("../../database");
+const postVideogamesByIdsController = require("../../Controllers/VideoGames/postVideogamesByIdsController");
+const { PurchaseOrder, PurchaseOrderItems } = require("../../database");
 
 const getParchuseOrderController = async ( orderId, req, res ) => {
   console.log("orderId: " + typeof orderId + ": " + orderId);
@@ -15,9 +16,42 @@ const getParchuseOrderController = async ( orderId, req, res ) => {
 
     if(orderDataResult)
     {
-      return orderDataResult
+      const orderVideogamesResult = await PurchaseOrderItems.findAll({
+        where: {
+          orderId: orderId
+        }
+        /*through: {
+          attributes: [],
+        }*/
+      });
+
+      if(orderVideogamesResult) {
+        const ids = orderVideogamesResult.map(item => {
+          return item.itemId;
+        });
+        const videogamesByIds = await postVideogamesByIdsController(ids);
+        if(videogamesByIds) {
+          const videogamesResult = videogamesByIds.map(item => {
+            const auxObj = orderVideogamesResult.find(obj => obj.itemId === item.id);
+            return {
+              ...item,
+              quantity: auxObj.quantity,
+              unitPrice: auxObj.unitPrice,
+              currencyId: auxObj.currencyId
+            };
+          });
+          return {
+            orderData: orderDataResult,
+            videogamesData: videogamesResult
+          };
+        } else {
+          res.status(500).send("No_videogames_data");
+        }
+      } else {
+        res.status(500).send("No_videogamesInOrder_exists");
+      }
     } else {
-      return "No_order_exists";
+      res.status(500).send("No_order_exists");
     }
     /*const { count, rows } = await PurchaseOrder.findAndCountAll({
       where: {
