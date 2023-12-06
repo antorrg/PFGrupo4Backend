@@ -1,7 +1,7 @@
 const { Videogame, Genre, Platform } = require("../../database");
 
 const getVideogames = async (cartItems, req, res ) => {
-    console.log("cartItems 2: " + JSON.stringify(cartItems));
+    //console.log("cartItems 2: " + JSON.stringify(cartItems));
     try {
       const result = await Videogame.findAll({
         where: {

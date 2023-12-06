@@ -1,159 +1,189 @@
-const { User } = require("../../database");
-const generateToken = require("../../utils/generate");
-const bcrypt = require("bcrypt");
+const {User}= require('../../database')
+const generateToken = require('../../utils/generate');
+const bcrypt = require('bcrypt');
 const saltRounds = 10; // Número de rondas de salt para bcrypt
-const sendEmailWelcome = require("../../nodemailer/sendEmail");
 
 //? Funcion userLogin (para crear o validar a un usuario en base a auth0)
 
-const userLogin = async (email, password, nickname, given_name, picture, sub, req, res) => {
-  try {
-    // Busca el usuario por el email
-    const existingUser = await User.findOne({
-      where: {
-        email: email,
-      },
-    });
-
-    if (existingUser) {
-      // El usuario ya existe, envía un mensaje indicando que está autenticado
-      let result = { isCreate: false, user: existingUser };
-      // console.log(result+' usuario existente')
-      // Genera el token
-      const token = generateToken(existingUser);
-      // Agrega el token al body de la respuesta
-      return { result, token };
-    } else {
-      // El usuario no existe, créalo
-      const [newUser, create] = await User.findOrCreate({
-
-        where: {
-          email: email,
-        },
-        defaults: {
-          email,
-          password,
-          nickname,
-          given_name,
-          picture,
-          sub,
-        },
-      });
-
-      const result = { isCreate: create, user: newUser };
-      // Genera el token
-      const token = generateToken(newUser);
-
-      // Enviar email de bienvenida
-      await sendEmailWelcome(result.user.email, result.user.nickname);
-      // Agrega el token al body de la respuesta
-      return { result, token };
-    }
-  } catch (error) {
-    console.error("¡Hubo un error!", error);
-    throw error;
-  }
-};
+const userCreate = async(email,password, nickname, given_name, picture, sub, req, res)=>{
+    try {
+        // Busca el usuario por el email
+        const existingUser = await User.findOne({
+          where: {
+            email: email,
+          },
+        });
+    
+        if (existingUser) {
+          if(existingUser.sub === null){
+            try {
+              // Actualizar solo el campo del sub
+              await existingUser.update({ sub: sub });
+            
+          const token = generateToken(existingUser);
+          let result = {isCreate: false, user:existingUser}
+          return {result, token}
+            } catch (error) {
+              throw new Error('Error al actualizar el sub:');
+              
+            }
+          }else if(existingUser.sub){
+            if(existingUser.sub ===sub){
+              const token = generateToken(existingUser);
+              let result = {isCreate: false, user:existingUser}
+              return {result, token}
+            }else{
+              throw new Error('Los subs no coinciden')
+            }
+          } 
+          
+        } else {
+          try {
+            // El usuario no existe, créalo
+          const [newUser, create] = await User.findOrCreate({
+            where: {
+              email: email,
+            },
+            defaults: {
+              email,
+              password,
+              nickname,
+              given_name,
+              picture,
+              sub,
+            },
+          });
+    
+          const result = { isCreate: create, user: newUser };
+          // Genera el token
+          const token = generateToken(newUser);
+          // Agrega el token al body de la respuesta
+          return {result, token}
+          } catch (error) {
+            throw new Error('Error al ingresar nuevo usuario (auth0)')
+          }
+          
+        }
+      } catch (error) {
+        console.error("¡Hubo un error!", error);
+        throw error;
+      }
+}
 //? Funcion UserwithPass para registrar a un nuevo usuario en base a pasword y...
 //? validar a un usuario en base a password
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-const userwithPass = async (email, password, nickname, given_name, picture, sub, req, res) => {
+const userwithPass = async(email, password, nickname, given_name, picture, sub, req, res)=>{
   // Método para registrar un nuevo usuario
-  try {
-    // Buscar el usuario por email
-    const user = await User.findOne({
-      where: {
-        email: email,
-      },
-    });
+  try{
+       // Buscar el usuario por email
+       const user = await User.findOne({
+        where: {
+          email: email,
+        },
+      });
 
-    if (!user) {
-      // Hashear la contraseña antes de almacenarla en la base de datos
+      if (!user) {
+        try {
+          // Hashear la contraseña antes de almacenarla en la base de datos
       const hashedPassword = await bcrypt.hash(password, saltRounds);
       // Crear el nuevo usuario en la base de datos con la contraseña hasheada
       const newUser = await User.create({
         email: email,
         password: hashedPassword,
-        nickname: nickname,
-        given_name: given_name,
-        picture: picture,
+        nickname: "",
+        given_name:"",
+        picture: "",
         sub: "",
       });
       const token = generateToken(newUser);
+            return {user:newUser, token}
 
-      return { result: newUser, token };
-    } else {
+        } catch (error) {
+          throw new Error ('Error al crear el usuario con pass')
+        }
+      
+        
+  }
+  else if (user){
+    throw new Error('El usuario ya tiene cuenta')
+     
+  }
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error);
+      throw error;
+    }
+  };
+//=================================================================================================
+const userWithPassLogin = async (email, password)=>{
+  const user = await User.findOne({
+    where: {
+      email: email,
+    },
+  });
 
-      // Comparar la contraseña ingresada con la contraseña hasheada almacenada en la base de datos
-      const passwordMatch = await bcrypt.compare(password, user.password);
+  try {
+  
+ const passwordMatch = await bcrypt.compare(password, user.password);
+ if (passwordMatch) {
+   // Contraseña válida, puedes generar y enviar un token de sesión aquí si es necesario
+     let result = { isCreate: false,  user: user };
+       // Genera el token
+       const token = generateToken(user);
+       return {result, token}
+ 
+ } else {
+   // Contraseña incorrecta
+   throw new Error ('Password no valido');
+ }
 
-      if (passwordMatch) {
-        // Contraseña válida, puedes generar y enviar un token de sesión aquí si es necesario
-        if (user) {
-          // El usuario ya existe, envía un mensaje indicando que está autenticado
-          let result = { isCreate: false, user: user };
-          // console.log(result+' usuario existente')
-          // Genera el token
-          const token = generateToken(user);
-
-          return { result, token };
-        } else {
-          // Contraseña incorrecta
-          return res.status(401).json({ error: "Credenciales inválidas" });
+  } catch (error) {
+    throw error;
+  }
+}
+ //?>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+  const userUpdPass = async (email, password, nickname, given_name, picture, sub, req, res) => {
+    try {
+      const user = await User.findOne({
+        where: {
+          email: email,
+        },
+      });
+  
+      if (!user.password) {
+        // El usuario no tiene una contraseña almacenada, crea una nueva
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
+        await user.update({ password: hashedPassword });
+      } else {
+        // Verificar si la nueva contraseña es diferente de la actual
+        const passwordMatch = await bcrypt.compare(password, user.password);
+        if (!passwordMatch) {
+          // Actualizar solo el campo de la contraseña
+          await user.update({ password: password });
         }
       }
-    }
-  } catch (error) {
-    console.error("Error al iniciar sesión:", error);
-    res.status(500).json({ error: "Error interno del servidor" });
-  }
-};
-
-//?>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-const userUpdPass = async (email, password, nickname, given_name, picture, sub, req, res) => {
-  try {
-    const user = await User.findOne({
-      where: {
-        email: email,
-      },
-    });
-
-    if (!user.password) {
-      // El usuario no tiene una contraseña almacenada, crea una nueva
-      const hashedPassword = await bcrypt.hash(password, saltRounds);
-      await user.update({ password: hashedPassword });
-    } else {
-      // Verificar si la nueva contraseña es diferente de la actual
-      const passwordMatch = await bcrypt.compare(password, user.password);
-      if (!passwordMatch) {
-        // Actualizar solo el campo de la contraseña
-        await user.update({ password: password });
-      }
+  
       const token = generateToken(user);
-
-      return { result: user, token };
-    }
+      return { user: user, token };
     } catch (error) {
       console.error("Error al colocar el password:", error);
       return { error: "Error interno del servidor" };
     }
-};
+  };
 //*=============================================================================================
-const userUpdSub = async (email, password, nickname, given_name, picture, sub, req, res) => {
-  try {
-    const user = await User.findOne({
-      where: {
-        email: email,
-      },
-    });
+  const userUpdSub = async (email, password, nickname, given_name, picture, sub, req, res) => {
+    try {
+      const user = await User.findOne({
+        where: {
+          email: email,
+        },
+      });
   
       if (user && !user.sub) {
           // Actualizar solo el campo del sub
           await user.update({ sub: sub });
         }
       const token = generateToken(user);
-      return { result: user, token };
-
+      return { user: user, token };
     } catch (error) {
       console.error("Error al colocar el sub:", error);
       return { error: "Error interno del servidor" };
@@ -161,9 +191,10 @@ const userUpdSub = async (email, password, nickname, given_name, picture, sub, r
   };
   
 
-module.exports = {
-  userLogin,
-  userwithPass,
-  userUpdPass,
-  userUpdSub,
-};
+  module.exports ={
+    userCreate,
+    userwithPass,
+    userUpdPass,
+    userUpdSub,
+    userWithPassLogin
+  };

@@ -7,7 +7,6 @@ const getUser = async()=>{
         });
         return users;
     } catch (error) {
-        console.log('aquí no hay nada')
         //throw new Error({ error: error.message });
     }
 }

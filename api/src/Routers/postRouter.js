@@ -7,19 +7,21 @@ const {
     createGameHandler,
     createGenreHandler,
     createPlatformHandler} = require("../Handlers/Admin/gamePostHandler");
-//const userLogHandler = require('../Handlers/Users/userLogHandler')
-const validateUser = require('../Handlers/Users/validateUser')
+const {userLogHandler, loginUserHand} = require('../Handlers/Users/userLogHandler')
+//const validateUser = require('../Handlers/Users/validateUser')
 const postCreateParchuseOrderHandler = require("../Handlers/Payments/postCreateParchuseOrderHandler");
 const postPaymentResultWebhookHandler = require("../Handlers/Payments/postPaymentResultWebhookHandler");
 //const createOrderInDBHandler = require("../Handlers/Payments/createOrderInDBHandler");
 //const verifyToken= require('../utils/verifyToken')
+const {validUserCreate, validUserLog} = require("../utils/validateUsers")
 
 //===============================================================================
 postRouter.post("/",  createGameHandler); //Modulo game/videogame
 postRouter.post("/genre",  createGenreHandler);
 postRouter.post("/platform", createPlatformHandler);
-postRouter.post("/user", validateUser);
-//postRouter.post("/user", userLogHandler);
+//postRouter.post("/user",validUserCreate, validateUser);
+postRouter.post("/user", validUserCreate, userLogHandler);
+postRouter.post("/user/login", validUserLog, loginUserHand);
 //Payments:
 postRouter.post("/paymentResultwebhook", postPaymentResultWebhookHandler);
 postRouter.post("/createParchuseOrder", postCreateParchuseOrderHandler);
