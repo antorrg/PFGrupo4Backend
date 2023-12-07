@@ -16,6 +16,7 @@ module.exports = (sequelize) => {
             },
             score: {
                 type: DataTypes.FLOAT,
+                allowNull: false,
                 validate: {
                     min : 0,
                     max: 5
@@ -23,7 +24,7 @@ module.exports = (sequelize) => {
             },
             status: {
                 type: DataTypes.STRING,
-                allowNull: false
+                defaultValue:'Pendiente',
             }
         },
         { timestamps: true }

@@ -9,11 +9,12 @@ module.exports = (sequelize) => {
             allowNull: false,
             primaryKey: true
         },
-        email: { type: DataTypes.STRING, allowNull: false, unique: true },
+        email: { type: DataTypes.STRING, allowNull: false },
+        password: {type:DataTypes.STRING, allowNull: true},
         nickname:{type: DataTypes.STRING, allowNull: true},
         given_name: { type: DataTypes.STRING, allowNull: true },
-        picture: { type: DataTypes.STRING, allowNull: true },
-        sub:{type: DataTypes.STRING, allowNull:false},
+        picture: { type: DataTypes.STRING, allowNull: false, defaultValue:'https://res.cloudinary.com/dmhxl1rpc/image/upload/c_scale,w_250/v1701669223/gameworld/avatar_gamer.jpg' },
+        sub:{type: DataTypes.STRING, allowNull:true},
         role:{type: DataTypes.SMALLINT, allowNull: false,defaultValue: 1,
           validate: {
             isIn: [[0, 1, 2]], // Por ejemplo, 0: admin, 1: user, 2: moderator
@@ -24,9 +25,18 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: true
         },
+        cart: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
         enable: {
             type: DataTypes.BOOLEAN,
-            allowNull: true
-        }
+            allowNull: true,
+            defaultValue: true
+        },
+        deleteAt:{
+          type: DataTypes.BOOLEAN,
+          defaultValue:false
+      } 
     });
 };

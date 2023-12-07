@@ -5,3 +5,5 @@ Para inicializar en desarrollo el comando es: ```npm run dev```, esto inicializa
 El comando ```npm start``` también va a inicializar pero con node, a cada cambio lo deberiamos reiniciar manualmente, pero a la hora de deployarlo es necesario que esté así..
 
 ## ¡Exitos muchachos!
+
+

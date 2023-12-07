@@ -1,5 +1,5 @@
 const { Genre, Platform, Videogame } = require("../../database");
-const datamaped = require("../../utils/dataMaped");
+const {datamaped} = require("../../utils/dataMaped");
 
 const getGameById = async (id) => {
     try {
@@ -18,7 +18,7 @@ const getGameById = async (id) => {
         ],
       });
   
-      if (!infodb) {
+      if (!infodb|| infodb.deleteAt === true) {
         throw new Error("Videogame not found");
       }
   

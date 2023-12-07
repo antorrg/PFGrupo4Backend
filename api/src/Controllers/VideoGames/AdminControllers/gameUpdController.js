@@ -1,4 +1,4 @@
-const { Videogame} = require("../../../database");
+const { Videogame, Genre, Platform} = require("../../../database");
 
 const updateVideogame = async (id, newData) => {
   try {
@@ -8,7 +8,7 @@ const updateVideogame = async (id, newData) => {
       return { error: "Videojuego no encontrado" };
     }
 
-    console.log("Nuevos datos (antes de la conversión):", newData);
+    //console.log("Nuevos datos (antes de la conversión):", newData);
 
     // Convertir campos a sus tipos respectivos antes de actualizar
     const parsedData = {
@@ -44,7 +44,7 @@ const updateVideogame = async (id, newData) => {
       await videogame.setGenres(newData.genres);
     }
 
-    console.log(videogame);
+    //console.log(videogame);
     return videogame;
   } catch (error) {
     console.error("Error al actualizar el videojuego:", error);
@@ -52,4 +52,38 @@ const updateVideogame = async (id, newData) => {
   }
 };
 
-module.exports = updateVideogame;
+const updateGenre = async (id, name) => {
+  try {
+    const genre = await Genre.findByPk(id);
+    if (genre) {
+      await genre.update({ name: name });
+      return { message: "Genero actualizado exitosamente." };
+    } 
+    else {
+      return { message: "Genero no encontrado." };
+    }
+  } catch (error) {
+    return {error: error.message}
+  }
+};
+
+const updatePLatform = async (id, name) => {
+  try {
+    const platform = await Platform.findByPk(id);
+    if (platform) {
+      await platform.update({ name: name });
+      return { message: "Plataforma actualizada exitosamente." };
+    } 
+    else {
+      return { message: "PLataforma no encontrada." };
+    }
+  } catch (error) {
+    return {error: error.message}
+  }
+};
+
+module.exports = {
+  updateVideogame,
+  updateGenre,
+  updatePLatform
+};

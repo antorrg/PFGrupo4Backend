@@ -10,8 +10,12 @@ module.exports = (sequelize) => {
         name: {
           type: DataTypes.STRING,
           allowNull: false,
-        }
+        },
+        deleteAt:{
+          type: DataTypes.BOOLEAN, 
+          defaultValue: false
       },
-      {timestamps:false}
-      );
+    },
+      {timestamps:true}
+    )
 }
