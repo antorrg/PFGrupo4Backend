@@ -18,7 +18,7 @@ const getGameById = async (id) => {
         ],
       });
   
-      if (!infodb) {
+      if (!infodb|| infodb.deleteAt === true) {
         throw new Error("Videogame not found");
       }
   

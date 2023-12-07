@@ -3,7 +3,7 @@ const { User } = require("../../database");
 const getUserById = async (id) => {
     try {
       const infodb = await User.findByPk(id);
-      if (!infodb) {
+      if (!infodb || infodb.deleteAt === true) {
         throw new Error("User not found");
       }
      return infodb;

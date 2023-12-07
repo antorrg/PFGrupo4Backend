@@ -5,6 +5,7 @@ const mainRouter=require('./Routers/mainRouter');
 
 
 server = express();
+
 server.use(cors());
 server.use(morgan('dev'));
 server.use(express.urlencoded({ extended:true}));

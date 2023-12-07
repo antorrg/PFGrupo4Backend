@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
             allowNull: false,
             primaryKey: true
         },
-        email: { type: DataTypes.STRING, allowNull: false, unique: true },
+        email: { type: DataTypes.STRING, allowNull: false },
         password: {type:DataTypes.STRING, allowNull: true},
         nickname:{type: DataTypes.STRING, allowNull: true},
         given_name: { type: DataTypes.STRING, allowNull: true },
@@ -31,7 +31,8 @@ module.exports = (sequelize) => {
         },
         enable: {
             type: DataTypes.BOOLEAN,
-            allowNull: true
+            allowNull: true,
+            defaultValue: true
         },
         deleteAt:{
           type: DataTypes.BOOLEAN,
