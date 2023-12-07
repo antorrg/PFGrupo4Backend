@@ -11,6 +11,7 @@ const userLogHandler = async(req,res)=>{
                 res.status(400).json({error: error.message})
             }
         
+       
         }else if(email && password){
            try {
             const send = await userwithPass(email, password);

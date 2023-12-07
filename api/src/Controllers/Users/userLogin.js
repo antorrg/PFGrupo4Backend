@@ -1,6 +1,8 @@
+const {Op}=require('sequelize');
 const {User}= require('../../database')
 const generateToken = require('../../utils/generate');
 const bcrypt = require('bcrypt');
+const sendEmail = require('../../nodemailer/sendEmail');
 const saltRounds = 10; // Número de rondas de salt para bcrypt
 
 //? Funcion userLogin (para crear o validar a un usuario en base a auth0)
@@ -10,23 +12,16 @@ const userCreate = async(email,password, nickname, given_name, picture, sub, req
         // Busca el usuario por el email
         const existingUser = await User.findOne({
           where: {
-            email: email,
+            email:email,
+            deleteAt:false,
+            enable:true,
           },
         });
     
         if (existingUser) {
-          if(existingUser.sub === null){
-            try {
-              // Actualizar solo el campo del sub
-              await existingUser.update({ sub: sub });
-            
-          const token = generateToken(existingUser);
-          let result = {isCreate: false, user:existingUser}
-          return {result, token}
-            } catch (error) {
-              throw new Error('Error al actualizar el sub:');
+          if(existingUser.sub === "" && sub){
+           throw new Error('Ya hay un usuario registrado con este email');
               
-            }
           }else if(existingUser.sub){
             if(existingUser.sub ===sub){
               const token = generateToken(existingUser);
@@ -43,6 +38,7 @@ const userCreate = async(email,password, nickname, given_name, picture, sub, req
           const [newUser, create] = await User.findOrCreate({
             where: {
               email: email,
+              deleteAt:false,
             },
             defaults: {
               email,
@@ -56,6 +52,7 @@ const userCreate = async(email,password, nickname, given_name, picture, sub, req
     
           const result = { isCreate: create, user: newUser };
           // Genera el token
+          await sendEmail(newUser.email);
           const token = generateToken(newUser);
           // Agrega el token al body de la respuesta
           return {result, token}
@@ -79,24 +76,26 @@ const userwithPass = async(email, password, nickname, given_name, picture, sub, 
        const user = await User.findOne({
         where: {
           email: email,
+          deleteAt:false,
         },
       });
 
       if (!user) {
         try {
-          // Hashear la contraseña antes de almacenarla en la base de datos
-      const hashedPassword = await bcrypt.hash(password, saltRounds);
+      
       // Crear el nuevo usuario en la base de datos con la contraseña hasheada
       const newUser = await User.create({
         email: email,
-        password: hashedPassword,
+        password: password,
         nickname: "",
         given_name:"",
         picture: "",
         sub: "",
       });
+      const result = {isCreate:true, user:newUser,}
+      await sendEmail(newUser.email);
       const token = generateToken(newUser);
-            return {user:newUser, token}
+            return { result, token}
 
         } catch (error) {
           throw new Error ('Error al crear el usuario con pass')
@@ -118,6 +117,8 @@ const userWithPassLogin = async (email, password)=>{
   const user = await User.findOne({
     where: {
       email: email,
+      deleteAt:false,
+      enable:true,
     },
   });
 
