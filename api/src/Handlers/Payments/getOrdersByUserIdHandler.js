@@ -1,5 +1,5 @@
 const getOrdersByUserIdController = require("../../Controllers/Payments/getOrdersByUserIdController");
-
+const { Op } = require("sequelize");
 //Se recibe por param tanto el "collection_id/payment_id" como "external_reference"
 
 const getParchuseOrderHandler = async (req, res) => {
@@ -18,6 +18,10 @@ const getParchuseOrderHandler = async (req, res) => {
 
     if(status) {
       filters.status = status;
+    } else {
+      filters.status = {
+        [Op.ne]: 'waiting'
+      };
     }
   
     try {
