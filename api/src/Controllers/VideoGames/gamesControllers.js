@@ -1,9 +1,10 @@
 const { Genre, Platform, Videogame } = require("../../database");
-const datamaped = require("../../utils/dataMaped");
+const {datamaped} = require("../../utils/dataMaped");
 
 const getAllGames = async () => {
   try {
     const allGames = await Videogame.findAll({
+      where: {deleteAt : false},
       include: [
         {
           model: Genre,
@@ -43,7 +44,7 @@ const getGameById = async (id) => {
       ],
     });
 
-    if (!infodb) {
+    if (!infodb || infodb.deleteAt === true) {
       throw new Error("Videogame not found");
     }
 
@@ -55,12 +56,21 @@ const getGameById = async (id) => {
 };
 
 const genres = async (req, res) => {
-  const genresDb = await Genre.findAll();
+  const genresDb = await Genre.findAll({
+    where:{deleteAt : false
+    }
+  });
+  
   return genresDb;
 };
 
 const platforms = async (req, res) => {
-  const platformsDb = await Platform.findAll();
+  const platformsDb = await Platform.findAll({
+    where: {
+      deleteAt:false
+    }
+  });
+  
   return platformsDb;
 };
 
