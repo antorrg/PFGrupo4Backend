@@ -26,6 +26,19 @@ module.exports = (sequelize) => {
         orderId: {
             type: DataTypes.INTEGER,
             allowNull: false,
+        },
+        userId: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        isRated: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
+        status: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     });
 };

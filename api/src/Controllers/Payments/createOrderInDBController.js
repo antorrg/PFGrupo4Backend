@@ -21,7 +21,9 @@ const createOrderInDBController = async ( userID, itemsData, req, res) => {
           quantity: item.quantity,
           unitPrice: item.unitPrice,
           currencyId: item.currencyId,
-          orderId: createOrder.id
+          orderId: createOrder.id,
+          userId: userID,
+          status: "waiting"
         };
       });
 
