@@ -81,7 +81,7 @@ const getVideogames = async (
 
     const auxTotalPages = Math.ceil(count / size);
     const auxPrevPage = page - 1 >= 0 ? page - 1 : -1;
-    const auxNextPage = page + 1 <= auxTotalPages ? page + 1 : -1;
+    const auxNextPage = page + 1 < auxTotalPages ? page + 1 : -1;
     const auxHasPrevPage = page - 1 >= 0 ? true : false;
     const auxHasNextPage = page + 1 < auxTotalPages ? true : false;
 

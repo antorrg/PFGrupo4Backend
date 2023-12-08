@@ -20,13 +20,13 @@ const postCreateParchuseOrderController = async (userID, items, orderID, req, re
 		},*/
 		back_urls: {
 			//"success": "http://localhost:3001/success",
-			"success": "http://localhost:3000/success",
-			"failure": "http://localhost:3000/failure",
-			"pending": "http://localhost:3000/pending"
+			"success": "http://http://localhost:3000/checkout/Succesfull",
+			"failure": "http://http://localhost:3000/checkout/Failure",
+			"pending": "http://http://localhost:3000/checkout/Pending"
 		},
 		auto_return: 'approved',
 		external_reference: orderID,
-		notification_url: "https://338a-181-53-96-163.ngrok-free.app/post/paymentResultwebhook"
+		notification_url: "https://f216-152-203-131-131.ngrok-free.app/post/paymentResultwebhook"
 		//notification_url: "https://3fd5-181-53-96-163.ngrok-free.app/post/webhook"
 		//auto_return: "approved"
 		//auto_return: "http://localhost:3000/pending"

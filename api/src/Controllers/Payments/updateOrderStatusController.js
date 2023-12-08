@@ -1,4 +1,4 @@
-const { PurchaseOrder } = require("../../database");
+const { PurchaseOrder, PurchaseOrderItems } = require("../../database");
 
 const updateOrderStatusController = async (orderDB_id, orderStatus, orderStatusDetail, orderTransactionId, req, res) => {
   console.log("orderPreferenceId: " + typeof orderDB_id + ": " + orderDB_id);
@@ -20,12 +20,28 @@ const updateOrderStatusController = async (orderDB_id, orderStatus, orderStatusD
         }
       );
 
-    if (numUpdatedRows === 0) {
-        console.log("Error no hay filas");
-        return res.status(404).json({ mensaje: 'orden no encontrado' });
+    if (numUpdatedRows !== 0) {
+      const [numUpdatedItemsRows, updatedItemsOrder] = await PurchaseOrderItems.update(
+        { 
+          status: orderStatus
+        },
+        {
+          where: {
+            orderId: orderDB_id
+          },
+          returning: true, // Devolver los registros actualizados
+        }
+      );
+      if(numUpdatedItemsRows !== 0) {
+        return updatedOrder;
+      } else {
+        console.log("Error no hay items");
+        return res.status(404).json({ mensaje: 'items no encontrados' });
+      }
+    } else {
+      console.log("Error no hay filas");
+      return res.status(404).json({ mensaje: 'orden no encontrado' });
     }
-
-    return updatedOrder;
 
   } catch (error) {
     console.log("Error Otro");
