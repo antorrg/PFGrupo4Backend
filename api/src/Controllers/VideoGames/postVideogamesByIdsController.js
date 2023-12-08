@@ -1,12 +1,7 @@
 const { Videogame, Genre, Platform } = require("../../database");
 
-<<<<<<< HEAD:api/src/Controllers/VideoGames/postVideogamesByIdsController.js
 const postVideogamesByIdsController = async (ids, req, res ) => {
     console.log("ids : " + JSON.stringify(ids));
-=======
-const getVideogames = async (cartItems, req, res ) => {
-    //console.log("cartItems 2: " + JSON.stringify(cartItems));
->>>>>>> 6488c4c1828b150d43c28ad2f7c8d2e4709b4aa0:api/src/Controllers/Users/getDataShoppingCartController.js
     try {
       const result = await Videogame.findAll({
         where: {
