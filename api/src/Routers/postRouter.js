@@ -13,6 +13,7 @@ const postCreateParchuseOrderHandler = require("../Handlers/Payments/postCreateP
 const postPaymentResultWebhookHandler = require("../Handlers/Payments/postPaymentResultWebhookHandler");
 const postUserShoppingCartHandler = require("../Handlers/Users/postUserShoppingCartHandler");
 const postVideogamesByIdsHandler = require("../Handlers/VideoGames/postVideogamesByIdsHandler");
+const postUserRatedHandler = require("../Handlers/Payments/postUserRatedHandler");
 //const createOrderInDBHandler = require("../Handlers/Payments/createOrderInDBHandler");
 //const verifyToken= require('../utils/verifyToken')
 const {validUserCreate, validUserLog} = require("../utils/validateUsers")
@@ -27,6 +28,7 @@ postRouter.post("/user/login", validUserLog, loginUserHand);
 //Payments:
 postRouter.post("/paymentResultwebhook", postPaymentResultWebhookHandler);
 postRouter.post("/createParchuseOrder", postCreateParchuseOrderHandler);
+postRouter.post("/postUserRated", postUserRatedHandler);
 //postRouter.post("/DBcreateParchuseOrder", createOrderInDBHandler);
 
 //User Cart:

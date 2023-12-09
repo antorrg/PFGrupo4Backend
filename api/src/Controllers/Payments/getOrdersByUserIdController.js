@@ -33,9 +33,15 @@ const getOrdersByUserIdController = async ( filters, page, size, req, res ) => {
             });
             //return orderVideogamesResult;
             if(orderVideogamesResult) {
-                const ids = orderVideogamesResult.map(item => {
-                    return item.itemId;
+                let ids = [];
+                let totalCost = 0;
+                orderVideogamesResult.forEach(element => {
+                    ids.push(element.itemId);
+                    totalCost += element.quantity * element.unitPrice;
                 });
+                /*const ids = orderVideogamesResult.map(item => {
+                    return item.itemId;
+                });*/
                 const videogamesByIds = await postVideogamesByIdsController(ids);
                 //return videogamesByIds;
                 if(videogamesByIds) {
@@ -49,7 +55,8 @@ const getOrdersByUserIdController = async ( filters, page, size, req, res ) => {
                                 unitPrice: auxObj.unitPrice,
                                 currencyId: auxObj.currencyId
                             };
-                        })
+                        }),
+                        totalCost: totalCost
                     })
                 }
             }
