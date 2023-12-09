@@ -15,6 +15,7 @@ const getUserDetailHand = require("../Handlers/Users/detailUserHandler");
 const getUserShoppingCartHandler = require("../Handlers/Users/getUserShoppingCartHandler");
 const getOrdersByUserIdHandler = require("../Handlers/Payments/getOrdersByUserIdHandler");
 const getRatedPendingItemsByUserIdHandler = require("../Handlers/Payments/getRatedPendingItemsByUserIdHandler");
+const getRatedByItemIdHandler = require("../Handlers/Payments/getRatedByItemIdHandler");
 //======================================================================================
 getRouter.get("/videogames", getVideogamesHandler);//Modulos games/videogames (Libres)
 getRouter.get("/games/:id", getDetailHandler); //Modulos games/videogames (Libres)
@@ -31,6 +32,7 @@ getRouter.get("/failure", (req, res) => res.send("failure"));
 getRouter.get("/pending", (req, res) => res.send("pending"));
 getRouter.get("/getOrdersByUserId", getOrdersByUserIdHandler);
 getRouter.get("/getRatedPendingItemsByUserId", getRatedPendingItemsByUserIdHandler);
+getRouter.get("/getRatedByItemId/:itemID", getRatedByItemIdHandler);
 
 getRouter.get("/getUserShoppingCart/:userID", getUserShoppingCartHandler);
 
