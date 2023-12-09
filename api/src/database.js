@@ -3,11 +3,9 @@ const CreateVideogame = require('./Models/videogame');
 const CreateGenre = require('./Models/genre');
 const CreatePlatform = require('./Models/platform');
 const CreatePurchaseOrder = require('./Models/purchaseOrder');
-const CreatePurchaseOrderItems = require('./Models/purchaseOrderItems');
 const CreateUser= require('./Models/user');
 const CreateRating=require('./Models/rating');
 const videogame = require('./Models/videogame');
-const CreateCart = require('./Models/cart');
 require ('dotenv').config();
 const {DB_USER, DB_PASS, DB_HOST, DB_NAME, DB_DEPLOY}=process.env;
 
@@ -31,9 +29,7 @@ CreateGenre(sequelize);
 CreatePlatform(sequelize);
 CreateUser(sequelize);
 CreatePurchaseOrder(sequelize);
-CreatePurchaseOrderItems(sequelize);
 CreateRating(sequelize);
-CreateCart(sequelize);
 
 const {Videogame, Genre, Platform, User, Rating}= sequelize.models
 

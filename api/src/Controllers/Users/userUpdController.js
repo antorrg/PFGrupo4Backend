@@ -1,4 +1,5 @@
 const {User}=require('../../database')
+const bcrypt = require('bcrypt');
 
 const userUpdController = async (id, newData)=>{
     try {
@@ -7,10 +8,11 @@ const userUpdController = async (id, newData)=>{
         if (!user) {
           return { error: "Usuario no encontrado" };
         }
-    
+        const hashedPassword = await bcrypt.hash(newData.password, 10);
+        
         // Convertir campos a sus tipos respectivos antes de actualizar
         const parsedData = {
-          password:newData.password,
+          password:hashedPassword,
           given_name: newData.given_name,
           picture: newData.picture,
           role: parseFloat(newData.role), //convertir a numero
