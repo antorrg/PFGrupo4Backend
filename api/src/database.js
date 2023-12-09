@@ -43,11 +43,11 @@ Genre.belongsToMany(Videogame, {through: 'videogame_genre'})
 Videogame.belongsToMany(Platform, {through: 'videogame_platform'})
 Platform.belongsToMany(Videogame, {through: 'videogame_platform'})
 
-User.hasMany(Rating);
+/*User.hasMany(Rating);
 Rating.belongsTo(User);
 
 Videogame.hasMany(Rating);
-Rating.belongsTo(Videogame);
+Rating.belongsTo(Videogame);*/
 
 module.exports = {
     ...sequelize.models,
