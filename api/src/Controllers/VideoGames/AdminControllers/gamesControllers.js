@@ -136,12 +136,12 @@ const getAllGamesAdminController = async (
 }
 
 const genres = async (req, res) => {
-  const genresDb = await Genre.findAll({where: {deleteAt: false}});
+  const genresDb = await Genre.findAll({where: {deleteAt: false}, order: [['name', 'ASC']]});
   return genresDb;
 };
 
 const platforms = async (req, res) => {
-  const platformsDb = await Platform.findAll({where: {deleteAt: false}});
+  const platformsDb = await Platform.findAll({where: {deleteAt: false}, order: [['name', 'ASC']]});
   return platformsDb;
 };
 
