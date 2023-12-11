@@ -41,12 +41,6 @@ const createGameHandler = async (req, res) => {
 
 const createGenreHandler = async (req, res) => {
   const { name } = req.body;
-  
-  if (!name) {
-    return res
-      .status(404)
-      .json({ error: "Un nombre es requerido para crear un genero" });
-  }
   try {
     const response = await createGenreDB(name);
     res.status(201).json(response);
@@ -57,12 +51,6 @@ const createGenreHandler = async (req, res) => {
 
 const createPlatformHandler = async (req, res) => {
   const { name } = req.body;
-  
-  if (!name) {
-    return res
-      .status(404)
-      .json({ error: "Un nombre es requerido para crear una plataforma" });
-  }
   try {
     const response = await createPlatformDB(name);
     res.status(201).json(response);

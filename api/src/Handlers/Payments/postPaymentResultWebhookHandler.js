@@ -3,7 +3,7 @@ const mercadopago = require("mercadopago");
 
 const postPaymentResultWebhookHandler = async (req, res) => {
   
-  console.log(req.query);
+  console.log("PAYMENT_RESULT: " + req.query);
   const payment = req.query;
 
   try {

@@ -6,7 +6,7 @@ const userLogHandler = async(req,res)=>{
         if(email && sub && !password){
             try {
                 const send = await userCreate(email, password, nickname, given_name, picture, sub);
-                res.status(200).json(send);
+                res.status(201).json(send);
             } catch (error) {
                 res.status(400).json({error: error.message})
             }
@@ -29,7 +29,7 @@ const loginUserHand = async (req, res)=>{
     const {email, password}=req.body;
     try {
         const send = await userWithPassLogin(email, password);
-            res.status(200).json(send);
+            res.status(201).json(send);
     } catch (error) {
         res.status(400).json({error:error.message});
     }

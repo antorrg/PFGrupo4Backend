@@ -21,13 +21,19 @@ const postCreateParchuseOrderHandler = async (req, res) => {
   try {
     //------------------------------
 
-    const createOrderDB = await createOrderInDBController(userID, JSON.stringify(auxItems));
-    
+    const createOrderDB = await createOrderInDBController(userID, auxItems/*JSON.stringify(auxItems)*/);
+    //console.log("createOrderDB: " + JSON.stringify(createOrderDB));
     const orderBodyMercadoPago = await postCreateParchuseOrderController(userID, items, createOrderDB.id.toString());
 
     const updateOrder = await updateOrderProferenceIdController(createOrderDB.id, orderBodyMercadoPago.id);
 
-    res.status(201).json({ body: orderBodyMercadoPago});
+    if(updateOrder) {
+      res.status(201).json({ body: orderBodyMercadoPago});
+    } else {
+      res.status(500).send("Order_not_update");
+    }
+    
+    //res.status(201).json({ body: "hi"});
     //------------------------------
 
     //res.status(201).json({ body: orderBody});

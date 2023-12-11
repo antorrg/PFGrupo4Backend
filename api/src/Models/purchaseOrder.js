@@ -11,10 +11,6 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        itemsData: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         totalCost: {
             type: DataTypes.INTEGER,
             //allowNull: false,
