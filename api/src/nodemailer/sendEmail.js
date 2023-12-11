@@ -22,9 +22,9 @@ async function sendEmailWelcome(userEmail) {
   const mailSend = {
     from: PASS_NODEMAILER,
     //? correo de test comentar y descomentar la siguiente linea pero actualmente envía a spam
-    to: "yawon80039@jalunaki.com",
+    //to: "yawon80039@jalunaki.com",
     //? descomentar para enviar al correo del usuario que se registra
-    //to: userEmail,
+    to: userEmail,
     subject: "GameWorld - ¡Bienvenido!",
     // text: "¡Bienvenido a GameWorld " + userNickname + "!",
     html: emailContent,
