@@ -42,22 +42,49 @@ const createGameDB = async (
 };
 
 const createGenreDB = async (name) => {
-    try {
-    const [newGenre, create] = await Genre.findOrCreate({ where: {name: name}});
-    const result = { isCreate: create, game: newGenre };
-    return result;
+  try {
+    const existingGenre = await Genre.findOne({
+      where: { name: name },
+    });
+    if (existingGenre) {
+      throw new Error("Este género ya existe");
+    } else {
+      try {
+        const [newGenre, created] = await Genre.findOrCreate({
+          where: { name: name },
+        });
+
+        const result = { isCreate: created, genre: newGenre };
+        return result;
+      } catch (createError) {
+        throw new Error("Error al crear el género");
+      }
+    }
   } catch (error) {
-    return {error: error.message};
+    throw error;
   }
 };
 
+
+
 const createPlatformDB = async (name) => {
   try {
-  const [newPLatform, create] = await Platform.findOrCreate({ where: {name: name}});
-  const result = { isCreate: create, game: newPLatform };
-  return result;
+    const existingPlatform = await Platform.findOne({
+      where: { name: name },
+    });
+    if (existingPlatform) {
+      throw new Error("Esta plataforma ya existe");
+    } else {
+      try {
+        const [newPLatform, create] = await Platform.findOrCreate({ where: {name: name}});
+      const result = { isCreate: create, game: newPLatform };
+      return result;
+      } catch (error) {
+        throw new Error("Error al crear la plataforma")
+      }
+    }
 } catch (error) {
-  return {error: error.message};
+  throw error;
 }
 };
 

@@ -134,6 +134,9 @@ const verifyToken = (req, res, next) => {
     }
     // Almacena el usuario decodificado en el objeto de solicitud para su uso posterior
     req.user = decoded;
+     // Extrae el ID del usuario y lo almacena en req.user.id
+     const userId = decoded.id;
+     req.user.id = userId;
     next();
   });
 };
@@ -143,6 +146,7 @@ _Obtiene el token de la solicitud. Puede estar presente en el encabezado como 'x
 _Verifica si el token está presente. Si no lo está, devuelve una respuesta de error indicando que el acceso no está autorizado y que el token no se proporcionó._
 _Utiliza la función verify para verificar el token utilizando la clave secreta. Si hay un error durante la verificación, maneja los casos donde el token ha expirado o es inválido, devolviendo respuestas de error adecuadas._
 _Si la verificación es exitosa, decodifica el token y almacena la información del usuario decodificado en req.user para su uso posterior._
+_Para el caso en el que sea necesario, extrae el id del usuario y lo almacena en req.user.id para su posterior uso._
 _Llama a next() para pasar al siguiente middleware en la cadena de manejo de solicitudes._
  <hr>
 
