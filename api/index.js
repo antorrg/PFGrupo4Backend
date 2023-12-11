@@ -15,6 +15,7 @@ const fillTables = require("./src/Controllers/VideoGames/databaseControllers/fil
 require("dotenv").config();
 const { PORT } = process.env;
 
+
 server.listen(PORT, async () => {
   try {
     await sequelize.sync({ force: false });
@@ -23,4 +24,5 @@ server.listen(PORT, async () => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+
 });
