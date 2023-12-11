@@ -1,5 +1,7 @@
-require("dotenv").config();
-const { MERCADOPAGO_ACCESS_TOKEN } = process.env;
+
+require ('dotenv').config();
+const { MERCADOPAGO_ACCESS_TOKEN, PORT, FRONT}=process.env;
+
 const mercadopago = require("mercadopago");
 
 const postCreateParchuseOrderController = async (
@@ -23,20 +25,20 @@ const postCreateParchuseOrderController = async (
 			surname: "esq",
 			email: "juan86@gmail.com"
 		},*/
-    back_urls: {
-      //"success": "http://localhost:3001/success",
-      success: "http://http://localhost:3000/checkout/Succesfull",
-      failure: "http://http://localhost:3000/checkout/Failure",
-      pending: "http://http://localhost:3000/checkout/Pending",
-    },
-    auto_return: "approved",
-    external_reference: orderID,
-    notification_url:
-      "https://095c-2803-a920-8e8-8100-881e-579b-742b-49a4.ngrok-free.app/post/paymentResultwebhook",
-    //notification_url: "https://3fd5-181-53-96-163.ngrok-free.app/post/webhook"
-    //auto_return: "approved"
-    //auto_return: "http://localhost:3000/pending"
-  };
+		back_urls: {
+			//"success": "http://localhost:3001/success",
+			"success": `${FRONT}/checkout/Succesfull`,
+			"failure": `${FRONT}/checkout/Failure`,
+			"pending": `${FRONT}/checkout/Pending`
+		},
+		auto_return: 'approved',
+		external_reference: orderID,
+		notification_url: `${PORT}/post/paymentResultwebhook`
+		//notification_url: "https://3fd5-181-53-96-163.ngrok-free.app/post/webhook"
+		//auto_return: "approved"
+		//auto_return: "http://localhost:3000/pending"
+	};
+
 
   /*
 	getRouter.get("/success", (req, res) => res.send("success"));
