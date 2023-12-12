@@ -6,12 +6,14 @@ const mercadopago = require("mercadopago");
 
 const postCreateParchuseOrderController = async (
   userID,
+  userEmail,
   items,
   orderID,
   req,
   res
 ) => {
   console.log("userID: " + userID);
+  console.log("userEmail: " + userEmail);
   //console.log("auxItems: " + JSON.stringify(auxItems));
 
   mercadopago.configure({
@@ -20,19 +22,23 @@ const postCreateParchuseOrderController = async (
 
   let preference = {
     items: items,
-    /*player: {
-			name: "Juan",
-			surname: "esq",
-			email: "juan86@gmail.com"
-		},*/
+    /*payer: {
+      name: 'João',
+      surname: 'Silva',
+      email: 'user@email.com'
+    },*/
 		back_urls: {
+      /*"success": `http://localhost:3000/checkout/Succesfull`,
+			"failure": `http://localhost:3000/checkout/Failure`,
+			"pending": `http://localhost:3000/checkout/Pending`*/
 			//"success": "http://localhost:3001/success",
 			"success": `${FRONT}/checkout/Succesfull`,
 			"failure": `${FRONT}/checkout/Failure`,
 			"pending": `${FRONT}/checkout/Pending`
 		},
 		auto_return: 'approved',
-		external_reference: orderID,
+		external_reference: orderID + "-_" + userEmail + "-_" + userID,
+    //notification_url: `https://e266-181-53-96-74.ngrok-free.app/post/paymentResultwebhook`
 		notification_url: `${PORT}/post/paymentResultwebhook`
 		//notification_url: "https://3fd5-181-53-96-163.ngrok-free.app/post/webhook"
 		//auto_return: "approved"

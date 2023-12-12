@@ -3,7 +3,7 @@ const createOrderInDBController = require("../../Controllers/Payments/createOrde
 const updateOrderProferenceIdController = require("../../Controllers/Payments/updateOrderProferenceIdController");
 
 const postCreateParchuseOrderHandler = async (req, res) => {
-  const { userID, items } = req.body;
+  const { userID, userEmail, items } = req.body;
 
   if(!items || items.length === 0) {
     res.status(400).json({ error: "No items attached" });
@@ -23,7 +23,7 @@ const postCreateParchuseOrderHandler = async (req, res) => {
 
     const createOrderDB = await createOrderInDBController(userID, auxItems/*JSON.stringify(auxItems)*/);
     //console.log("createOrderDB: " + JSON.stringify(createOrderDB));
-    const orderBodyMercadoPago = await postCreateParchuseOrderController(userID, items, createOrderDB.id.toString());
+    const orderBodyMercadoPago = await postCreateParchuseOrderController(userID, userEmail, items, createOrderDB.id.toString());
 
     const updateOrder = await updateOrderProferenceIdController(createOrderDB.id, orderBodyMercadoPago.id);
 
