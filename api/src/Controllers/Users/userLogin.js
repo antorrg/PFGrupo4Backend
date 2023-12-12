@@ -167,6 +167,7 @@ const userUpdPass = async (
     const user = await User.findOne({
       where: {
         email: email,
+        deleteAt: false
       },
     });
 
@@ -205,6 +206,7 @@ const userUpdSub = async (
     const user = await User.findOne({
       where: {
         email: email,
+        deleteAt: false
       },
     });
 

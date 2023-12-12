@@ -18,6 +18,7 @@ const createGameDB = async (
     const [newGame, create] = await Videogame.findOrCreate({
       where: {
         name: name,
+        deleteAt: false
       },
       defaults: {
         description,
@@ -44,14 +45,14 @@ const createGameDB = async (
 const createGenreDB = async (name) => {
   try {
     const existingGenre = await Genre.findOne({
-      where: { name: name },
+      where: { name: name, deleteAt: false },
     });
     if (existingGenre) {
       throw new Error("Este género ya existe");
     } else {
       try {
         const [newGenre, created] = await Genre.findOrCreate({
-          where: { name: name },
+          where: { name: name, deleteAt: false },
         });
 
         const result = { isCreate: created, genre: newGenre };
@@ -70,13 +71,13 @@ const createGenreDB = async (name) => {
 const createPlatformDB = async (name) => {
   try {
     const existingPlatform = await Platform.findOne({
-      where: { name: name },
+      where: { name: name, deleteAt: false },
     });
     if (existingPlatform) {
       throw new Error("Esta plataforma ya existe");
     } else {
       try {
-        const [newPLatform, create] = await Platform.findOrCreate({ where: {name: name}});
+        const [newPLatform, create] = await Platform.findOrCreate({ where: {name: name, deleteAt: false}});
       const result = { isCreate: create, game: newPLatform };
       return result;
       } catch (error) {
