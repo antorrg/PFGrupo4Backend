@@ -23,7 +23,7 @@ getRouter.get("/genres", getGenresHandler); //Protegida
 getRouter.get("/platforms", getPlatformHandler); //Protegida
 getRouter.get("/games", getGamesAdminHandler); //Libres
 getRouter.get("/user", verifyToken, getUserHandler) //Protegida
-getRouter.get("/user/:id", getUserDetailHand) //Libre
+getRouter.get("/user/:id", verifyToken, getUserDetailHand) //Libre
 
 //Payments:
 getRouter.get("/getParchuseOrder", getParchuseOrderHandler);
