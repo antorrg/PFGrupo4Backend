@@ -15,26 +15,25 @@ const postUserShoppingCartHandler = require("../Handlers/Users/postUserShoppingC
 const postVideogamesByIdsHandler = require("../Handlers/VideoGames/postVideogamesByIdsHandler");
 const postUserRatedHandler = require("../Handlers/Payments/postUserRatedHandler");
 //const createOrderInDBHandler = require("../Handlers/Payments/createOrderInDBHandler");
-//const verifyToken= require('../utils/verifyToken')
+const verifyToken= require('../utils/verifyToken')
 const {validUserCreate, validUserLog} = require("../utils/validateUsers")
 
 //===============================================================================
-postRouter.post("/",  createGameHandler); //Modulo game/videogame
-postRouter.post("/genre",  createGenreHandler);
-postRouter.post("/platform", createPlatformHandler);
-//postRouter.post("/user",validUserCreate, validateUser);
+postRouter.post("/",  verifyToken, createGameHandler); //Modulo game/videogame
+postRouter.post("/genre",  verifyToken, createGenreHandler);
+postRouter.post("/platform", verifyToken, createPlatformHandler);
 postRouter.post("/user", validUserCreate, userLogHandler);
 postRouter.post("/user/login", validUserLog, loginUserHand);
 //Payments:
-postRouter.post("/paymentResultwebhook", postPaymentResultWebhookHandler);
-postRouter.post("/createParchuseOrder", postCreateParchuseOrderHandler);
-postRouter.post("/postUserRated", postUserRatedHandler);
+postRouter.post("/paymentResultwebhook", verifyToken, postPaymentResultWebhookHandler);
+postRouter.post("/createParchuseOrder", verifyToken, postCreateParchuseOrderHandler);
+postRouter.post("/postUserRated", verifyToken, postUserRatedHandler);
 //postRouter.post("/DBcreateParchuseOrder", createOrderInDBHandler);
 
 //User Cart:
-postRouter.post("/createShoppingCart", postUserShoppingCartHandler);
+postRouter.post("/createShoppingCart", verifyToken, postUserShoppingCartHandler);
 
-postRouter.post("/videogamesByIds", postVideogamesByIdsHandler);
+postRouter.post("/videogamesByIds", verifyToken, postVideogamesByIdsHandler);
 
 
 module.exports = postRouter;

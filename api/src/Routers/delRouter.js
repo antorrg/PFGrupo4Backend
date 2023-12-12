@@ -6,11 +6,12 @@ const {
     delGameHand,
     delGenreHand,
     delPlatformHand} = require('../Handlers/Admin/delGameHand')
+    const verifyToken= require('../utils/verifyToken');
 
 //========================================================================
-delRouter.delete('/games/:id', delGameHand);
-delRouter.delete('/genres/:id', delGenreHand);
-delRouter.delete('/platforms/:id', delPlatformHand);
-delRouter.delete('/user/:id', delUserHandler);
+delRouter.delete('/games/:id', verifyToken, delGameHand);
+delRouter.delete('/genres/:id', verifyToken, delGenreHand);
+delRouter.delete('/platforms/:id', verifyToken, delPlatformHand);
+delRouter.delete('/user/:id', verifyToken, delUserHandler);
 
 module.exports= delRouter;

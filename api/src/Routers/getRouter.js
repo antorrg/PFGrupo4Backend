@@ -18,11 +18,11 @@ const getRatedPendingItemsByUserIdHandler = require("../Handlers/Payments/getRat
 const getRatedByItemIdHandler = require("../Handlers/Payments/getRatedByItemIdHandler");
 //======================================================================================
 getRouter.get("/videogames", getVideogamesHandler);//Modulos games/videogames (Libres)
-getRouter.get("/games/:id", verifyToken, getDetailHandler); //Modulos games/videogames (Libres)
-getRouter.get("/genres", getGenresHandler); //Protegida
-getRouter.get("/platforms", getPlatformHandler); //Protegida
-getRouter.get("/games", getGamesAdminHandler); //Libres
-getRouter.get("/user",  getUserHandler) //Protegida
+getRouter.get("/games/:id", getDetailHandler); //Modulos games/videogames (Libres)
+getRouter.get("/genres", verifyToken, getGenresHandler); //Protegida
+getRouter.get("/platforms", verifyToken,getPlatformHandler); //Protegida
+getRouter.get("/games", verifyToken,getGamesAdminHandler); //Libres
+getRouter.get("/user", verifyToken, getUserHandler) //Protegida
 getRouter.get("/user/:id", getUserDetailHand) //Libre
 
 //Payments:
