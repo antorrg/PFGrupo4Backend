@@ -54,7 +54,7 @@ const createGenreDB = async (name) => {
     } else {
       try {
         const [newGenre, create] = await Genre.findOrCreate({where: { name: name}});
-        const result = { isCreate: create, genre: newGenre };
+        const result = { isCreate: create, game: newGenre };
         return result;
       } catch (createError) {
         throw new Error("Error al crear el género");
@@ -78,7 +78,7 @@ const createPlatformDB = async (name) => {
     } else {
       try {
         const [newPlatform, create] = await Platform.findOrCreate({ where: {name: name}});
-        const result = { isCreate: create, platform: newPlatform };
+        const result = { isCreate: create, game: newPlatform };
         return result;
       } catch (error) {
         throw new Error("Error al crear la plataforma")
