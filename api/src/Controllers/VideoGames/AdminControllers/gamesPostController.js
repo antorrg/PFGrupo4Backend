@@ -1,3 +1,4 @@
+const {Op} = require('sequelize');
 const { Videogame, Genre, Platform } = require("../../../database");
 
 const createGameDB = async (
@@ -45,17 +46,15 @@ const createGameDB = async (
 const createGenreDB = async (name) => {
   try {
     const existingGenre = await Genre.findOne({
-      where: { name: name, deleteAt: false },
+      where: { name: {[Op.iLike]:name}, deleteAt: false }
     });
+    console.log(existingGenre);
     if (existingGenre) {
       throw new Error("Este género ya existe");
     } else {
       try {
-        const [newGenre, created] = await Genre.findOrCreate({
-          where: { name: name, deleteAt: false },
-        });
-
-        const result = { isCreate: created, genre: newGenre };
+        const [newGenre, create] = await Genre.findOrCreate({where: { name: name}});
+        const result = { isCreate: create, game: newGenre };
         return result;
       } catch (createError) {
         throw new Error("Error al crear el género");
@@ -71,15 +70,16 @@ const createGenreDB = async (name) => {
 const createPlatformDB = async (name) => {
   try {
     const existingPlatform = await Platform.findOne({
-      where: { name: name, deleteAt: false },
+      where: { name: {[Op.iLike]:name}, deleteAt: false }
     });
+    console.log(existingPlatform);
     if (existingPlatform) {
       throw new Error("Esta plataforma ya existe");
     } else {
       try {
-        const [newPLatform, create] = await Platform.findOrCreate({ where: {name: name, deleteAt: false}});
-      const result = { isCreate: create, game: newPLatform };
-      return result;
+        const [newPlatform, create] = await Platform.findOrCreate({ where: {name: name}});
+        const result = { isCreate: create, game: newPlatform };
+        return result;
       } catch (error) {
         throw new Error("Error al crear la plataforma")
       }

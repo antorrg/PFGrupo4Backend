@@ -131,9 +131,11 @@ const userWithPassLogin = async (email, password) => {
       enable: true,
     },
   });
-
+console.log(email);
+console.log(password);
+console.log(user);
   try {
-    if (user.password) {
+    if (user) {
       const passwordMatch = await bcrypt.compare(password, user.password);
       if (passwordMatch) {
         // Contraseña válida, puedes generar y enviar un token de sesión aquí si es necesario
@@ -146,7 +148,7 @@ const userWithPassLogin = async (email, password) => {
         throw new Error("Email o password no validos");
       }
     } else {
-      throw new Error("Login incorrecto, el usuario tiene otra cuenta");
+      throw new Error("Usuario no registrado");
     }
   } catch (error) {
     throw error;
