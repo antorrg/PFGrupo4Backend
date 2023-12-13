@@ -17,9 +17,9 @@ const userUpdController = async (id, newData)=>{
             given_name: newData.given_name,
             picture: newData.picture,
             nickname: newData.nickname,
-            //role: parseFloat(newData.role), //convertir a numero
+            role: parseFloat(newData.role), //convertir a numero
             country: newData.country,
-            //enable: Boolean(newData.enable), // Convertir a booleano
+            enable: Boolean(newData.enable), // Convertir a booleano
           };
       
           // Validar que el campo numérico sea válido después de la conversión
