@@ -1,4 +1,7 @@
 const bcrypt = require('bcrypt');
+require('dotenv').config();
+const {SUDO_AUTH } = process.env;
+
 
 const validUserCreate = async(req, res, next)=>{
     const { email, password, sub } = req.body;
@@ -26,7 +29,18 @@ const validUserLog = (req, res, next)=>{
     next ();
 };
 
-module.exports= {
+const validUserSu = (req, res, next)=>{
+        const providedToken = req.headers['x-access-token'];
+        // Verifica si el token está presente
+        if (!providedToken) {return res.status(401).json({ error: 'Acceso no autorizado.' });}
+        if (providedToken !== SUDO_AUTH) {return res.status(403).json({ error: 'Acceso no autorizado.' });}
+    
+        next();
+    
+};
+
+module.exports= { 
     validUserCreate,
-    validUserLog
+    validUserLog,
+    validUserSu 
 }
