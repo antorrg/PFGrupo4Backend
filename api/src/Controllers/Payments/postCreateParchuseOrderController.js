@@ -1,6 +1,6 @@
 
 require ('dotenv').config();
-const { MERCADOPAGO_ACCESS_TOKEN, PORT, FRONT}=process.env;
+const { MERCADOPAGO_ACCESS_TOKEN, PORT_MP, FRONT}=process.env;
 
 const mercadopago = require("mercadopago");
 
