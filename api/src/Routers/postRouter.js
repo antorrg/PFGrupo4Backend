@@ -33,7 +33,7 @@ postRouter.post("/postUserRated", verifyToken, postUserRatedHandler);
 //User Cart:
 postRouter.post("/createShoppingCart", verifyToken, postUserShoppingCartHandler);
 
-postRouter.post("/videogamesByIds", verifyToken, postVideogamesByIdsHandler);
+postRouter.post("/videogamesByIds", postVideogamesByIdsHandler);
 
 
 module.exports = postRouter;
