@@ -49,7 +49,7 @@ const platformDelete = async (id) => {
       return { message: "Plataforma eliminada." };
     } else if (platform && platform.deleteAt) {
       
-      return { message: "La plataforma ya eliminada." };
+      return { message: "La plataforma ya esta eliminada." };
     } else {
       
       return { message: "Plataforma no encontrada." };

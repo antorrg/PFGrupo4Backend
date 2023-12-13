@@ -47,6 +47,7 @@ const createGenreDB = async (name) => {
   try {
     const existingGenre = await Genre.findOne({
       where: { name: {[Op.iLike]:name}, deleteAt: false }
+
     });
     console.log(existingGenre);
     if (existingGenre) {
@@ -70,7 +71,7 @@ const createGenreDB = async (name) => {
 const createPlatformDB = async (name) => {
   try {
     const existingPlatform = await Platform.findOne({
-      where: { name: {[Op.iLike]:name}, deleteAt: false }
+      where: { name: name, deleteAt: false }
     });
     console.log(existingPlatform);
     if (existingPlatform) {

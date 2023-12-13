@@ -131,9 +131,9 @@ const userWithPassLogin = async (email, password) => {
       enable: true,
     },
   });
-console.log(email);
-console.log(password);
-console.log(user);
+// console.log(email);
+// console.log(password);
+// console.log(user);
   try {
     if (user) {
       const passwordMatch = await bcrypt.compare(password, user.password);
