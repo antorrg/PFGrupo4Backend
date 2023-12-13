@@ -39,7 +39,7 @@ const postCreateParchuseOrderController = async (
 		auto_return: 'approved',
 		external_reference: orderID + "-_" + userEmail + "-_" + userID,
     //notification_url: `https://e266-181-53-96-74.ngrok-free.app/post/paymentResultwebhook`
-		notification_url: `${PORT_MP}/post/paymentResultwebhook`
+		notification_url: `${PORT}/post/paymentResultwebhook`
 		//notification_url: "https://3fd5-181-53-96-163.ngrok-free.app/post/webhook"
 		//auto_return: "approved"
 		//auto_return: "http://localhost:3000/pending"

@@ -22,7 +22,11 @@ const getVideogames = async (
         {
           model: Genre,
           attributes: ["name"],
-          where: genresFilters,
+          where: { 
+            ...genresFilters,
+            deleteAt: false, // Agrega la condición deleteAt: false para Genre
+          },
+          //where: genresFilters,
           /*where: {
                         //name: ["Actions", "Puzzle", "Indie"]
                         name: { [Op.in]: ["Actions", "Puzzle", "Indie"] }
@@ -34,7 +38,11 @@ const getVideogames = async (
         {
           model: Platform,
           attributes: ["name"],
-          where: platformsFilters,
+          where: { 
+            ...platformsFilters,
+            deleteAt: false, // Agrega la condición deleteAt: false para Platform
+          },
+          //where: platformsFilters,
           through: {
             attributes: [],
           },

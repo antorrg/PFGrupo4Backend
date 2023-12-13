@@ -7,16 +7,16 @@ const gameDelete = async (id) => {
     if (videogame && !videogame.deleteAt) {
       // Actualizar el campo 'enable' a false (deshabilitar)
       await videogame.update({ deleteAt: true });
-      return { message: "Juego con eliminado logico exitoso." };
+      return { message: "Videojuego eliminado." };
     } else if (videogame && videogame.deleteAt) {
       // Si ya está deshabilitado, devolver un mensaje indicando eso
-      return { message: "El juego ya está con eliminado logico." };
+      return { message: "El videojuego ya esta eliminado." };
     } else {
       // Si el juego no existe, devolver un mensaje indicando eso
-      return { message: "Juego no encontrado." };
+      return { message: "Videojuego no encontrado." };
     }
   } catch (error) {
-    throw new Error("Error al hacer el eliminado logico en el juego.");
+    throw new Error("Error al eliminar el videojuego.");
   }
 };
 
@@ -26,16 +26,16 @@ const genreDelete = async (id) => {
     if (genre && !genre.deleteAt) {
       
       await genre.update({ deleteAt: true });
-      return { message: "Genero con eliminado logico exitoso." };
+      return { message: "Genero eliminado." };
     } else if (genre && genre.deleteAt) {
       
-      return { message: "El genero ya está con eliminado logico." };
+      return { message: "El genero ya está eliminado." };
     } else {
       
       return { message: "Genero no encontrado." };
     }
   } catch (error) {
-    throw new Error("Error al hacer el eliminado logico en el genero.");
+    throw new Error("Error al eliminar el genero.");
   }
 };
 
@@ -46,16 +46,16 @@ const platformDelete = async (id) => {
     if (platform && !platform.deleteAt) {
       
       await platform.update({ deleteAt: true });
-      return { message: "Plataforma con eliminado logico exitoso." };
+      return { message: "Plataforma eliminada." };
     } else if (platform && platform.deleteAt) {
       
-      return { message: "La plataforma ya está con eliminado logico." };
+      return { message: "La plataforma ya esta eliminada." };
     } else {
       
       return { message: "Plataforma no encontrada." };
     }
   } catch (error) {
-    throw new Error("Error al hacer el eliminado logico en la plataforma.");
+    throw new Error("Error al eliminar la plataforma.");
   }
 };
 
