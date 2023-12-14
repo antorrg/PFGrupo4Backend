@@ -30,7 +30,6 @@ const {DB_USER, DB_PASS, DB_HOST, DB_NAME, DB_DEPLOY}=process.env;
 
 
 
-
 CreateVideogame(sequelize);
 CreateGenre(sequelize);
 CreatePlatform(sequelize);

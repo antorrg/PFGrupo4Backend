@@ -54,11 +54,11 @@ const userSUpdController = async (id, newData)=>{
         return { error: "Usuario no encontrado" };
       }
 
-      if(!newData.password){
-        // const hashedPassword = await bcrypt.hash(newData.password, 10);
+      if(newData){
+        const hashedPassword = await bcrypt.hash(newData.password, 10);
         // Convertir campos a sus tipos respectivos antes de actualizar
         const parsedData = {
-          //password:hashedPassword,
+          password:hashedPassword,
           given_name: newData.given_name,
           picture: newData.picture,
           nickname: newData.nickname,
@@ -78,12 +78,12 @@ const userSUpdController = async (id, newData)=>{
     
         // Actualizar todos los campos
         await user.update(parsedData);
-      } else {
-        const hashedPassword = await bcrypt.hash(newData.password, 10);
-        const parsedData = {
-          password:hashedPassword,
-        };
-        await user.update(parsedData);
+      // } else {
+      //   const hashedPassword = await bcrypt.hash(newData.password, 10);
+      //   const parsedData = {
+      //     password:hashedPassword,
+      //   };
+      //   await user.update(parsedData);
       }
       return user;
     } catch (error) {

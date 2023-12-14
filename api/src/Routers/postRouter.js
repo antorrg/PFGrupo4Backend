@@ -25,7 +25,7 @@ postRouter.post("/platform", verifyToken, createPlatformHandler);
 postRouter.post("/user", validUserCreate, userLogHandler);
 postRouter.post("/user/login", validUserLog, loginUserHand);
 //Payments:
-postRouter.post("/paymentResultwebhook", verifyToken, postPaymentResultWebhookHandler);
+postRouter.post("/paymentResultwebhook", postPaymentResultWebhookHandler);
 postRouter.post("/createParchuseOrder", verifyToken, postCreateParchuseOrderHandler);
 postRouter.post("/postUserRated", verifyToken, postUserRatedHandler);
 //postRouter.post("/DBcreateParchuseOrder", createOrderInDBHandler);
