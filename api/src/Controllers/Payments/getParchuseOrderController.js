@@ -26,7 +26,9 @@ const getParchuseOrderController = async ( orderId, req, res ) => {
       });
 
       if(orderVideogamesResult) {
+        let totalCost = 0;
         const ids = orderVideogamesResult.map(item => {
+          totalCost += item.quantity * item.unitPrice;
           return item.itemId;
         });
         const videogamesByIds = await postVideogamesByIdsController(ids);
@@ -40,6 +42,7 @@ const getParchuseOrderController = async ( orderId, req, res ) => {
               currencyId: auxObj.currencyId
             };
           });
+          orderDataResult.totalCost = totalCost;
           return {
             orderData: orderDataResult,
             videogamesData: videogamesResult
