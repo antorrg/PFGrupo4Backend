@@ -4,7 +4,7 @@ const {SECRET_KEY} = process.env;
 
 const generateToken = (user) => {
   const secretKey = SECRET_KEY;
-  const token = sign({ userId: user.id, email: user.email }, secretKey, { expiresIn: '10m' });
+  const token = sign({ userId: user.id, email: user.email }, secretKey, { expiresIn: '5h' });
   return token;
 };
 
