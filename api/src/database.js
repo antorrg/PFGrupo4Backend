@@ -30,7 +30,6 @@ native:false}
 
 
 
-
 CreateVideogame(sequelize);
 CreateGenre(sequelize);
 CreatePlatform(sequelize);
