@@ -1,4 +1,5 @@
 const {User}=require('../../database');
+const { Op } = require('sequelize');
 
 const getUser = async( page, size, req, res )=>{
     page = +page;
@@ -7,7 +8,12 @@ const getUser = async( page, size, req, res )=>{
     //console.log("size :: " + size);
     try {
         const { count, rows } = await User.findAndCountAll({
-            where:{deleteAt:false},
+            where:{
+                deleteAt:false,
+                email: {
+                    [Op.notIn]: ['gameworld.ecommerce@gmail.com', 'antoniorodriguezgramajo@gmail.com'] // Lista de correos electrónicos a excluir
+                }
+            },
             limit: size,
             offset: page * size,
         });
