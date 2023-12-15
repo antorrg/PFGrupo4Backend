@@ -3,7 +3,7 @@ const getUser = require('../../Controllers/Users/getUser')
 const getUserHandler = async(req, res)=>{
     const {
         page = 0,
-        size = 5
+        size = 20
     } = req.query;
 
     //console.log("page :: " + page);
