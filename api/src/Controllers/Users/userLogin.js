@@ -23,14 +23,16 @@ const userCreate = async (
       where: {
         email: email,
         deleteAt: false,
-        enable: true,
+       // enable: true,
       },
     });
 
     if (existingUser) {
       if (existingUser.sub === "" && sub) {
         throw new Error("Ya hay un usuario registrado con este email");
-      } else if (existingUser.sub) {
+      } else if (existingUser && existingUser.enable===false) {
+          throw new Error("Usuario bloqueado");
+        }else if (existingUser.sub) {
         if (existingUser.sub === sub) {
           const token = generateToken(existingUser);
           let result = { isCreate: false, user: existingUser };
@@ -128,13 +130,16 @@ const userWithPassLogin = async (email, password) => {
     where: {
       email: email,
       deleteAt: false,
-      enable: true,
+      //enable: true,
     },
   });
 // console.log(email);
 // console.log(password);
 // console.log(user);
   try {
+    if (user && user.enable === false){
+      throw new Error("Usuario bloqueado");
+    }
     if (user) {
       const passwordMatch = await bcrypt.compare(password, user.password);
       if (passwordMatch) {
