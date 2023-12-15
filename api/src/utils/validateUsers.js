@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 require('dotenv').config();
-const {SUDO_AUTH } = process.env;
+const {SUDO_AUTH,ADMIN1,ADMIN2 } = process.env;
+const getUserIdByEmail = require('./adminPass')
 
 
 const validUserCreate = async(req, res, next)=>{
@@ -39,8 +40,33 @@ const validUserSu = (req, res, next)=>{
     
 };
 
+
+
+const verifyUsPas = async(req, res, next)=> {
+    const { ADMIN1, ADMIN2 } = process.env;
+    const adminEmails = [ADMIN1, ADMIN2];
+  
+    const userIdInParam = req.params.id;
+    const passwordInBody = req.body.password;
+  
+    try {
+      for (const adminEmail of adminEmails) {
+        const userId = await getUserIdByEmail(adminEmail);
+  
+        if (userIdInParam === userId && passwordInBody !== null) {
+          return res.status(403).json({ message: 'Acceso no autorizado.' });
+        }
+      }
+  
+      next();
+    } catch (error) {
+      res.status(500).json({ message: 'Error interno del servidor.' });
+    }
+  }
 module.exports= { 
     validUserCreate,
     validUserLog,
-    validUserSu 
+    validUserSu,
+    verifyUsPas
+    
 }
