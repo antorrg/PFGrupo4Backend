@@ -1,5 +1,7 @@
 const {User}=require('../../database');
 const { Op } = require('sequelize');
+require('dotenv').config();
+const {ADMIN1,ADMIN2 } = process.env;
 
 const getUser = async( page, size, req, res )=>{
     page = +page;
@@ -11,7 +13,7 @@ const getUser = async( page, size, req, res )=>{
             where:{
                 deleteAt:false,
                 email: {
-                    [Op.notIn]: ['gameworld.ecommerce@gmail.com', 'antoniorodriguezgramajo@gmail.com'] // Lista de correos electrónicos a excluir
+                    [Op.notIn]: [ADMIN1, ADMIN2] // Lista de correos electrónicos a excluir
                 }
             },
             limit: size,
