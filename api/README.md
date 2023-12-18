@@ -1,4 +1,6 @@
 # GameWorld Server
+[Volver al inicio](../README.md)
+
 Este servidor cuenta con la instalacion de las siguientes dependencias:  express, axios, dotenv, nodemon, morgan, sequelize, postgres, pg, pg-hstore, cors, uuid, jsonwebtoken, bcrypt.
 
 Para inicializar en desarrollo el comando es: ```npm run dev```, esto inicializa con nodemon.
@@ -34,3 +36,5 @@ Tambien se implementaron diferentes middlewares a fin de evitar que la informaci
 Esta explicación está lejos de ser una completa (en este mismo momento, al escribirla, estamos aprendiendo a documentar una app, y mas bien parece un tutorial, pero nuestra intención al hacerla es que cada uno aprenda aquellas cosas en las cuales no pudo intervenir directamente.)
 
 ## ¡Exitos muchachos!
+
+[Volver al inicio](../README.md)

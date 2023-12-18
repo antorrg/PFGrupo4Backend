@@ -56,9 +56,24 @@ const verifyUsPas = async (req, res, next) => {
     for (const adminEmail of adminEmails) {
       const user = await getUserIdByEmail(adminEmail);
       if (id === user.id) {
-        if (password) { return res.status(403).json({ error: ' Acción no permitida.' });}
+        if (password || (adminEmail !== email1 && adminEmail !== email2)) { return res.status(403).json({ error: ' Acción no permitida.' });}
         return next();
       }
+    }
+  } catch (error) {
+    res.status(500).json({ error: 'Error interno del servidor.' });
+  }
+};
+
+const verifyDoNotDel = async (req, res, next) => {
+  const {email1, email2}=getEmails();
+  try {
+    const adminEmails = [email1, email2];
+    const id = req.params.id;
+    for (const adminEmail of adminEmails) {
+      const user = await getUserIdByEmail(adminEmail);
+      if (id === user.id){return res.status(403).json({ error: ' Acción no permitida.' });}
+        return next();
     }
   } catch (error) {
     res.status(500).json({ error: 'Error interno del servidor.' });
@@ -70,6 +85,7 @@ module.exports= {
     validUserCreate,
     validUserLog,
     validUserSu,
-    verifyUsPas
+    verifyUsPas,
+    verifyDoNotDel
     
 }
