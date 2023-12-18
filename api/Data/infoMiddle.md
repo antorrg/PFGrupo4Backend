@@ -44,9 +44,9 @@ const verifyUsPas = async (req, res, next) => {
     //Obtiene el id correspondiente al email utilizando "getUserIdByEmail"
       const user = await getUserIdByEmail(adminEmail);
       
-      // Verifica si la petición corresponde al ID y contraseña del usuario, si esta petición contiene "password" la deniega.
+      // Verifica si la petición corresponde al ID y contraseña del usuario, si esta petición contiene "password" o no existe alguna igualdad con los emails protegidos (intento de edicion de email) la deniega.
       if (id === user.id) {
-        if (password) { return res.status(403).json({ error: ' Acción no permitida.' });}
+        if (password || (adminEmail !== email1 && adminEmail !== email2)) { return res.status(403).json({ error: ' Acción no permitida.' });}
      //Si la petición no contiene "password" le da paso hacia la función siguiente:
         return next();
       }
