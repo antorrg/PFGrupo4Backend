@@ -2,10 +2,15 @@
 ## Sobre JWT (json web token) 
 [Documentación sobre JWT](https://jwt.io/introduction)
 
+[Volver al README:](../README.md)
 
-Voy a intentar documentar brevemente lo que se implementó en cuanto a JWT en nuestra api, para esto se utilizó de JWT las funciones `sign` y `verify` utilizando tambien un string o cadena secreta. 
+
+Vamos a intentar documentar brevemente lo que se implementó en cuanto a JWT en nuestra api, para esto se utilizó de JWT las funciones `sign` y `verify` utilizando tambien un string o cadena secreta. 
 ### Comenzemos con la cadena secreta: 
-Es un string aleatorio que yo conformé de la siguiente manera: 
+
+[Volver a README (click aqui)](../README.md#inicializando-el-server)
+
+Es un string aleatorio que conformamos de la siguiente manera: 
 ```javascript
 const crypto = require('crypto');
 
@@ -16,7 +21,7 @@ const generateSecret = () => {
 const secret = generateSecret();
 console.log(`La cadena secreta generada es: ${secret}`);
 ```
-Estas líneas de código (pedidas oportunamente a Chat GPT) son una pequeña función que dejé comentada debajo de la función `generate.js`. Al descomentarla teniendo la consola con nodemon activo automaticamente se genera la clave secreta que con "copiar" "pegar" guardo en mi archivo .env con el nombre "SECRET_KEY" en este caso. 
+Estas líneas de código (pedidas oportunamente a Chat GPT) son una pequeña función que dejamos comentada debajo de la función `generate.js`. Al descomentarla teniendo la consola con nodemon activo automaticamente se genera la clave secreta que con "copiar" "pegar" guardo en mi archivo .env con el nombre "SECRET_KEY" en este caso. 
 Aquí una breve explicación de como funciona:
 
 _El código que has proporcionado utiliza el módulo "crypto"  que proporciona funcionalidades criptográficas en Node.js para generar una cadena secreta aleatoria. Aquí está el desglose del código:_
@@ -110,6 +115,7 @@ _En este ejemplo, el token expirará después de 30 segundos. Puedes ajustar ese
 ### Función "verifyToken":
 Esta funcion la utilizamos para verificar la validez del token que enviamos y en base a eso proteger las rutas.
 Aqui un pequeño desglose de la misma:
+
 ```javascript
 const { verify } = require('jsonwebtoken');
 require('dotenv').config();
@@ -148,6 +154,8 @@ _Utiliza la función verify para verificar el token utilizando la clave secreta.
 _Si la verificación es exitosa, decodifica el token y almacena la información del usuario decodificado en req.user para su uso posterior._
 _Para el caso en el que sea necesario, extrae el id del usuario y lo almacena en req.user.id para su posterior uso._
 _Llama a next() para pasar al siguiente middleware en la cadena de manejo de solicitudes._
+
+[Volver a Middlewares (click aquí)](infoMiddle.md#verifytoken)
  <hr>
 
 
@@ -165,5 +173,10 @@ charRouter.get('/character/:id', verifyToken, charUserById);
 
 module.exports=charRouter;
  ```
- Este es el caso de mi app de rickandmorty que use como modelo experimental, ya que tiene muy pocas funcionalidades y me permite probar aisladamente las funciones, como ven se interpone simplemente en la ruta a proteger. 
+ Este es el caso de una app de rickandmorty que usamos como modelo experimental, ya que tiene muy pocas funcionalidades y nos permite probar aisladamente las funciones, como ven se interpone simplemente en la ruta a proteger. 
  
+[Volver a Middlewares (click aquí)](infoMiddle.md#su-implementación)
+
+
+
+ [Volver al README:](../README.md)

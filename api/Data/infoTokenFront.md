@@ -1,5 +1,5 @@
 # Implementacion de jwt en una app de React con Vite
-En este caso tengo que implementar jwt (estariamos recibiendo el access token por body),
+En este caso debemos que implementar jwt (estariamos recibiendo el access token por body),
 un buen comienzo seria que la funcion que recibe la response aloje el token en el localStorage: 
 ```javascript
 const enviarInfoAlServer = async (userData) => {
@@ -10,7 +10,7 @@ const enviarInfoAlServer = async (userData) => {
     
           if (response.status === 201) {
             const token = response.data.token;
-            localStorage.setItem('authToken', token);//Esta es la declaracion
+            localStorage.setItem('validToken', token);//Esta es la declaracion
            } if (response.data) {
             console.log(response.data)
             return response.data;
@@ -22,7 +22,7 @@ const enviarInfoAlServer = async (userData) => {
 }
 ``` 
 
-Luego, voy a utilizar a "detail" como un componente de pruebas, y alli tengo que tomar el token que se encuentra en el "almacenamiento local" (local Storage) y pasarselo junto con el id en este caso a la funcion del "useEffect" que hace el dispatch: 
+Luego, utilizamos a "detail" como un componente de pruebas, y alli vamos a tomar el token que se encuentra en el "almacenamiento local" (local Storage) y pasarselo junto con el id en este caso a la funcion del "useEffect" que hace el dispatch: 
 
 ```javascript
 const Detail = () => {
@@ -30,7 +30,7 @@ const Detail = () => {
   const detail = useSelector((state) => state.characterById);
 
   const { id } = useParams();
-  const token = localStorage.getItem('authToken');
+  const token = localStorage.getItem('validToken');
 
   useEffect(() => {
     dispatch(getById(id, token));
@@ -39,7 +39,7 @@ const Detail = () => {
 }
 ```
 
-Ya en las actions puedo con estos datos confeccionar el header, o bien, (que a mi me gusta más así) hacer una funcion que lo haga y yo invocarla, algo así como un middleware, para esto en un archivo aparte al que yo llamé `AxiosUtils.jsx`, allí escribí:
+Ya en las actions podemos con estos datos confeccionar el header, o bien,  hacer una funcion que lo haga y luego invocarla, algo así como un middleware, para esto en un archivo aparte al que llamamos `AxiosUtils.jsx`, escribimos:
 ```javascript
 const setAuthHeader = (token) => {
   const config = {};
@@ -69,7 +69,28 @@ export const getById =(id, token)=>async(dispatch)=>{
     }
 }
 ```
-Si lo quisiera hacer de otro modo no es más que unas pocas lineas de código, pero al igual que las `actions-types`, yo las prefiero porque me evita posibles errores de tipeo. 
+Hacerlo del modo tradicional no es más que unas pocas lineas de código. 
+
+```javascript
+export const getById =(id, token)=>async(dispatch)=>{
+    try {
+        const response = await axios(`/api/character/${id}`,{
+          headers : {
+            'x-access-token' : `${token}`
+          };
+        });
+        const data = response.data;
+        return dispatch({
+            type:SET_BY_ID,
+            payload:data
+        })
+    } catch (error) {
+        handleApiError(error);
+        throw error; 
+    }
+}
+```
+La desventaja que tiene esto es que podemos tener algun error de sintaxis, además el código no queda tan limpio.
 
 ## Axios Interceptor:
 Esta es la respuesta de nuestro amigo Chat GPT: 
@@ -80,9 +101,9 @@ _Los interceptores en Axios te permiten ejecutar tu código o modificar la solic
 
 _Axios proporciona dos tipos de interceptores: interceptores de solicitud e interceptores de respuesta._
 <hr>
-De lo dicho se desprende que tambien lo podia usar para generar el header, pero bueno, en este caso lo que quiero hacer es manejar la response para que al recibir un status 401 (usuario no autorizado) me cierre la sesión y me envíe al login, como no tengo un login como tal sino una página Home de visitante, voy a proceder a enviarlo allí. 
+De lo dicho se desprende que tambien lo podia usar para generar el header, pero bueno, en este caso lo que quermos hacer es manejar la response para que al recibir un status 401 (usuario no autorizado) cierre la sesión y envíe al usuario al login, como no tenemos un login como tal sino una página Home de visitante, vamos a proceder a enviarlo allí. 
 
-En mi caso solo tengo auth0 como login y voy a utilizar este medio, pero en otros casos este codigo se puede adaptar (este ejemplo lo estoy haciendo con una app de prueba). Hice un archivo llamado `AxiosInterceptor.jsx` adonde puse lo siguiente:
+En el caso del ejemplo solo tenemos auth0 como login y vamos a utilizar este medio, pero en otros casos este codigo se puede adaptar (este ejemplo lo estamos haciendo con una app de prueba). Hicimos un archivo llamado `AxiosInterceptor.jsx` adonde pusimos lo siguiente:
 
 
 ```javascript
@@ -114,7 +135,7 @@ export default interceptor;
 ```
 Aqui tenemos dos funciones `ìnterceptor` y `redirectToLogin` la primera intercepta la response 401 o cualquier otro error y la segunda es la encargada de redireccionarme al login. Adentro de esta última, la funcion `logout` es la funcion específica de auth0 encargada de cerrar sesión. La  declaracion `window.location.reload(true);` es secundaria, pero en caso de tener un login normal con user y pass sería principal, ya que recarga la página.
 
-La implementacion la llevé a cabo en el componente App, ya que se me recomendaba que fuera en un componente principal, aquí el código:
+La implementacion la llevamos a cabo en el componente App, ya que se me recomendaba que fuera en un componente principal, aquí el código:
 
 ```javascript
 import {Landing, Detail }from './views/index';
@@ -136,4 +157,4 @@ function App() {
     //resto del componente...
 )}
 ```
-Esto lo hice para el hook de auth0 ya que no puedo manejar un hook fuera del contexto de un componente funcional. 
+Esto lo hicimos para el hook de auth0 ya que no podemos manejar un hook fuera del contexto de un componente funcional. 

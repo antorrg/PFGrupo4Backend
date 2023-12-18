@@ -1,7 +1,9 @@
 const {User}=require('../../database');
 const { Op } = require('sequelize');
+const { getEmails}= require('../../utils/createSUs')
 
 const getUser = async( page, size, req, res )=>{
+    const {email1, email2}=getEmails();
     page = +page;
     size = +size;
     //console.log("page :: " + page);
@@ -11,7 +13,7 @@ const getUser = async( page, size, req, res )=>{
             where:{
                 deleteAt:false,
                 email: {
-                    [Op.notIn]: ['gameworld.ecommerce@gmail.com', 'antoniorodriguezgramajo@gmail.com'] // Lista de correos electrónicos a excluir
+                    [Op.notIn]: [email1, email2] // Lista de correos electrónicos a excluir
                 }
             },
             limit: size,
