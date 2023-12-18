@@ -1,9 +1,9 @@
 const {User}=require('../../database');
 const { Op } = require('sequelize');
-require('dotenv').config();
-const {ADMIN1,ADMIN2 } = process.env;
+const { getEmails}= require('../../utils/createSUs')
 
 const getUser = async( page, size, req, res )=>{
+    const {email1, email2}=getEmails();
     page = +page;
     size = +size;
     //console.log("page :: " + page);
@@ -13,7 +13,7 @@ const getUser = async( page, size, req, res )=>{
             where:{
                 deleteAt:false,
                 email: {
-                    [Op.notIn]: [ADMIN1, ADMIN2] // Lista de correos electrónicos a excluir
+                    [Op.notIn]: [email1, email2] // Lista de correos electrónicos a excluir
                 }
             },
             limit: size,

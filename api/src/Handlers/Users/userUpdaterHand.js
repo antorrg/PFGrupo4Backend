@@ -1,6 +1,7 @@
 const {userUpdController, userSUpdController}= require('../../Controllers/Users/userUpdController');
 
 
+
 const userUpdaterHand = async(req,res)=>{
     const {id} = req.params;
     const newData = req.body;
