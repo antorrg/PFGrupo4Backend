@@ -13,6 +13,7 @@ const {DB_USER, DB_PASS, DB_HOST, DB_NAME, DB_DEPLOY}=process.env;
 
 
 
+
 // const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`,
 //{logging: false,
 //native:false}
@@ -28,6 +29,7 @@ const {DB_USER, DB_PASS, DB_HOST, DB_NAME, DB_DEPLOY}=process.env;
       }    
     }
   });
+
 
 
 

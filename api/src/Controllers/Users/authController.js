@@ -1,6 +1,5 @@
 const { User } = require('../../database');
 const bcrypt = require('bcrypt');
-const generateToken = require('../../utils/generate');
 
 const authenticateAndUpdate = async (email, password, sub, additionalFields) => {
     try {
