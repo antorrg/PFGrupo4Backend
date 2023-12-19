@@ -57,9 +57,9 @@ const verifyUsPas = async (req, res, next) => {
       const user = await getUserIdByEmail(adminEmail);
       if (id === user.id) {
         if (password || (adminEmail !== email1 && adminEmail !== email2)) { return res.status(403).json({ error: ' Acción no permitida.' });}
-        return next();
       }
     }
+       return next();
   } catch (error) {
     res.status(500).json({ error: 'Error interno del servidor.' });
   }
