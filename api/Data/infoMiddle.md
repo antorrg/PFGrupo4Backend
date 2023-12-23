@@ -47,10 +47,10 @@ const verifyUsPas = async (req, res, next) => {
       // Verifica si la petición corresponde al ID y contraseña del usuario, si esta petición contiene "password" o no existe alguna igualdad con los emails protegidos (intento de edicion de email) la deniega.
       if (id === user.id) {
         if (password || (adminEmail !== email1 && adminEmail !== email2)) { return res.status(403).json({ error: ' Acción no permitida.' });}
-     //Si la petición no contiene "password" le da paso hacia la función siguiente:
-        return next();
       }
     }
+     //Si la petición no contiene "password" le da paso hacia la función siguiente:
+        return next();
   } catch (error) {
     res.status(500).json({ error: 'Error interno del servidor.' });
   }

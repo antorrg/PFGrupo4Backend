@@ -10,7 +10,7 @@ El camino más fácil cuando estamos desarrollando la app del server es introduc
 En la variable de entorno se crearon tres (3) variables: USER, PASS e IMG, en la primera se almacenan los usuarios, la información debe ir sin comillas, sin espacios y separadas por comas, en la segunda los passwords, ingresados siguiendo el mismo criterio, y en la tercera una única url de la imagen que se utilizará como avatar para el usuario (esta imagen es por defecto, pero luego, en la app se puede actualizar libremente).
 <hr>
 
-![captura de archivo.env](./imgs/Captura%20env.png)
+![captura de archivo.env](./imgs/CapturaEnv.jpg)
 
 <hr>
 Bien, ya tenemos la información guardada en una manera que nos permite cuando desplegamos la app (deploy) guardar toda información sensible en las variables de entorno que nos ofrecen los diferentes servicios de hosting. 
