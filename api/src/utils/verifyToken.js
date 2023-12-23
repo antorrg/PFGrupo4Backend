@@ -21,9 +21,11 @@ const verifyToken = (req, res, next) => {
     }
     // Almacena el usuario decodificado en el objeto de solicitud para su uso posterior
     req.user = decoded;
-     // Extrae el ID del usuario y lo almacena en req.user.id
      const userId = decoded.id;
-     req.user.id = userId;
+     req.userId = userId;
+     //console.log(req.user.userId+' id del usuario')
+     //console.log(req.user.email+': este es el email del usuario')
+
     next();
   });
 };
