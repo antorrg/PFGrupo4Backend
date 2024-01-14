@@ -13,7 +13,9 @@ Se recomienda cambiar la clave secreta provista luego de haber inicializado el s
 
 [Acerca de la clave secreta (click aqui)](../api/Data/infoToken.md#comenzemos-con-la-cadena-secreta)
 
-
+## Sobre bcrypt:
+En este enlace les dejo informacion sobre brypt
+[Acerca de bcrypt](./Data/infoBcrypt.md)
 ## Información util:
 
 Les dejamos una explicación básica de lo que hicimos en el back y en el front acerca de la autenticación con JWT y la implementacion de interceptor en el front:
@@ -36,5 +38,7 @@ Tambien se implementaron diferentes middlewares a fin de evitar que la informaci
 Esta explicación está lejos de ser una completa (en este mismo momento, al escribirla, estamos aprendiendo a documentar una app, y mas bien parece un tutorial, pero nuestra intención al hacerla es que cada uno aprenda aquellas cosas en las cuales no pudo intervenir directamente.)
 
 ## ¡Exitos muchachos!
+
+> (!Tip)
 
 [Volver al inicio](../README.md)

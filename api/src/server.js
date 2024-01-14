@@ -2,6 +2,7 @@ const express=require('express');
 const morgan=require('morgan');
 const cors=require('cors');
 const mainRouter=require('./Routers/mainRouter');
+const errorEndWare = require('./utils/errorEndware')
 
 
 server = express();
@@ -21,5 +22,9 @@ server.use(express.json());
 
 
 server.use(mainRouter);
+
+server.use(errorEndWare)
+// Error catching endware.
+
 
 module.exports = server;
