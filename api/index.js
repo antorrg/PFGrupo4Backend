@@ -24,7 +24,7 @@ server.listen(PORT, async () => {
     await appUserTable();
     console.log(`Server is running on port ${PORT} ✔️`);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.error("Could not syncing with database");
   }
 
 });
