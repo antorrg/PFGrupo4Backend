@@ -3,6 +3,7 @@ const morgan=require('morgan');
 const cors=require('cors');
 const mainRouter=require('./Routers/mainRouter');
 const errorEndWare = require('./utils/errorEndware')
+const validJson = require('./utils/validJson')
 
 
 server = express();
@@ -19,6 +20,7 @@ server.use((req, res, next) => {
 });
 
 server.use(express.json());
+server.use(validJson);
 
 
 server.use(mainRouter);
