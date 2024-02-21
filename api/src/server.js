@@ -1,6 +1,7 @@
 const express=require('express');
 const morgan=require('morgan');
-const cors=require('cors');
+const cors = require('cors');
+const helmet = require('helmet')
 const mainRouter=require('./Routers/mainRouter');
 const errorEndWare = require('./utils/errorEndware')
 const validJson = require('./utils/validJson')
@@ -9,6 +10,7 @@ const validJson = require('./utils/validJson')
 server = express();
 
 server.use(cors());
+server.use(helmet());
 server.use(morgan('dev'));
 server.use(express.urlencoded({ extended:true}));
 server.use((req, res, next) => {

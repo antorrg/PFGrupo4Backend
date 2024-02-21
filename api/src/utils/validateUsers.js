@@ -13,6 +13,9 @@ const validUserCreate = async(req, res, next)=>{
     if (!email) {
         return res.status(400).json({ error: "missing email" });
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {return res.status(400).json({ error: "invalid email format" });}
+
     if (!password && !sub) {
         return res.status(400).json({ error: "missing password or sub" });
     }
@@ -30,6 +33,8 @@ const validUserCreate = async(req, res, next)=>{
 const validUserLog = (req, res, next)=>{
     const { email, password } = req.body;
     if (!email) {return res.status(400).json({ error: "missing email" });}
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {return res.status(400).json({ error: "invalid email format" });}
     if (!password) {return res.status(400).json({ error: "missing password" });}
     next ();
 };
