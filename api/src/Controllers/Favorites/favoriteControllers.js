@@ -65,19 +65,20 @@ const getFav = async (userId)=>{
        throw error;
     }
 };
-const deleteFav = async (id, userId)=>{
-    console.log(favId + ' favorito')
-    console.log(userId + ' usuario')
+const deleteFav = async (id, userPP)=>{
+    console.log(id + ' favorito')
+    console.log(userPP + ' usuario')
    
     try {
-        const user = await User.findByPk(userId);
+        const user = await User.findByPk(id);
         if (!user) {throw new Error('User not found.');}
 
-        const favorite = await Favorite.findByPk(id);
+        const favorite = await Favorite.findByPk(userPP);
         if (!favorite) {throw new Error('Favorite not found.');}
 
         await user.removeFavorite(favorite);
         return id;
+        
 
     } catch (error) {
         throw error;

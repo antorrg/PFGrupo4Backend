@@ -24,10 +24,10 @@ const getFavHandler  = async (req,res)=>{
 };
 
 const delfavHandler  = async (req,res)=>{
-    const userId = req.user.userId;
-    const { id } = req.params;
+    const  userPP = req.user.userId 
+    const  {id}  = req.params;
     try {
-        const del = await(deleteFav(id, userId));
+        const del = await(deleteFav(userPP, id));
         res.status(200).json(del);
     } catch (error) {
         res.status(500).json({ error: error.message });
