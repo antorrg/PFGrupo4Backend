@@ -27,7 +27,7 @@ const delfavHandler  = async (req,res)=>{
     const  userPP = req.user.userId 
     const  {id}  = req.params;
     try {
-        const del = await(deleteFav(userPP, id));
+        const del = await(deleteFav(id, userPP));
         res.status(200).json(del);
     } catch (error) {
         res.status(500).json({ error: error.message });
